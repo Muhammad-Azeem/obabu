@@ -23,8 +23,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b23d5c20-191b-45c2-b826-09e44a58c247" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/aboutus.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/activity.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/sales.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/about-us-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/about-us-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/about-us-bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/about-us-bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/about-us-bg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/about-us-bg-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/about-us-bg-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/announcement.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/bg_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/boy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/child.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/contact-us.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/explore-fun-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/footer-bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/footer-bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/footer-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/girl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/home-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/home_bg_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/home_bg_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/home_bg_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/info-box-after.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/info-box-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/info-box-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/left-bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/left-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-program-bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-program-bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-program-bg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-program-bg-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-services-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-services-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-services-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-team-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-team-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/our-team-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-membership-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-membership-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-membership-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-membership.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-services-bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-services-bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-services-bg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-services-bg-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-team-bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-team-bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-team-bg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-team-bg-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-team-bg-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sales-team-bg-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/why-us-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/why-us-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/why-us-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/why-us-4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +232,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -186,7 +258,7 @@
       <updated>1616691669531</updated>
       <workItem from="1616691672838" duration="11728000" />
       <workItem from="1616775960922" duration="1399000" />
-      <workItem from="1617094194643" duration="2328000" />
+      <workItem from="1617094194643" duration="3138000" />
     </task>
     <servers />
   </component>
@@ -205,10 +277,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="385" y="169" width="670" height="678" key="search.everywhere.popup" timestamp="1617133618482">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state x="385" y="169" width="670" height="676" key="search.everywhere.popup" timestamp="1617134507197">
+      <screen x="0" y="25" width="1440" height="820" />
     </state>
-    <state x="385" y="169" width="670" height="676" key="search.everywhere.popup/0.25.1440.820@0.25.1440.820" timestamp="1616782389827" />
+    <state x="385" y="169" width="670" height="676" key="search.everywhere.popup/0.25.1440.820@0.25.1440.820" timestamp="1617134507197" />
     <state x="385" y="169" width="670" height="678" key="search.everywhere.popup/0.25.1440.822@0.25.1440.822" timestamp="1617133618482" />
   </component>
   <component name="XDebuggerManager">
