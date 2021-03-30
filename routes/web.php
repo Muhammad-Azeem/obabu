@@ -18,11 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/main',function(){
-   return view('');
+    return view('');
 });
 //    Route::get('login','main\auth@login')->name('login');
 //    Route::get('register','main\auth@register')->name('register');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');

@@ -14,8 +14,8 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/signup.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/signup.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
 <section class="signup-section">
@@ -32,7 +32,7 @@
                 <!-- Just an image -->
                 <nav>
                     <a class="navbar-brand" href="#">
-                        <img src="{{asset('public/assets/images/logo.png')}}" class="img-fluid mx-auto" height="118" width="144" alt="logo">
+                        <img src="{{asset('assets/images/logo.png')}}" class="img-fluid mx-auto" height="118" width="144" alt="logo">
                     </a>
                 </nav>
                 <div class="text-center signup-main">
