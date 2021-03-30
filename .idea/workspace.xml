@@ -23,12 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b23d5c20-191b-45c2-b826-09e44a58c247" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +200,7 @@
       <updated>1616691669531</updated>
       <workItem from="1616691672838" duration="11728000" />
       <workItem from="1616775960922" duration="1399000" />
-      <workItem from="1617094194643" duration="4554000" />
+      <workItem from="1617094194643" duration="6233000" />
     </task>
     <servers />
   </component>
@@ -229,10 +227,11 @@
       <screen x="0" y="25" width="1440" height="820" />
     </state>
     <state x="421" y="190" width="597" height="490" key="find.popup/0.25.1440.820@0.25.1440.820" timestamp="1617135260803" />
-    <state x="385" y="169" width="670" height="676" key="search.everywhere.popup" timestamp="1617135422571">
-      <screen x="0" y="25" width="1440" height="820" />
+    <state x="385" y="169" width="670" height="677" key="search.everywhere.popup" timestamp="1617137832141">
+      <screen x="0" y="25" width="1440" height="821" />
     </state>
     <state x="385" y="169" width="670" height="676" key="search.everywhere.popup/0.25.1440.820@0.25.1440.820" timestamp="1617135422571" />
+    <state x="385" y="169" width="670" height="677" key="search.everywhere.popup/0.25.1440.821@0.25.1440.821" timestamp="1617137832141" />
     <state x="385" y="169" width="670" height="678" key="search.everywhere.popup/0.25.1440.822@0.25.1440.822" timestamp="1617133618482" />
   </component>
   <component name="XDebuggerManager">

@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Angular || Html</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Font and icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/login.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/style.css')}}">
-</head>
-<body>
+@extends('layouts.main')
+@section('title','Obabu Login')
+@section('maincontent')
 <section class="login-section">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-8 col-lg-8 col-xl-8 login-left">
                 <!-- Just an image -->
-                <nav>
-                    <a class="navbar-brand" href="#">
-                        <img src="{{asset('public/assets/images/logo.png')}}" class="img-fluid mx-auto" height="118" width="144" alt="logo">
-                    </a>
-                </nav>
+
                 <div class="text-center login-main">
                     <h1>Log In</h1>
                     <form class="d-flex flex-column align-items-center justify-content-center mt-4" method="POST" action="{{ route('login') }}">
@@ -69,7 +48,7 @@
                             </a>
                         @endif
 
-                        <button class="shadow-lg btn btn-primary mt-2 py-2 px-5" type="submit"> {{ __('Login') }}</button>
+                        <button class="shadow-lg btn btn-primary mt-2 py-2 px-5" type="submit" style="margin-bottom: 20px"> {{ __('Login') }}</button>
 
                     </form>
 
@@ -86,5 +65,4 @@
         </div>
     </div>
 </section>
-</body>
-</html>
+@stop
