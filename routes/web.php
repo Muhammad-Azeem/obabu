@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.index');
 });
+
+Route::get('/main',function(){
+   return view('');
+});
+
+Route::get('/', function () {
+    return view('welcome2');
+});
+Route::get('/users/teachers', [UserController::class, 'teacherListing'])->name('page.teacher-listing');
+Route::get('/users/children', [UserController::class, 'childrenListing'])->name('page.children-listing');
+Route::get('/users/parent', [UserController::class, 'parentListing'])->name('page.parent-listing');
+//    Route::get('login','main\auth@login')->name('login');
+//    Route::get('register','main\auth@register')->name('register');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
