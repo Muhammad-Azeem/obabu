@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <img src="{{asset('public/assets/images/footer-logo.png')}}" class="img-fluid" alt="footer logo">
+                <a href="{{url('/')}}"> <img src="{{asset('public/assets/images/footer-logo.png')}}" class="img-fluid" alt="footer logo"></a>
                 <div class="social-icons mt-3">
                     <!-- <i class="fa fa-facebook"></i> -->
                     <i class='bx bxl-facebook-circle' ></i>

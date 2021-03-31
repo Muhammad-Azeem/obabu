@@ -31,7 +31,7 @@
             <div class="col-12 col-md-8 col-lg-8 col-xl-8 signup-right">
                 <!-- Just an image -->
                 <nav>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{url('/')}}">
                         <img src="{{asset('public/assets/images/logo.png')}}" class="img-fluid mx-auto" height="118" width="144" alt="logo">
                     </a>
                 </nav>
@@ -80,7 +80,7 @@
                                 <i class='bx bxs-lock-alt' ></i>
                               </span>
                             </div>
-                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                         </div>
 

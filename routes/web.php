@@ -28,9 +28,14 @@ Route::get('/', function () {
 Route::get('/users/teachers', [UserController::class, 'teacherListing'])->name('page.teacher-listing');
 Route::get('/users/children', [UserController::class, 'childrenListing'])->name('page.children-listing');
 Route::get('/users/parent', [UserController::class, 'parentListing'])->name('page.parent-listing');
+
 //    Route::get('login','main\auth@login')->name('login');
 //    Route::get('register','main\auth@register')->name('register');
+Route::get('/membership', [\App\Http\Controllers\HomeController::class,'membership'])->name('membership');
+Route::get('/discount_membership', [\App\Http\Controllers\HomeController::class,'discount_membership'])->name('discount_membership');
+Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
+Route::get('/sales', [\App\Http\Controllers\HomeController::class,'sales'])->name('sales');
+Route::get('/about-us', [\App\Http\Controllers\HomeController::class,'about_us'])->name('about_us');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
