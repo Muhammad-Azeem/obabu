@@ -1,31 +1,35 @@
 <header class="header">
     <nav class="navbar navbar-light navbar-expand-lg bg-transparent">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{url('/')}}">
                 <img src="{{asset('public/assets/images/logo.png')}}" class="img-fluid mx-auto" height="114" width="139" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            @php
+            $segment = \Illuminate\Support\Facades\Request::segment(1);
+            @endphp
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link text-white">HOME</a>
+                    <li class="nav-item {{($segment == '') ? 'active' :''}}">
+                        <a class="nav-link text-white" href="{{url('/')}}">HOME</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">ABOUT US</a>
+                    <li class="nav-item {{($segment == 'about-us') ? 'active' :''}}">
+                        <a class="nav-link" href="{{route('about_us')}}">ABOUT US</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">ACTIVITY</a>
+                    <li class="nav-item {{($segment == 'sales') ? 'active' :''}}">
+                        <a class="nav-link" href="{{route('sales')}}">SALES</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">SALES</a>
+                    <li class="nav-item {{($segment == 'membership') ? 'active' :''}}">
+                        <a class="nav-link" href="{{route('membership')}}">MEMBERSHIPS</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{($segment == 'chat_view') ? 'active' :''}}">
                         <a class="nav-link">CHAT VIEW</a>
                     </li>
                     <li class="nav-item">
                     @guest
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
@@ -55,9 +59,11 @@
                         @endguest
                     </li>
                 </ul>
+                @auth
                 <div class="my-2 my-lg-0">
                     <img src="{{asset('public/assets/images/profile.png')}}" alt="User Image" class="img-fluid" width="124" height="124"/>
                 </div>
+                @endauth
             </div>
         </div>
     </nav>

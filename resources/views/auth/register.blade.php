@@ -14,8 +14,8 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/signup.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/signup.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/style.css')}}">
 </head>
 <body>
 <section class="signup-section">
@@ -31,8 +31,8 @@
             <div class="col-12 col-md-8 col-lg-8 col-xl-8 signup-right">
                 <!-- Just an image -->
                 <nav>
-                    <a class="navbar-brand" href="#">
-                        <img src="{{asset('assets/images/logo.png')}}" class="img-fluid mx-auto" height="118" width="144" alt="logo">
+                    <a class="navbar-brand" href="{{url('/')}}">
+                        <img src="{{asset('public/assets/images/logo.png')}}" class="img-fluid mx-auto" height="118" width="144" alt="logo">
                     </a>
                 </nav>
                 <div class="text-center signup-main">
@@ -80,7 +80,7 @@
                                 <i class='bx bxs-lock-alt' ></i>
                               </span>
                             </div>
-                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                         </div>
 

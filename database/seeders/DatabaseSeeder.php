@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Facade\Ignition\Support\Packagist\Package;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            PackageSeeder::class,
+        ]);
     }
 }

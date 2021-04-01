@@ -24,7 +24,7 @@
             <div class="col-12 col-md-8 col-lg-8 col-xl-8 login-left">
                 <!-- Just an image -->
                 <nav>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{url('/')}}">
                         <img src="{{asset('public/assets/images/logo.png')}}" class="img-fluid mx-auto" height="118" width="144" alt="logo">
                     </a>
                 </nav>
@@ -58,11 +58,11 @@
                                     </span>
                             @enderror
                         </div>
-{{--                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
+                        {{--                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
 
-{{--                        <label class="form-check-label" for="remember">--}}
-{{--                            {{ __('Remember Me') }}--}}
-{{--                        </label>--}}
+                        {{--                        <label class="form-check-label" for="remember">--}}
+                        {{--                            {{ __('Remember Me') }}--}}
+                        {{--                        </label>--}}
                         @if (Route::has('password.request'))
                             <a class="btn btn-link" href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}
