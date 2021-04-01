@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     /**
@@ -23,6 +23,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home.index');
     }
+    public function sales()
+    {
+        return view('home.sales');
+    }
+    public function about_us()
+    {
+        return view('home.about_us');
+    }
+    public function membership()
+    {
+        return view('home.membership');
+    } public function discount_membership()
+{
+    return view('home.membership_discount');
+}
 }

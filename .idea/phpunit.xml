@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PHPUnit">
+    <option name="directories">
+      <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/tests/Unit" />
+        <option value="$PROJECT_DIR$/tests/Feature" />
+=======
+        <option value="$PROJECT_DIR$/tests" />
+>>>>>>> 652594051a9f04126cc3370a8b9bb0e76e287e15
+      </list>
+    </option>
+  </component>
+</project>
