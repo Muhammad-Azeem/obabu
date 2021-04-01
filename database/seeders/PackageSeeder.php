@@ -22,6 +22,7 @@ class PackageSeeder extends Seeder
             'discount' => '1',
             'days_per_week' => '20',
             'per_day_price' => '2',
+            'name' => 'path finer'
 
         ]);
 
@@ -46,6 +47,7 @@ class PackageSeeder extends Seeder
             'discount' => '13',
             'days_per_week' => '23',
             'per_day_price' => '23',
+            'name' => 'Explore',
         ]);
 
         PackageOption::create([
@@ -69,6 +71,7 @@ class PackageSeeder extends Seeder
             'discount' => '1',
             'days_per_week' => '3',
             'per_day_price' => '75',
+            'name' => 'adventurer',
         ]);
 
         PackageOption::create([

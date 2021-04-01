@@ -5,7 +5,7 @@
 <head>
     <base href="">
     <meta charset="utf-8" />
-    <title>Obabu</title>
+    <title>CRM</title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -84,7 +84,7 @@
     <!--begin::Layout Skins(used by all pages) -->
 
     <!--end::Layout Skins -->
-    <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico') }}" />
 </head>
 
 <!-- end::Head -->
