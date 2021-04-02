@@ -17,12 +17,12 @@ class PackageSeeder extends Seeder
     {
 
     $package = Package::create([
-            'monthly_price' => '54',
-            'weekly_price' => '3',
-            'discount' => '1',
-            'days_per_week' => '20',
-            'per_day_price' => '2',
-            'name' => 'path finer'
+            'monthly_price' => '60',
+            'weekly_price' => '15',
+            'discount' => '10',
+            'days_per_week' => '3',
+            'per_day_price' => '5',
+            'name' => 'Pathfinder'
 
         ]);
 
@@ -42,11 +42,11 @@ class PackageSeeder extends Seeder
         ]);
 
         $package = Package::create([
-            'monthly_price' => '44',
-            'weekly_price' => '32',
-            'discount' => '13',
-            'days_per_week' => '23',
-            'per_day_price' => '23',
+            'monthly_price' => '80',
+            'weekly_price' => '20',
+            'discount' => '15',
+            'days_per_week' => '5',
+            'per_day_price' => '4',
             'name' => 'Explore',
         ]);
 
@@ -66,11 +66,11 @@ class PackageSeeder extends Seeder
         ]);
 
         $package = Package::create([
-            'monthly_price' => '54',
-            'weekly_price' => '24',
-            'discount' => '1',
-            'days_per_week' => '3',
-            'per_day_price' => '75',
+            'monthly_price' => '100',
+            'weekly_price' => '25',
+            'discount' => '30',
+            'days_per_week' => '5',
+            'per_day_price' => '3',
             'name' => 'adventurer',
         ]);
 

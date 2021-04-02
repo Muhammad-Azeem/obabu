@@ -85,3 +85,61 @@
         </div>
     </div>
 </footer>
+<script>
+    function changePrice(type){
+        $('#type').val(type);
+
+        if (type == 'monthly'){
+            $('.monthly_price').show();
+            $('.weekly_price').hide();
+
+        }else{
+            $('.monthly_price').hide();
+            $('.weekly_price').show();
+
+        }
+    }
+    function changePriceDay(id,price,number,id2,monthly,weekly,discount){
+        var type = $('#type').val();
+        if (discount == null) {
+            var total = number * price;
+        }else {
+            var minus = (number * price/100)*discount;
+            var total = (number * price) - minus;
+
+        }
+
+        if (id2 != 0){
+
+            if (type == 'monthly'){
+                $('.'+id+'-total_price').html('').append(total+'<span>$</span>');
+
+                $('.monthly_price').show();
+                $('.weekly_price').hide();
+
+            }else{
+                $('.'+id+'-total_price1').html('').append(total+'<span>$</span>');
+
+                $('.monthly_price').hide();
+                $('.weekly_price').show();
+
+            }
+        }else{
+            if (type == 'monthly'){
+                $('.'+id+'-total_price').html('').append(monthly+'<span>$</span>');
+
+                $('.monthly_price').show();
+                $('.weekly_price').hide();
+
+            }else{
+                $('.'+id+'-total_price1').html('').append(weekly+'<span>$</span>');
+
+                $('.monthly_price').hide();
+                $('.weekly_price').show();
+
+            }
+        }
+
+
+    }
+</script>

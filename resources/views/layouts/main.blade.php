@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/membership.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/membership2.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/payment.css')}}">
 </head>
 </head>
 <body>

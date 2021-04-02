@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Package;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -33,11 +34,20 @@ class HomeController extends Controller
     {
         return view('home.about_us');
     }
+    public function payment()
+    {
+        return view('home.payment');
+    }
     public function membership()
     {
-        return view('home.membership');
+        $membership = Package::with('options')->whereNull('is_session_count')->get();
+        $session = Package::whereNotNull('is_session_count')->get();
+        return view('home.membership',compact('membership','session'));
     } public function discount_membership()
 {
-    return view('home.membership_discount');
+    $membership = Package::with('options')->whereNull('is_session_count')->get();
+    $session = Package::whereNotNull('is_session_count')->get();
+
+    return view('home.membership_discount',compact('membership','session'));
 }
 }

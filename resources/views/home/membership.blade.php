@@ -29,55 +29,71 @@
                 <p>Select Your Right Plan !</p>
             </div>
             <div class="sessions">
-                <button type="button" class="btn btn-secondary shadow">Monthly Session</button>
+                <button type="button" class="btn btn-secondary shadow" onclick="changePrice('monthly')">Monthly Session</button>
                 <p class="or">OR</p>
-                <button type="button" class="btn btn-primary shadow">Weekly Session</button>
+                <button type="button" class="btn btn-primary shadow" onclick="changePrice('weekly')">Weekly Session</button>
             </div>
         </div>
         <div class="main_tables_spc">
             <div class="container-fluid">
                 <div class="row m-0">
+{{--                    @dd($membership,$session)--}}
+                    @foreach($membership as $key => $m)
                     <div class="col-md-4">
                         <div class="mem_table shadow">
                             <div class="mem_t_head">
+                                @if($key == 0)
                                 <img src="{{asset('public/assets/images/blue.png')}}" class="img-fluid">
-                                <div class="price_mem">
-                                    <div class="price_main">
-                                        <h4>20 <span>$</span></h4>
-                                        <p> Per Monthly </p>
+                                @elseif($key == 1)
+                                    <img src="{{asset('public/assets/images/pink.png')}}" class="img-fluid">
+                                @else
+                                    <img src="{{asset('public/assets/images/green.png')}}" class="img-fluid">
+                                @endif
+                                    <div class="price_mem">
+                                    <div class="price_main monthly_price">
+                                        <h4 class="total_price {{$key}}-total_price">{{$m->monthly_price}} <span>$</span></h4>
+                                        <p> Per Month </p>
                                     </div>
+                                        <div class="price_main weekly_price" style="display: none">
+                                            <h4 class="total_price1 {{$key}}-total_price1">{{$m->weekly_price}} <span>$</span></h4>
+                                            <p> Per Week </p>
+                                        </div>
+                                        <input type="hidden" name="type" id="type" value="monthly">
                                 </div>
                             </div>
                             <div class="mem_t_data">
                                 <div class="name_mem text-center">
-                                    <h3>PATHFINDER</h3>
+                                    <h3>{{strtoupper($m->name)}}</h3>
                                 </div>
                                 <div class="check_p">
-                                    <p> <i class='bx bx-check'></i> 3 Days Per Week </p>
+                                    <p> <i class='bx bx-check'></i> {{$m->days_per_week}} Days Per Week </p>
                                     <p> <i class='bx bx-check'></i> Select Classes Per Day : </p>
                                 </div>
                                 <div class="list_radio_btn">
+                                    @foreach($m->options as $key1 => $o)
+{{--                                    @dd($key1,$m, $o->number)--}}
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option1" checked>
-                                        <label class="form-check-label" for="exampleRadios1">
-                                            2 Classes per day
-                                        </label>
+{{--                                        @if($key1 == 0)--}}
+                                        <input class="form-check-input" type="radio" name="exampleRadios2"  id="exampleRadios-{{$key1}}" value="{{$o->number}}" onclick="changePriceDay('{{$key}}','{{$m->per_day_price}}','{{$o->number}}','{{$key1}}','{{$m->monthly_price}}','{{$m->weekly_price}}',null)" >
+                                            <label class="form-check-label" for="exampleRadios-{{$key1}}">
+                                                {{$o->number}} Classes per day
+                                            </label>
+
+{{--                                        @else--}}
+{{--                                            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios-{{$key1+1}}" value="{{$o->number}}" onclick="changePriceDay('{{$key}}','{{$m->per_day_price}}','{{$o->number}}','{{$key1}}','{{$m->monthly_price}}','{{$m->weekly_price}}')">--}}
+{{--                                                    <label class="form-check-label" for="exampleRadios-{{$key1+1}}">--}}
+{{--                                                        {{$o->number}} Classes per day--}}
+{{--                                                    </label>--}}
+
+{{--                                        @endif--}}
+
+
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="option2">
-                                        <label class="form-check-label" for="exampleRadios2">
-                                            3 Classes per day
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option3">
-                                        <label class="form-check-label" for="exampleRadios3">
-                                            4 Classes per day
-                                        </label>
-                                    </div>
+                                    @endforeach
+
                                 </div>
                                 <div class="pack_btn text-center">
-                                    <button type="button" class="btn">GET PACKAGE</button>
+                                    <a href="{{route('payment')}}"><button type="button" class="btn">GET PACKAGE</button></a>
                                 </div>
                             </div>
                             <div class="position_img">
@@ -85,99 +101,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="mem_table shadow pink_">
-                            <div class="mem_t_head">
-                                <img src="{{asset('public/assets/images/pink.png')}}" class="img-fluid">
-                                <div class="price_mem">
-                                    <div class="price_main">
-                                        <h4>40 <span>$</span></h4>
-                                        <p> Per Monthly </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mem_t_data">
-                                <div class="name_mem text-center">
-                                    <h3>EXPLORER</h3>
-                                </div>
-                                <div class="check_p">
-                                    <p> <i class='bx bx-check'></i> 4 Days Per Week </p>
-                                    <p> <i class='bx bx-check'></i> Select Classes Per Day : </p>
-                                </div>
-                                <div class="list_radio_btn">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios9" value="option1" checked>
-                                        <label class="form-check-label" for="exampleRadios9">
-                                            2 Classes per day
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios4" value="option2">
-                                        <label class="form-check-label" for="exampleRadios4">
-                                            3 Classes per day
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios5" value="option3">
-                                        <label class="form-check-label" for="exampleRadios5">
-                                            4 Classes per day
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pack_btn text-center">
-                                    <button type="button" class="btn">GET PACKAGE</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mem_table shadow green_">
-                            <div class="mem_t_head">
-                                <img src="{{asset('public/assets/images/green.png')}}" class="img-fluid">
-                                <div class="price_mem">
-                                    <div class="price_main">
-                                        <h4>50 <span>$</span></h4>
-                                        <p> Per Monthly </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mem_t_data">
-                                <div class="name_mem text-center">
-                                    <h3>ADVENTURER</h3>
-                                </div>
-                                <div class="check_p">
-                                    <p> <i class='bx bx-check'></i> 5 Days Per Week </p>
-                                    <p> <i class='bx bx-check'></i> Select Classes Per Day : </p>
-                                </div>
-                                <div class="list_radio_btn">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios10" value="option1" checked>
-                                        <label class="form-check-label" for="exampleRadios10">
-                                            2 Classes per day
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios20" value="option2">
-                                        <label class="form-check-label" for="exampleRadios20">
-                                            3 Classes per day
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios30" value="option3">
-                                        <label class="form-check-label" for="exampleRadios30">
-                                            4 Classes per day
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="pack_btn text-center">
-                                    <button type="button" class="btn">GET PACKAGE</button>
-                                </div>
-                            </div>
-                            <div class="rotate_img">
-                                <img src="{{asset('public/assets/images/blue_cartoon.png')}}">
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -188,38 +113,6 @@
             <div class="session_head text-center">
                 <h4>Single Sessions Also Available</h4>
             </div>
-            <!-- <div class="row">
-                <div class="col-md-4">
-                    <div class="session_inp">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadiossession" id="exampleRadiossession" value="option2">
-                          <label class="form-check-label" for="exampleRadiossession">
-                            5 Sessions
-                          </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="session_inp">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadiossession" id="exampleRadiossession2" value="option2">
-                          <label class="form-check-label" for="exampleRadiossession2">
-                            10 Sessions
-                          </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="session_inp">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadiossession" id="exampleRadiossession4" value="option2">
-                          <label class="form-check-label" for="exampleRadiossession4">
-                            20 Sessions
-                          </label>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="custom_radio_main">
                 <div class="custom_radio">
                     <label class="label_container green_color">5 Sessions
@@ -243,4 +136,6 @@
                 </div>
             </div>
         </section>
+
 @stop
+
