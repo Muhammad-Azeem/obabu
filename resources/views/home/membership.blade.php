@@ -126,9 +126,9 @@
                 <div class="custom_radio">
                     @foreach($session as $s)
                     <label class="label_container green_color">{{$s->is_session_count}} Sessions
-                        <input type="radio" checked="checked" name="radio" onclick="buyPackage('{{$m->id}}','session')">
+                        <input type="radio" checked="checked" name="radio" onclick="buyPackage('{{$s->id}}','session')">
                         <span class="checkmark"></span>
-                        <h4>{{$s->is_session_count * $m->per_day_price}} $</h4>
+                        <h4>{{$s->is_session_count * $s->per_day_price}} $</h4>
                     </label>
                     @endforeach
 

@@ -78,7 +78,8 @@ class HomeController extends Controller
         }
         $num = 0;
         $data['package'] = Package::find($request->package_id);
-        if ($data['package']->name){
+//        dd($data['package']->name);
+        if ($data['package']->name != null){
             $num = PackageOption::where('id',$request->option_id)->first();
 //            dd((int)$data['package']->days_per_week * 4);
             if ($request->type == 'monthly') {
