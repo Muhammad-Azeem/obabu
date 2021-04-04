@@ -117,7 +117,7 @@ class HomeController extends Controller
             Transaction::create([
                 'user_id'=>$user->id,
                 'package_id' => $data['package']->id,
-                'price'=>$price
+                'amount'=>$price
             ]);
 
             return redirect('/');
