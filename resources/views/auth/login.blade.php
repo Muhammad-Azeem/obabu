@@ -14,8 +14,8 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/login.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/login.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/style.css')}}">
 </head>
 <body>
 <section class="login-section">

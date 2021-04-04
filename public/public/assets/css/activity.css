@@ -1,0 +1,83 @@
+.activity {
+	 background: linear-gradient(to right, #a1ee9b 50%, #e9e8e8 0%);
+}
+ .activity .activity-box {
+	 border-radius: 30px;
+}
+ .activity .activity-box .border-color {
+	 border: 5px solid #3c1a5b !important;
+}
+ .activity .activity-box .border-radius {
+	 border-radius: 0.4rem !important;
+}
+ .activity .activity-box hr {
+	 padding: 1px;
+	 background-color: #3c1a5b;
+}
+ .activity .activity-box .card {
+	 border-radius: 0.7rem;
+	 background-color: #e9e8e8;
+}
+ .activity .activity-box .bg-card {
+	 background: #b9b2dc;
+}
+ .activity .activity-box .list-box {
+	 background: #a6dae8;
+	 border-radius: 0.7rem;
+	 padding: 1rem;
+}
+ .activity .activity-box .list-box h5 {
+	 color: #3c1a5b;
+}
+ .activity .activity-box .list-box p {
+	 font-size: 0.8rem;
+}
+ .activity .activity-box .list-box-green {
+	 background: #a1ee9b;
+}
+ .activity .activity-box .list-box-g1 {
+	 background: #fee3b8;
+}
+ .activity .activity-box .list-box-g2 {
+	 background: #ebc8d5;
+}
+ .activity .activity-box .list-box-trans {
+	 background: #e9e8e8;
+	 cursor: pointer;
+}
+ .activity .activity-box .bg-thead {
+	 background: #a6dae8;
+}
+ .activity .activity-box .color-accepted {
+	 color: #265b1a !important;
+}
+ .activity .activity-box .tr-accepted {
+	 background-color: #a1ee9b;
+}
+ .activity .activity-box .btn-accepted {
+	 background-color: #034c3c !important;
+}
+ .activity .activity-box .tr-pending {
+	 background-color: #fee3b8;
+}
+ .activity .activity-box .color-pending {
+	 color: #8e6b34 !important;
+}
+ .activity .activity-box .btn-pending {
+	 background-color: #8e6b34 !important;
+}
+ .activity .activity-box .list-group .list-group-item.active {
+	 background-color: #f08da9 !important;
+	 border: none;
+	 color: #3c1a5b;
+	 text-align: center;
+	 font-weight: bold;
+	 font-size: 1.2rem;
+}
+ .activity .activity-box .list-group .list-group-item.bg-list-item1 {
+	 background-color: #b9b2dc !important;
+}
+ .activity .activity-box .list-group .list-group-item.bg-list-item2 {
+	 background-color: #a6dae8 !important;
+}
+ 

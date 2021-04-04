@@ -94,6 +94,7 @@
             $('.weekly_price').hide();
 
         }else{
+            $('input[name="exampleRadios2"]').prop('checked', false);
             $('.monthly_price').hide();
             $('.weekly_price').show();
 
@@ -113,12 +114,13 @@
 
             if (type == 'monthly'){
                 $('.'+id+'-total_price').html('').append(total+'<span>$</span>');
-
+                $('#total_amount').val(total)
                 $('.monthly_price').show();
                 $('.weekly_price').hide();
 
             }else{
                 $('.'+id+'-total_price1').html('').append(total+'<span>$</span>');
+                $('#total_amount').val(total)
 
                 $('.monthly_price').hide();
                 $('.weekly_price').show();
@@ -127,12 +129,14 @@
         }else{
             if (type == 'monthly'){
                 $('.'+id+'-total_price').html('').append(monthly+'<span>$</span>');
+                $('#total_amount').val(monthly)
 
                 $('.monthly_price').show();
                 $('.weekly_price').hide();
 
             }else{
                 $('.'+id+'-total_price1').html('').append(weekly+'<span>$</span>');
+                $('#total_amount').val(weekly)
 
                 $('.monthly_price').hide();
                 $('.weekly_price').show();
@@ -141,5 +145,30 @@
         }
 
 
+    }
+
+    function buyPackage(id,type){
+        if (type == 'session'){
+            $('#is_session').val(1);
+            $('#package_id').val(id);
+            $('#sub_btn').trigger('click');
+        }else{
+            var option = $('input[name="exampleRadios2"]:checked').val();
+            if (option == undefined){
+                swal("Alert", "Select classes per day!", "warning");
+
+            }else {
+                // alert(option)
+
+                $('#package_id').val(id);
+                $('#option_id').val(option);
+                $('#sub_btn').trigger('click');
+            }
+        }
+
+    }
+    function replaceName(){
+        var name = $('.get_name').val();
+        $('.user_name').html('').append(name);
     }
 </script>

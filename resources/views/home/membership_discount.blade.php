@@ -43,7 +43,15 @@
         </div>
     </div>
     <section class="table_membership">
-
+        <form action="{{route('payment')}}" method="post" enctype="multipart/form-data" >
+            @csrf
+            <input type="hidden" name="type" id="type" value="weekly">
+            <input type="hidden" name="total_price" id="total_amount" value="">
+            <input type="hidden" name="package_id" id="package_id" value="">
+            <input type="hidden" name="option_id" id="option_id" value="">
+            <input type="hidden" name="is_session" id="is_session" value="0">
+            <button type="submit" id="sub_btn" style="display: none"></button>
+        </form>
         <div class="main_tables_spc">
             <div class="container-fluid">
                 <div class="row m-0">
@@ -102,7 +110,7 @@
 
                                     </div>
                                     <div class="pack_btn text-center">
-                                        <a href="{{route('payment')}}"><button type="button" class="btn">GET PACKAGE</button></a>
+                                        <button type="button" class="btn" onclick="buyPackage('{{$m->id}}','package')">GET PACKAGE</button>
                                     </div>
                                 </div>
                                 <div class="ribbon ribbon-top-left"><span>{{$m->discount}}% Off</span></div>

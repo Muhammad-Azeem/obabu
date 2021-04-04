@@ -1,0 +1,155 @@
+.sales {
+	 background: url('../images/home_bg_1.png') 0% 0% no-repeat, url('../images/home_bg_2.png') 100% 0% no-repeat, url('../images/home_bg_2.png') 100% 26% no-repeat, url('../images/home_bg_3.png') 0% 26% no-repeat, url('../images/sales-bg.png') 100% 40% no-repeat;
+	 background-size: 40%, 40%, 30%, 50%, 40%;
+	 background-color: #b9b2dc;
+}
+ .sales hr {
+	 margin: 0px;
+	 height: 3vh;
+	 background-color: #ef5455;
+}
+ .sales .banner {
+	 margin-top: 5rem;
+}
+ .sales .banner .banner-details {
+	 padding-left: 2rem;
+}
+ .sales .banner .banner-details .join-website {
+	 background-color: #e9e8e8;
+	 border-radius: 100px;
+	 padding: 0.5rem;
+}
+ .sales .banner .banner-details .join-website .btn-primary {
+	 padding: 8px 15px;
+}
+ .sales .banner .banner-image {
+	 margin-top: -5rem;
+}
+ .sales .fun-happen-here .info-box {
+	 background: url('../images/info-box-right.png') -1% 100% no-repeat, url('../images/info-box-left.png') 101% 0% no-repeat;
+	 background-size: 10%, 10%;
+	 border-radius: 10px;
+	 background-color: #f6f6f6;
+}
+ .sales .membership .membership-left-details {
+	 padding-left: 2rem;
+}
+ .sales .membership .membership-left-details .btn-primary {
+	 padding: 7px 40px;
+}
+ .sales .membership .right-image {
+	 margin-top: -16rem;
+}
+ .sales .membership .left-images {
+	 margin-top: 1rem;
+}
+ .sales .membership .left-images .left-bottom-image {
+	 margin-top: -4.5rem;
+}
+ .sales .membership .membership-right-details {
+	 margin-top: 20rem;
+}
+ .sales .membership .membership-bottom {
+	 margin-top: -8rem;
+}
+ .sales .our-services {
+	 background: url('../images/sales-services-bg-3.png') 0% 100% no-repeat, url('../images/sales-services-bg-4.png') 100% 100% no-repeat, url('../images/sales-services-bg-1.png') 0% 100% no-repeat, url('../images/sales-services-bg-2.png') 100% 100% no-repeat;
+	 background-size: 27%, 27%, 35%, 35%;
+	 position: relative;
+	 background-color: #f6f6f6;
+	 padding-bottom: 4rem;
+}
+ .sales .our-services h2 {
+	 font-size: 3.5rem;
+	 color: #034c3c;
+}
+ .sales .our-services .our-services-image {
+	 position: absolute;
+	 right: 15px;
+	 bottom: 35px;
+	 z-index: 9999;
+}
+ .sales .our-services .card {
+	 border-radius: 20px;
+	 border: none;
+	 background-color: #e9e8e8;
+	 width: 17rem;
+}
+ .sales .our-services .card .card-body {
+	 padding: 0px;
+}
+ .sales .our-services .card .card-img-top {
+	 width: 130px;
+	 height: 130px;
+	 margin: -70px auto 0;
+}
+ .sales .our-services .card .card-footer {
+	 height: 24px;
+	 padding: 0;
+	 border-top: 0px;
+	 background-color: #f3a712;
+	 border-radius: 0 0 20px 20px;
+}
+ .sales .our-services .card .btn-custom {
+	 background-color: #0496ff;
+	 color: white;
+	 border-radius: 100px;
+	 padding: 13px 18px;
+	 opacity: 1;
+	 border: 0px;
+	 transition: 0.3s;
+}
+ .sales .our-services .card .btn-custom:hover {
+	 opacity: 0.8;
+}
+ .sales .our-team {
+	 background: url('../images/sales-team-bg-5.png') 0% 0% no-repeat, url('../images/sales-team-bg-6.png') 100% 0% no-repeat, url('../images/sales-team-bg-3.png') 0% 0% no-repeat, url('../images/sales-team-bg-4.png') 100% 0% no-repeat, url('../images/sales-team-bg-2.png') 100% 0% no-repeat, url('../images/sales-team-bg-1.png') 0% 0% no-repeat;
+	 background-size: contain, contain, 27%, 27%, 35%, 35%;
+	 padding-top: 10rem;
+	 padding-bottom: 15rem;
+	 background-color: #f6f6f6;
+}
+ @media only screen and (max-width: 1199px) {
+	 .sales .membership .right-image {
+		 margin-top: -10rem;
+	}
+	 .sales .membership .membership-bottom {
+		 margin-top: 0;
+	}
+	 .sales .our-services .card {
+		 width: 14rem;
+	}
+}
+ @media only screen and (max-width: 991px) {
+	 .sales .banner .banner-image {
+		 margin-top: -3rem;
+	}
+	 .sales .membership .right-image {
+		 margin-top: 1rem;
+	}
+	 .sales .membership .membership-right-details {
+		 margin-top: 10rem;
+	}
+	 .sales .our-services .card {
+		 width: 11rem;
+	}
+}
+ @media only screen and (max-width: 767px) {
+	 .sales .banner .banner-image {
+		 margin-top: 2rem;
+	}
+	 .sales .membership .right-image {
+		 margin-top: 1rem;
+	}
+	 .sales .membership .membership-right-details {
+		 margin-top: 2rem;
+	}
+	 .sales .our-services .our-services-image {
+		 display: none;
+	}
+	 .sales .our-services .card {
+		 margin: 3.5rem auto;
+		 width: 17rem;
+	}
+}
+ 

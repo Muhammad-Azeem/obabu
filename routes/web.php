@@ -33,7 +33,8 @@ Route::get('/users/parent', [UserController::class, 'parentListing'])->name('pag
 //    Route::get('login','main\auth@login')->name('login');
 //    Route::get('register','main\auth@register')->name('register');
 Route::get('/membership', [\App\Http\Controllers\HomeController::class,'membership'])->name('membership');
-Route::get('/payment', [\App\Http\Controllers\HomeController::class,'payment'])->name('payment');
+Route::post('/payment', [\App\Http\Controllers\HomeController::class,'payment'])->name('payment');
+Route::post('/charge', [\App\Http\Controllers\HomeController::class,'charge'])->name('charge');
 Route::get('/discount_membership', [\App\Http\Controllers\HomeController::class,'discount_membership'])->name('discount_membership');
 Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
 Route::get('/sales', [\App\Http\Controllers\HomeController::class,'sales'])->name('sales');

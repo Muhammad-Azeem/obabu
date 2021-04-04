@@ -37,6 +37,15 @@
         <div class="main_tables_spc">
             <div class="container-fluid">
                 <div class="row m-0">
+                    <form action="{{route('payment')}}" method="post" enctype="multipart/form-data" >
+                        @csrf
+                        <input type="hidden" name="type" id="type" value="monthly">
+                        <input type="hidden" name="total_price" id="total_amount" value="">
+                        <input type="hidden" name="package_id" id="package_id" value="">
+                        <input type="hidden" name="option_id" id="option_id" value="">
+                        <input type="hidden" name="is_session" id="is_session" value="0">
+                        <button type="submit" id="sub_btn" style="display: none"></button>
+                    </form>
 {{--                    @dd($membership,$session)--}}
                     @foreach($membership as $key => $m)
                     <div class="col-md-4">
@@ -74,7 +83,7 @@
 {{--                                    @dd($key1,$m, $o->number)--}}
                                     <div class="form-check">
 {{--                                        @if($key1 == 0)--}}
-                                        <input class="form-check-input" type="radio" name="exampleRadios2"  id="exampleRadios-{{$key1}}" value="{{$o->number}}" onclick="changePriceDay('{{$key}}','{{$m->per_day_price}}','{{$o->number}}','{{$key1}}','{{$m->monthly_price}}','{{$m->weekly_price}}',null)" >
+                                        <input class="form-check-input" type="radio" name="exampleRadios2"  id="exampleRadios-{{$key1}}" value="{{$o->id}}" onclick="changePriceDay('{{$key}}','{{$m->per_day_price}}','{{$o->number}}','{{$key1}}','{{$m->monthly_price}}','{{$m->weekly_price}}',null)" >
                                             <label class="form-check-label" for="exampleRadios-{{$key1}}">
                                                 {{$o->number}} Classes per day
                                             </label>
@@ -93,7 +102,7 @@
 
                                 </div>
                                 <div class="pack_btn text-center">
-                                    <a href="{{route('payment')}}"><button type="button" class="btn">GET PACKAGE</button></a>
+                                    <button type="button" class="btn" onclick="buyPackage('{{$m->id}}','package')">GET PACKAGE</button>
                                 </div>
                             </div>
                             <div class="position_img">
@@ -115,21 +124,14 @@
             </div>
             <div class="custom_radio_main">
                 <div class="custom_radio">
-                    <label class="label_container green_color">5 Sessions
-                        <input type="radio" checked="checked" name="radio">
+                    @foreach($session as $s)
+                    <label class="label_container green_color">{{$s->is_session_count}} Sessions
+                        <input type="radio" checked="checked" name="radio" onclick="buyPackage('{{$m->id}}','session')">
                         <span class="checkmark"></span>
-                        <h4>12 $</h4>
+                        <h4>{{$s->is_session_count * $m->per_day_price}} $</h4>
                     </label>
-                    <label class="label_container purple_color">10 Sessions
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                        <h4>15 $</h4>
-                    </label>
-                    <label class="label_container last_checkbox blue_color">20 Sessions
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                        <h4>20 $</h4>
-                    </label>
+                    @endforeach
+
                 </div>
                 <div class="bottom_main_img">
                     <img src="{{asset('public/assets/images/info-box-after.png')}}" class="img-fluid">
