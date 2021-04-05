@@ -8,16 +8,17 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
     public function teacherListing(){
-        $users = User::get();
-        return view('admin.teacher-listing', compact('users'));
+        $teacherUsers = User::get();
+        return view('admin.users.teacher-listing', compact('teacherUsers'));
     }
     public function childrenListing(){
-        $users = User::get();
-        return view('admin.children-listing', compact('users'));
+        $childrenUsers = User::get();
+        return view('admin.users.children-listing', compact('childrenUsers'));
     }
     public function parentListing(){
-        $users = User::get();
-        return view('admin.parent-listing', compact('users'));
+        $parentUsers = User::get();
+        return view('admin.users.parent-listing', compact('parentUsers'));
     }
 }

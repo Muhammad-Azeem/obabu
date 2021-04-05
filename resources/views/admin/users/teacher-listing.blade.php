@@ -19,8 +19,8 @@
         </tr>
         </thead>
         <tbody>
-        @forelse($users as $key => $user)
-            @if($user->type == 'children')
+        @forelse($teacherUsers as $key => $user)
+            @if($user->type == 'teacher')
             <tr>
             <th>{{$key++}}</th>
             <td>{{$user->photo}}</td>

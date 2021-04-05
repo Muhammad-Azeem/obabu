@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 .header .navbar .navbar-nav {
 	 background-color: rgba(60, 26, 91, 0.15);
 	 border-radius: 100px;
@@ -34,7 +43,7 @@
 		 border-radius: 0px !important;
 	}
 }
- 
+
  .home {
 	 background: url('../images/home_bg_1.png') 0% 0% no-repeat, url('../images/home_bg_2.png') 100% 0% no-repeat, url('../images/home_bg_2.png') 100% 25% no-repeat, url('../images/home_bg_3.png') 0% 26% no-repeat, url('../images/home_bg_1.png') 114% 44% no-repeat;
 	 background-size: 40%, 40%, 30%, 40%, 40%;
@@ -257,7 +266,7 @@
 	 opacity: 0.8;
 	 background-color: #ef5455 !important;
 }
- 
+
 .footer {
 	 background: url('../images/footer-bg-2.png') 0% 0% no-repeat, url('../images/footer-bg-1.png') 100% 0% no-repeat;
 	 background-size: 25%, 23%;
@@ -313,7 +322,7 @@
 }
 .social-icons i {
     font-size: 30px;
-    margin-left: 10px; 
+    margin-left: 10px;
 }
 .social-icons .bxl-facebook-circle {
 	color: #265b1a;
@@ -337,6 +346,6 @@
 		 display: none;
 	}
 }
- 
+
 
 /* end general style */

@@ -19,12 +19,13 @@
         </tr>
         </thead>
         <tbody>
-        @forelse($users as $key => $user)
-            @if($user->type == 'parent')
+        @forelse($childrenUsers as $key => $user)
+            @if($user->type == 'children')
             <tr>
             <th>{{$key++}}</th>
             <td>{{$user->photo}}</td>
             <td>{{$user->name}}</td>
+            <td>{{$user->age}}</td>
             <td></td>
         </tr>
             @endif
