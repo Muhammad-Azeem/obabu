@@ -1,0 +1,53 @@
+.signup-section .navbar {
+	 height: 100px;
+}
+ .signup-section .signup-right {
+	 background: url("../images/left-top.png") 103% 0% no-repeat, url("../images/left-bottom.png") 0% 100% no-repeat;
+	 background-size: 19%, 40%;
+	 height: 100vh;
+	 position: relative;
+	 z-index: 9999;
+	 background-color: #f6f6f6;
+}
+ .signup-section .signup-left {
+	 background-image: url("../images/bg_overlay.png ");
+	 background-position: center;
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-color: #b9b2dc;
+	 height: 100vh;
+}
+ .signup-section .signup-main {
+	 margin-top: -20px;
+}
+ .signup-section .ng-fa-icon {
+	 margin: 1%;
+}
+ .signup-section .input-group-text {
+	 color: #fff !important;
+	 background-color: #f08da9 !important;
+	 cursor: pointer;
+}
+ .signup-section input {
+	 border: none;
+	 border-radius: 5px;
+}
+ .signup-section input.form-control:focus {
+	 box-shadow: none;
+}
+ .signup-section hr {
+	 margin: 2rem auto;
+	 margin-bottom: 1rem;
+	 border: 0;
+	 border-top: 2px solid #ef5455;
+	 width: 15%;
+}
+.input-group-text i {
+  font-size: 20px;
+}
+ @media only screen and (max-width: 992px) {
+	 .signup-section .input-group {
+		 width: 80% !important;
+	}
+}
+ 

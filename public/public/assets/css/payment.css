@@ -1,0 +1,214 @@
+ .payment {
+    background: url(../images/payment_right.png) -44% -2% no-repeat, url(../images/right_membership.png) 120% 0% no-repeat;
+    background-size: 59%, 54%;
+    background-color: #b9b2dc;
+}
+.banner-details {
+	padding-left: 2rem;
+}
+
+.banner-details .signup {
+	padding: 7px 30px;
+}
+
+.payment_cards {
+    padding: 2rem 2rem 2rem 8rem!important;
+    position: relative;
+}
+
+.card_main {
+    background: #A1EE9B;
+    border-radius: 14px;
+    position: relative;
+    margin-bottom: 6rem;
+}
+.card_main .card_title h3 {
+    border-bottom: 1px solid #3C1A5B;
+    margin: 0;
+    padding: 20px 20px 17px;
+    font-weight: 700;
+    color: #265B1A;
+}
+.card_fields {
+    padding: 20px 20px 17px;
+
+}
+
+.custom_input input {
+    border: 2px solid #265B1A !important;
+    border-radius: 30px;
+    padding: 20px;
+    transition: .3s ease-out;
+    margin-bottom: 1rem;
+}
+.custom_input input::placeholder , .custom_input input {
+    font-weight: 600;
+    color: #265B1A;
+    font-size: 16px;
+}
+.custom_input input:focus {
+    outline: none;
+    box-shadow: 0;
+}
+.custom_input.green_inp input:focus {
+    box-shadow: 0 0 0 0.2rem rgb(38 91 26);
+}
+.payment_top_cartoon img {
+width: 14%;
+    position: absolute;
+        top: -37%;
+    left: 4%;
+}
+.payment_bottom_cartoon img {
+    position: absolute;
+    right: 28%;
+    width: 13%;
+    bottom: -38%;
+}
+
+.card_main.chocolate {
+    background: #FEE3B8;
+}
+
+
+
+.card_main.chocolate  .card_title h3 {
+    color: #8E6B34 !important;
+    border-color: #8E6B34 !important;
+}
+
+
+.card_main.chocolate .custom_input input {
+    border-color: #8E6B34 !important;
+}
+
+
+.card_main.chocolate .custom_input.green_inp input:focus {
+    box-shadow: 0 0 0 0.2rem rgb(142 107 52);
+}
+
+
+.card_main.chocolate .custom_input input::placeholder , .custom_input input {
+    color: #8E6B34;
+}
+
+.accept_payment h4 {
+        font-size: 16px;
+    font-weight: 600;
+    color: #8e6b34;
+}
+.align_imgs_inp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.accept_imgs img {
+    width: 40px;
+    margin: 0 10px;
+    transition: .3s ease-out;
+}
+.accept_imgs img:hover {
+    transform: scale(1.1111);
+}
+.checkout_btn {
+    text-align: center;
+}
+.checkout_btn button {
+    background: #EF5455;
+    padding: 8px 58px;
+    border-radius: 30px;
+    color: #fff !important;
+    font-weight: 700;
+    margin-top: 12px;
+    transition: .3s;
+}
+.checkout_btn button:hover {
+    transform: scale(.9);
+}
+
+.checkout_btn button:active {
+    transform: scale(.8);
+}
+
+
+.card_main.blue_card {
+    background: #BCE4E3;
+}
+
+
+
+.card_main.blue_card  .card_title h3 {
+    color: #095178 !important;
+    border-color: #3C1A5B !important;
+}
+
+
+.card_main.blue_card .custom_input input {
+    border-color: #8E6B34 !important;
+}
+
+
+.card_main.blue_card .custom_input.green_inp input:focus {
+    box-shadow: 0 0 0 0.2rem rgb(142 107 52);
+}
+
+
+.card_main.blue_card .custom_input input::placeholder , .custom_input input {
+    color: #8E6B34;
+}
+
+.info_titles , .total {
+    display: flex;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.info_titles h5 , .total h5 {
+        margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #006BA6;
+}
+.info_titles p , .total p {
+    font-size: 17px;
+    margin: 0;
+    padding-left: 1rem;
+    color: #095178;
+    font-weight: 600;
+}
+.manage_order button {
+        background: #0496FF;
+    padding: 7px 65px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.payment_bottom_cartoon_lst img {
+    position: absolute;
+    right: 17%;
+    top: -42%;
+    width: 14%;
+}
+
+.horizontal_line hr {
+    border: 2px solid;
+    border-radius: 4px;
+    position: absolute;
+    width: 60%;
+    top: 45%;
+    transform: rotate(
+90deg
+);
+    left: -24%;
+}
+
+.radio_img img {
+        position: absolute;
+    left: -9.2%;
+    z-index: 9;
+    top: 40%;
+    width: 8%;
+}
+
+/* end general style */
+
+

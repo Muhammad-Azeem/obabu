@@ -1,0 +1,169 @@
+.about-us {
+	 background: url('../images/about-us-bg-1.png') 0% 0% no-repeat, url('../images/about-us-bg-3.png') 100% 0% no-repeat;
+	 background-size: 83%, 35%, 83%, 30%, 40%;
+	 background-color: #b9b2dc;
+}
+ .about-us hr {
+	 margin: 0px;
+	 height: 3vh;
+	 background-color: #b9b2dc;
+}
+ .about-us .about-us-top {
+	 margin-top: 1rem;
+}
+ .about-us .about-us-top .top-details {
+	 padding: 3rem 0 3rem 3rem;
+}
+ .about-us .about-us-section {
+	 background: url('../images/about-us-bg-4.png') 100% 0% no-repeat, url('../images/about-us-bg-5.png') 0% 0% no-repeat, url('../images/about-us-bg-2.png') 100% 0% no-repeat;
+	 background-color: #f6f6f6;
+	 background-size: contain, contain, contain;
+	 padding: 7rem 0rem;
+}
+ .about-us .about-us-section p {
+	 font-size: 1.2rem;
+}
+ .about-us .our-services {
+	 background: url('../images/home_bg_2.png') 100% 43% no-repeat, url('../images/home_bg_1.png') 0% 43% no-repeat;
+	 background-size: 38%, 38%;
+	 position: relative;
+	 background-color: #a6dae8;
+}
+ .about-us .our-services h2 {
+	 font-size: 3.5rem;
+	 color: #095178;
+}
+ .about-us .our-services .our-services-image {
+	 position: absolute;
+	 left: 15px;
+	 bottom: 35px;
+	 z-index: 9999;
+}
+ .about-us .our-services .card {
+	 border-radius: 20px;
+	 border: none;
+	 background-color: #f6f6f6;
+	 width: 17rem;
+}
+ .about-us .our-services .card .card-body {
+	 padding: 0px;
+}
+ .about-us .our-services .card .card-img-top {
+	 width: 130px;
+	 height: 130px;
+	 margin: -70px auto 0;
+}
+ .about-us .our-services .card .card-footer {
+	 height: 24px;
+	 padding: 0;
+	 border-top: 0px;
+	 background-color: #f3a712;
+	 border-radius: 0 0 20px 20px;
+}
+ .about-us .our-services .card .btn-custom {
+	 background-color: #0496ff;
+	 color: white;
+	 border-radius: 100px;
+	 padding: 10px 15px;
+	 opacity: 1;
+	 border: 0px;
+	 transition: 0.3s;
+}
+ .about-us .our-services .card .btn-custom:hover {
+	 opacity: 0.8;
+}
+ .about-us .our-team {
+	 background: url('../images/our-program-bg-3.png') 0% 100% no-repeat, url('../images/our-program-bg-4.png') 100% 100% no-repeat, url('../images/our-program-bg-1.png') 0% 100% no-repeat, url('../images/our-program-bg-2.png') 100% 100% no-repeat;
+	 background-size: 20%, 20%, 30%, 30%;
+	 padding-bottom: 8rem;
+	 background-color: #f6f6f6;
+}
+ .about-us .contact-us {
+	 background: url('../images/home_bg_2.png') 100% 43% no-repeat, url('../images/home_bg_3.png') 0% 43% no-repeat;
+	 background-size: 38%, 38%;
+	 background-color: #a6dae8;
+	 padding-bottom: 7rem;
+}
+ .about-us .contact-us h2 {
+	 color: #095178;
+}
+ .about-us .contact-us .p-right {
+	 font-size: 0.75rem;
+	 color: #095178;
+}
+ .about-us .contact-us .info-box {
+	 position: relative;
+	 background: url('../images/info-box-right.png') -1% 100% no-repeat, url('../images/info-box-left.png') 101% 0% no-repeat;
+	 background-size: 25%, 25%;
+	 border-radius: 10px;
+	 background-color: #f6f6f6;
+}
+ .about-us .contact-us .info-box .info-text-img {
+	 position: absolute;
+	 bottom: -29px;
+	 right: -59px;
+}
+ .about-us .contact-us .contact-us-details {
+	 color: #095178;
+	 padding: 10rem 5rem;
+}
+ .about-us .contact-us .input-group-text {
+	 color: #fff !important;
+	 background-color: #f08da9 !important;
+	 cursor: pointer;
+}
+ .about-us .contact-us input {
+	 border: none;
+	 border-radius: 5px;
+}
+ .about-us .contact-us input.form-control:focus {
+	 box-shadow: none;
+}
+ .about-us .contact-us .form-group label {
+	 color: #095178;
+}
+ .about-us .contact-us button {
+	 background-color: #095178 !important;
+	 padding: 0.5rem 3rem !important;
+}
+ @media only screen and (max-width: 1199px) and (min-width: 992px) {
+	 .about-us .our-services .card {
+		 width: 14rem;
+	}
+}
+ @media only screen and (max-width: 992px) {
+	 .about-us {
+		 background-image: none !important;
+	}
+	 .about-us .our-services .card {
+		 width: 11rem;
+	}
+}
+ @media only screen and (max-width: 767px) {
+	 .about-us .about-us-section {
+		 background: none;
+	}
+}
+ @media only screen and (max-width: 768px) and (min-width: 360px) {
+	 .about-us .about-us-top .top-details {
+		 padding: 1.5rem 0 1.5rem 1.5rem;
+	}
+	 .about-us .our-services .our-services-image {
+		 display: none;
+	}
+	 .about-us .our-services .card {
+		 margin: 3.5rem auto;
+		 width: 17rem;
+	}
+}
+ @media only screen and (max-width: 360px) {
+	 .about-us .about-us-top .top-details {
+		 padding: 0;
+	}
+}
+ @media only screen and (max-width: 320px) {
+	 .about-us .about-us-top h1 {
+		 font-size: 3rem !important;
+	}
+}
+ 
