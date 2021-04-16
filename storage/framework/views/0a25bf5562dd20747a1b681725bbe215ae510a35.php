@@ -70,4 +70,28 @@
         </div>
     </nav>
 </header>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="main_img">
+                <img src="<?php echo e(asset('assets/images/bcha1.png')); ?>" class="img-fluid banner_image">
+                <img src="<?php echo e(asset('assets/images/cover_img.png')); ?>" class="cover_img">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="main_banner">
+                <h1><span>$</span>6.50</h1>
+                <p>PER SESSION FOR THE</p>
+                <h2>Littlest Learners <br>
+                    Prek Live Chat <br>
+                    Small Group</h2>
+                <p class="bottom_p">Prelaunch sale price.</p>
+                <button type="button" class="banner_btn">LIMITED TIME ONLY !</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
 <?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/obabu/resources/views/layouts/header.blade.php ENDPATH**/ ?>
