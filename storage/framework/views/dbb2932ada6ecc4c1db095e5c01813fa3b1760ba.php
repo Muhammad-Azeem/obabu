@@ -17,17 +17,18 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('/assets/css/style.css')); ?>">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 </head>
 <body>
 <main id="app">
-    @include('layouts.header')
-        @section('maincontent')
-        @show
-            @include('layouts.footer')
+    <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php $__env->startSection('maincontent'); ?>
+        <?php echo $__env->yieldSection(); ?>
+            <?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </main>
-    @section('customJs')
+    <?php $__env->startSection('customJs'); ?>
 </body>
 </html>
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/obabu/resources/views/layouts/main.blade.php ENDPATH**/ ?>
