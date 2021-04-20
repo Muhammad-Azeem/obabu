@@ -15,9 +15,9 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/activity.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/membership.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/membership2.css')}}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/activity.css')}}"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/membership.css')}}"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/membership2.css')}}"> --}}
 </head>
 <body>
 <main class="activity">

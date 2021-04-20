@@ -1,8 +1,8 @@
 <footer class="footer p-3">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <a href="{{url('/')}}"> <img src="{{asset('public/assets/images/footer-logo.png')}}" class="img-fluid" alt="footer logo"></a>
+            <div class="col-md-2">
+                <img src="assets/images/footer-logo.png" class="img-fluid" alt="footer logo">
                 <div class="social-icons mt-3">
                     <!-- <i class="fa fa-facebook"></i> -->
                     <i class='bx bxl-facebook-circle' ></i>
@@ -65,14 +65,14 @@
                         <form class="d-flex flex-column align-items-start justify-content-start mt-4">
                             <div class="input-group mb-3 w-100 shadow-sm ">
                                 <div class="input-group-prepend">
-											<span class="input-group-text">
-												<!-- <fa-icon [icon]="faEnvelope"></fa-icon> -->
-												<i class='bx bxs-envelope'></i>
-											</span>
+                                    <span class="input-group-text">
+                                        <!-- <fa-icon [icon]="faEnvelope"></fa-icon> -->
+                                        <i class='bx bxs-envelope'></i>
+                                    </span>
                                 </div>
                                 <input type="email" class="form-control" placeholder="Email" required>
                             </div>
-                            <button class="btn btn-primary shadow-lg mt-3">CONNECT</button>
+                            <button class="btn footer_btn shadow-lg mt-3">CONNECT</button>
                         </form>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-right">
-                <img src="{{asset('public/assets/images/footer.png')}}" class="img-fluid footer-image" alt="footer image"  width="250" height="250">
+                <img src="assets/images/footer.png" class="img-fluid footer-image" alt="footer image"  width="250" height="250">
             </div>
         </div>
     </div>

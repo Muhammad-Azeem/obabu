@@ -1,4 +1,4 @@
-<header class="header">
+{{-- <header class="header">
     <nav class="navbar navbar-light navbar-expand-lg bg-transparent">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{url('/')}}">
@@ -92,3 +92,4 @@
 </div>
 
 </section>
+ --}}

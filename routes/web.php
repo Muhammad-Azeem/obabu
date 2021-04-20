@@ -42,3 +42,13 @@ Route::get('/about-us', [\App\Http\Controllers\HomeController::class,'about_us']
 
 Auth::routes();
 
+// Umair Work
+Route::get('/join', function () {
+    return view('home.join');
+});
+Route::get('/video', function () {
+    return view('home.video');
+});
+Route::get('/success', function () {
+    return view('home.success');
+});
