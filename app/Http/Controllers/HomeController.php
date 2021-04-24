@@ -49,6 +49,18 @@ class HomeController extends Controller
     {
         return view('home.about_us');
     }
+    public function join()
+    {
+        return view('home.join');
+    }
+    public function video()
+    {
+        return view('home.video');
+    }
+    public function success()
+    {
+        return view('home.success');
+    }
     public function payment(Request $request)
     {
 //        dd($request->all());
