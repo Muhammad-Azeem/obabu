@@ -5,66 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9559e81-1fe2-44ca-9782-375037b1c082" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/images/POPO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/PPOPO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Path 679.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Path 680.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Path 681.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Path 682.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Path 683.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Path 685.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Path 686.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/banner_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/banner_bg1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bcha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bcha1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bcha2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/blue_top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bottom_join.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bottom_join1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bottom_joinperfect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/contact.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/cover_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/join.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/join_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/join_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/join_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/join_p4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/join_p5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/left_group.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/logo_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/logo_bg1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/member_right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/ot_header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/other_header_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/pink_top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/right_group.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/signup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/tble_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/tble_top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/team1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/team2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/timeline_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/timeline_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/timeline_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/ul_ct.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/yellow_top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login_old.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register_old.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/footer.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/footer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/0a25bf5562dd20747a1b681725bbe215ae510a35.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/0a25bf5562dd20747a1b681725bbe215ae510a35.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b531bef451cc59132bdd726dfeb55c2b86b63908.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b531bef451cc59132bdd726dfeb55c2b86b63908.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b6f1af82c90a09739817ce409539b1845b7632e9.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b6f1af82c90a09739817ce409539b1845b7632e9.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/dbb2932ada6ecc4c1db095e5c01813fa3b1760ba.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/dbb2932ada6ecc4c1db095e5c01813fa3b1760ba.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/RRdgMo4fyPyF1ouYfNLbXDwb7ukGej3G5FpTHiC8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/TgzzsPW9xKI2gjItK8rP5PbwmAeqYdVKu1lbNim4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/oZt7mLQVzOipDKNwn7sWmr9V7jjz3Xh08ymQNINq" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +196,9 @@
       <updated>1617311244540</updated>
       <workItem from="1617311245677" duration="25647000" />
       <workItem from="1618332702249" duration="5885000" />
-      <workItem from="1618587501860" duration="476000" />
+      <workItem from="1618587501860" duration="2789000" />
+      <workItem from="1618641763366" duration="286000" />
+      <workItem from="1619074693279" duration="537000" />
     </task>
     <servers />
   </component>
