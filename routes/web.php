@@ -52,3 +52,9 @@ Route::get('/video', function () {
 Route::get('/success', function () {
     return view('home.success');
 });
+Route::get('/teacher', function () {
+    return view('home.teacher_profile');
+});
+Route::get('/student', function () {
+    return view('home.student_profile');
+});

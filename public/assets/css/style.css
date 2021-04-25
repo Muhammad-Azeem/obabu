@@ -821,9 +821,9 @@ p {
 
 .join_head img {
     position: absolute;
-    top: -60%;
-    width: 20%;
-    right: 14%;
+    top: -149%;
+    width: 36%;
+    right: 9%;
 }
 
 .yellow_tr th {
@@ -976,7 +976,7 @@ p {
    height: 100px;
 }
  .login-section .login-left {
-    height: 100vh;
+    /*height: 100vh;*/
     background-image: url(../images/login.png);
     position: relative;
     z-index: 9999;
@@ -989,7 +989,7 @@ p {
 }
  .login-section .login-right {
    background-color: #663086;
-   height: 100vh;
+   /*height: 100vh;*/
 }
  .login-section .login-right h2 {
     color: #FAC61A;
@@ -1096,14 +1096,12 @@ p {
      z-index: 9999;
     background-image: url(../images/signup.png);
     position: relative;
-    height: 100vh;
     z-index: 9999;
     background-position: bottom;
     background-size: cover;
 }
  .signup-section .signup-left {
      background-color: #663086;
-     height: 100vh;
 }
  .signup-section .signup-main {
      margin-top: -20px;
@@ -1386,12 +1384,12 @@ filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.19));
     left: 6%;
     width: 19%;
 }
-.bottom_main_img .left_img {
+.bottom_main_img .left_img  , .left_img {
     position: absolute;
     top: -14px;
     left: -105px;
 }
-.bottom_main_img .right_img {
+.bottom_main_img .right_img  , .right_img {
 
     position: absolute;
     right: -118px;
@@ -2072,4 +2070,467 @@ border-radius: 30px;
     z-index: 99;
     filter: none;
     box-shadow: none;
+}
+/*Teacher Profile*/
+.profile_section  h3 {
+    margin-top: 16px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #20bcc9;
+}
+.profile_section  a {
+    display: block;
+    color: #fc22b6;
+    font-weight: 600;
+}
+.profile_section  button {
+    margin-top: 1.5rem;
+    background: #3c1a5b;
+    filter: drop-shadow(6px 6px 12px rgba(0, 0, 0, 0.26));
+    padding: 8px 24px;
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    border-radius: 30px;
+    font-weight: 600;    
+}
+.teacher_data , .intrest_info {
+    background: transparent;
+    border: 5px solid #fc22b6;
+    border-radius: 20px;
+    padding: 30px 20px 20px;
+    box-shadow: inset 1px 1px 10px 0px #80808094;
+    margin-bottom: 1rem;
+}
+.about_teacher h3 , .intrest_info h3 {
+    color: #fc22b6;
+}
+.per_info {
+    background: transparent;
+    border: 5px solid #707070;
+    border-radius: 20px;
+    padding: 22px 20px 20px;
+    box-shadow: inset 1px 1px 10px 0px #80808094;
+    margin-bottom: 1rem;
+}
+.per_info_head  i {
+    font-size: 26px;
+}
+.info_detail {
+    margin-top: 1.3rem;
+}
+.info_detail h3 {
+    font-size: 17px;
+    margin-bottom: 1rem;
+    color: #fc22b6;
+}
+.info_detail p {
+    margin-bottom: 8px;
+}
+.intrest_info {
+    padding-top: 22px !important;
+}
+.intrst_img p {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.intrst_img {
+    text-align: center;
+        margin-top: 10px;
+}
+.intrst_img img {
+    width: 60px;
+}
+.edu_sec {
+    border: 5px solid #20bcc9;
+    background: transparent;
+    border-radius: 20px;
+    padding: 30px 20px 20px;
+    box-shadow: inset 1px 1px 10px 0px #80808094;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.main_edu {
+    display: flex;
+    align-items: center;
+}
+.edu_img img {
+    width: 65px;
+}
+.edu_data {
+    padding-left: 16px;
+}
+.edu_data h3 {
+    font-size: 18px;
+    color: #20BCC9;
+}
+.edu_data h5 {
+    font-size: 14px;
+    margin-bottom: 1px;
+    color: #FAC61A;
+    font-weight: 800;
+}
+.edu_data p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.add_edu_mrgin {
+    margin-top: 25px;
+}
+.languag_main {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 37px;
+}
+.languag_main img {
+    width: 62px;
+}
+.languag_name {
+    padding-left: 10px;
+}
+.languag_name h4 {
+    color: #663086;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+.languag_name p {
+    font-size: 14px;
+    color: #20BCC9;
+    margin: 0;
+}
+.yellow_head h3 , .yellow_head i {
+    color: #FAC61A !important;
+}
+.languag_sec {
+    background: transparent;
+    border: 5px solid #fac61a;
+    border-radius: 20px;
+    padding: 22px 20px 20px;
+    box-shadow: inset 1px 1px 10px 0px #80808094;
+    margin-bottom: 2rem;
+}
+.pink_head i {
+    color: #fc22b6 !important; 
+}
+.teacher_navbar {
+    border-radius: 100px;
+    backdrop-filter: blur(30px);
+    --webkit-backdrop-filter: blur(30px);
+    background-color: rgba(0, 0, 0, 0.12) !important;
+}
+.edit_icon {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+}
+.edit_icon i {
+    font-size: 24px;
+    color: #20bcc9;
+}
+/*Teavher info 2*/
+.tch_info_head , ._main_image_haed_ad  {
+    border-bottom: 2px solid #fac61a;
+    position: relative;
+}
+.tch_info_head h3 , .tch_info_head i {
+    color: #20BCC9;
+}
+.tch_info_head i {
+    font-size: 24px;
+}
+.tch_details .info_detail p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.profile_section.profile_section2 h3 {
+    margin-top: 0px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #fac61a;
+    margin-bottom: 4px;
+}
+.profile_section.profile_section2 a {
+    color: #fc22b6;
+    font-size: 14px
+}
+.change_profie_clr {
+    margin-top: 2rem;
+}
+.profile_section.change_profie_clr h3 {
+    font-size: 22px;
+    margin-top: 0px;
+    color: #663086;
+    margin-bottom: 4px;
+}
+.profile_section.change_profie_clr a {
+    font-size: 14px;
+    color: #20BCC9;
+}
+._main_image_haed_ad {
+    margin-top: 5rem;
+}
+.profile_section2 img , .change_profie_clr img   {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+.intrest_poision {
+    position: absolute;
+    top: -60px;
+    width: 28%;
+    right: 39px;
+}
+.hobbies_sections {
+    border: 5px solid #20bcc9;
+    background: transparent;
+    border-radius: 20px;
+    padding: 12px 12px 12px;
+    box-shadow: inset 1px 1px 10px 0px #80808094;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.images_hobby {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.img_hobby.text-center img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+.img_hobby p {
+    margin: 0;
+    font-size: 10px;
+}
+.blue_color p {
+    color: #20BCC9 !important;
+}
+.yellow_color p {
+    color: #f0be18 !important;
+}
+.pink_color p {
+    color: #f921b3 !important; 
+}
+/*.hobbies h3  {
+    font-size: 20px;
+}*/
+.edu_sec.edu_sec2 {
+    border-color: #fc22b6;
+}
+.edu_sec.edu_sec2 img {
+    width: 100px;
+}
+.edu_sec2 .edu_data h3 {
+color: #fac61a;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+.edu_sec2 .edu_data h5 {
+    color: #fc22b6;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+.edu_sec.edu_sec2 .edu_data {
+    padding-left: 30px;
+}
+.languag_sec2 .yellow_head h3,.languag_sec2 .yellow_head i {
+    color: #3C1A5B !important;
+}
+/*Booking*/
+.catergories_tech h2 {
+    border-bottom: 2px solid #FAC61A;
+    font-size: 2rem;
+    color: #fc22b6;
+}
+.category_list img {
+    width: 100px;
+    margin-top: 2rem;
+}
+.category_list p {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+.tech_techer .purple_fill {
+    background: #663086;
+    color: #fff;
+}
+.tech_techer .blue_fill {
+    background: #20BCC9;
+    color: #fff;
+}
+.tech_techer .pink_fill {
+    background: #FC22B6;
+    color: #fff;
+}
+.tech_techer .yellow_fill {
+    background: #FAC61A;
+    color: #fff;
+}
+.tech_techer .fic_Width .stu_detail p {
+    color: #fff;
+    font-size: 14px;
+}
+.tech_techer .time_date p {
+    color: #fff;
+}
+.blue_fill td {
+    border-color: #20BCC9;
+}
+.yellow_fill td {
+    border-color: #FAC61A;
+}
+.pink_fill td {
+    border-color: #FC22B6;
+}
+.purple_fill th {
+    border-color: #663086;
+}
+.purple_fill td {
+    border-color: #663086;
+}
+.tech_techer table {
+    white-space: nowrap;
+    width: 100%;
+}
+.tech_techer .join_head h3 {
+    font-weight: 400;padding-bottom: 4px;font-size: 2rem;border: none;
+}
+.tech_techer .join_head {
+        border-bottom: 2px solid #fc22b6;
+            display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.tech_techer .jn_tbl th,.tech_techer .jn_tbl td {
+    font-size: 14px;
+}
+.tech_techer .time_date p {
+    color: #fff;
+    font-size: 14px;
+}
+.main_fil_link img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.main_fil_link {
+    display: flex;
+    align-items: center;
+    padding: 8px 18px;
+}
+.main_fil_link p {
+    margin: 0;
+        font-size: 12px;
+    padding-left: 15px;
+    color: #fff;
+}
+.yellow_fill {
+    background: #f8c51d;
+        border-radius: 8px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+.purple_fill {
+    background: #663086;
+        border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.pink_fill {
+    background: #fb22b5;
+        border-radius: 8px;
+    margin-bottom: 1rem;
+}
+/*Coming Soon*/
+.coming_soon_sec h2 {
+        color: #663086;
+}
+.coming_soon_sec p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.coming_soon_sec .bar_coming {
+    border-radius: 34.5px;
+    background: #f08da9;
+    height: 30px;
+    margin-bottom: 2rem;
+}
+.coming_soon_sec button {
+    background: #ef5455;
+    filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.24));
+    border-radius: 30px;
+    padding: 8px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+.main_coming  {
+    width: 37%;
+    margin: 0 auto;
+}
+.coming_soon_sec {
+    position: relative;
+        margin-top: 13rem;
+    margin-bottom: 11rem;
+}
+.coming_soon_sec .left_img {
+    left: 25px !important;
+}
+.coming_soon_sec .right_img {
+    right: 60px !important;
+}
+
+.custom_checkbox .form-group {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.custom_checkbox .form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;.custom_checkbox 
+}
+
+.custom_checkbox .form-group label {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  color: #3C1A5B;
+}
+
+.custom_checkbox .form-group label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #663086;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.custom_checkbox .form-group input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #663086;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
