@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('title','Obabu Home')
 @section('maincontent')
+
     <section class="payment_cards">
         <div class="container-fluid">
             <div class="card_main yellow_card">
