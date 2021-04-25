@@ -58,3 +58,6 @@ Route::get('/teacher', function () {
 Route::get('/student', function () {
     return view('home.student_profile');
 });
+Route::get('/coming-soon', function () {
+    return view('home.coming-soon');
+});
