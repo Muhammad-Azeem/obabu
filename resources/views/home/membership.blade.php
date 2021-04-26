@@ -74,7 +74,7 @@
                                             </div>
 
                                     </div>
-                                    </div>
+                                    
                                     <div class="mem_t_data">
                                         <div class="name_mem text-center">
                                             <h3>{{strtoupper($m->name)}}</h3>
@@ -112,7 +112,7 @@
                                     </div>
                                     @if(isset($m->discount))<div class="ribbon ribbon-top-left"><span>{{$m->discount}}% Off</span></div>@endif
                                 </div>
-
+                            </div>
                             @endforeach
 
 
@@ -131,7 +131,7 @@
             <div class="custom_radio_main">
                 <div class="custom_radio">
                     @foreach($session as $s)
-                        <label class="label_container green_color">{{$s->is_session_count}} Sessions
+                        <label class="label_container blue_radio">{{$s->is_session_count}} Sessions
                             <input type="radio" checked="checked" name="radio" onclick="buyPackage('{{$s->id}}','session')">
                             <span class="checkmark"></span>
                             <h4>{{$s->is_session_count * $s->per_day_price}} $</h4>

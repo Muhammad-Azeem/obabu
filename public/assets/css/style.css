@@ -1490,9 +1490,9 @@ filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.19));
     border-color: #FC22B6 !important;
 }
 .payment_top_cartoon img {
-width: 14%;
+width: 13%;
     position: absolute;
-        top: -37%;
+    top: -36%;
     left: 4%;
 }
 .payment_bottom_cartoon img {
@@ -1590,11 +1590,11 @@ width: 14%;
     color: #20BCC9;
 }
 
-.info_titles , .total {
+/*.info_titles , .total {
     display: flex;
     text-align: center;
     margin-bottom: 8px;
-}
+}*/
 .info_titles h5 , .total h5 {
         margin: 0;
     font-size: 18px;
@@ -1608,12 +1608,26 @@ width: 14%;
     color: #20BCC9;
     font-weight: 600;
 }
+.info_titles, .total {
+    display: flex;
+    text-align: center;
+    margin-bottom: 8px;
+}
 .manage_order button {
         background: #20bcc9;
     padding: 7px 65px;
     color: #fff;
     font-weight: 700;
     border-radius: 5px;
+}
+.yellow_inp input {
+        color: #fac61a !important   ;
+}
+.yellow_inp input:focus {
+    box-shadow: 0 0 0 0.2rem rgb(250 198 26);
+}
+.align_total {
+    width: max-content;
 }
 .align_total .total {
     border-top: 4px solid #20bcc9;
@@ -1624,7 +1638,7 @@ width: 14%;
     position: absolute;
     right: 17%;
     top: -42%;
-    width: 14%;
+    width: 12%;
 }
 
 .horizontal_line hr {
