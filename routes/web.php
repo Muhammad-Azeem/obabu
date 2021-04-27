@@ -47,6 +47,7 @@ Route::post('/users/childrens', [UserController::class, 'store'])->name('page.st
 
 //interest
 Route::get('/interest', [InterestController::class, 'index'])->name('interest.index');
+Route::get('/hobby', [InterestController::class, 'hobbyIndex'])->name('hobby.index');
 Route::get('/interest/create', [InterestController::class, 'create'])->name('interest.create');
 Route::post('/interest/', [InterestController::class, 'store'])->name('interest.store');
 Route::get('/interest/{id}/edit', [InterestController::class, 'edit'])->name('interest.edit');

@@ -18,8 +18,13 @@ class InterestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $interests = Interest::all();
+        $interests = Interest::where('type', 'interest')->get();
         return view('admin.interest.index', compact('interests'));
+    }
+
+    public function hobbyIndex(){
+        $interests = Interest::where('type', 'hobbies')->get();
+        return view('admin.interest.hobbyindex', compact('interests'));
     }
 
     /**
@@ -59,7 +64,12 @@ class InterestController extends Controller
                 }
             
             $interest = Interest::create($data);
-        return redirect()->route('interest.index')->with('success', 'Interest has been added successfully');    
+            if($interest->type == 'interest'){
+                return redirect()->route('interest.index')->with('success', 'Interest has been added successfully');    
+            }else{
+                return redirect()->route('hobby.index')->with('success', 'Interest has been added successfully');     
+            }
+         
     }
 
     /**
