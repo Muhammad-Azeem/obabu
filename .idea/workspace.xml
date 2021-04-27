@@ -1,66 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
   <component name="ChangeListManager">
-    <list default="true" id="6dce8098-7865-40a6-ba99-38a35886e517" name="Default Changelist" comment="" />
-=======
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="b23d5c20-191b-45c2-b826-09e44a58c247" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+    <list default="true" id="426e5b44-9acb-4f4c-bea9-57af7c5504bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/obabu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/obabu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/children-listing.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/parent-listing.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/teacher-listing.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navigation/nav-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navigation/nav-admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_30_205707_create_package_options_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_30_205707_create_package_options_table.php" afterDir="false" />
->>>>>>> 16c63f249202d08d86ed847d39da04af1806e808
     </list>
->>>>>>> f4b62df3d0922612ebad99254d9dab55fc586ab5
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
-  <component name="ComposerSettings">
-=======
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
->>>>>>> f4b62df3d0922612ebad99254d9dab55fc586ab5
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-<<<<<<< HEAD
-  <component name="ProjectId" id="1qUTAv9LDBzgBt8A8v1pQr5faGo" />
-=======
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -171,35 +133,10 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
-      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
-<<<<<<< HEAD
-=======
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
-      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
-      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
-      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
->>>>>>> 16c63f249202d08d86ed847d39da04af1806e808
     </include_path>
   </component>
-  <component name="ProjectId" id="1qG2aF0vuNXHfQvYRxhc32J2rER" />
-<<<<<<< HEAD
+  <component name="ProjectId" id="1r5K6GegcG02XDHS6eSIPmfzV8g" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
->>>>>>> f4b62df3d0922612ebad99254d9dab55fc586ab5
-=======
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
->>>>>>> c1c0b8170876720003f165d4c4fa0beefe08e59a
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -208,147 +145,37 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../crm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\obabu" />
-    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6dce8098-7865-40a6-ba99-38a35886e517" name="Default Changelist" comment="" />
-      <created>1617133029125</created>
+      <changelist id="426e5b44-9acb-4f4c-bea9-57af7c5504bb" name="Default Changelist" comment="" />
+      <created>1618260335573</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1617133029125</updated>
-      <workItem from="1617133035692" duration="819000" />
-=======
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
->>>>>>> 71f2c2c645fe1bf91a7ef9dfc9ae8c15ec30d6ab
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
->>>>>>> c1c0b8170876720003f165d4c4fa0beefe08e59a
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
->>>>>>> 652594051a9f04126cc3370a8b9bb0e76e287e15
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/home" />
-      <recent name="$PROJECT_DIR$/public/assets/css" />
-      <recent name="$PROJECT_DIR$/public/assets/images" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/routes" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="b23d5c20-191b-45c2-b826-09e44a58c247" name="Default Changelist" comment="" />
-      <created>1616691669531</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1616691669531</updated>
-      <workItem from="1616691672838" duration="11728000" />
-      <workItem from="1616775960922" duration="1399000" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <workItem from="1617094194643" duration="2328000" />
->>>>>>> f4b62df3d0922612ebad99254d9dab55fc586ab5
-=======
-      <workItem from="1617094194643" duration="3138000" />
->>>>>>> 71f2c2c645fe1bf91a7ef9dfc9ae8c15ec30d6ab
-=======
-      <workItem from="1617094194643" duration="3441000" />
->>>>>>> c1c0b8170876720003f165d4c4fa0beefe08e59a
-=======
-      <workItem from="1617094194643" duration="6664000" />
-      <workItem from="1617209271404" duration="8162000" />
->>>>>>> 652594051a9f04126cc3370a8b9bb0e76e287e15
+      <updated>1618260335573</updated>
+      <workItem from="1618260347632" duration="685000" />
+      <workItem from="1618751468852" duration="590000" />
+      <workItem from="1618769206702" duration="50000" />
+      <workItem from="1618769291028" duration="596000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-<<<<<<< HEAD
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617133763149">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1618260441353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617133763149" />
-=======
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="467" y="283" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1617136139936">
-      <screen x="0" y="25" width="1440" height="822" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618260441353" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618769255167">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="467" y="283" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1440.822@0.25.1440.822" timestamp="1617136139936" />
-    <state x="421" y="190" width="597" height="490" key="find.popup" timestamp="1617135260803">
-      <screen x="0" y="25" width="1440" height="820" />
-    </state>
-    <state x="421" y="190" width="597" height="490" key="find.popup/0.25.1440.820@0.25.1440.820" timestamp="1617135260803" />
-    <state x="385" y="169" width="670" height="678" key="search.everywhere.popup" timestamp="1617222780721">
-      <screen x="0" y="25" width="1440" height="822" />
-    </state>
-    <state x="385" y="169" width="670" height="676" key="search.everywhere.popup/0.25.1440.820@0.25.1440.820" timestamp="1617135422571" />
-    <state x="385" y="169" width="670" height="677" key="search.everywhere.popup/0.25.1440.821@0.25.1440.821" timestamp="1617137832141" />
-    <state x="385" y="169" width="670" height="678" key="search.everywhere.popup/0.25.1440.822@0.25.1440.822" timestamp="1617222780721" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/auth/login.blade.php</url>
-          <line>74</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/welcome.blade.php</url>
-          <line>26</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
->>>>>>> f4b62df3d0922612ebad99254d9dab55fc586ab5
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618769255167" />
   </component>
 </project>
