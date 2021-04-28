@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\SiteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\PackageController;
+use App\Http\Controllers\Admin\InterestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +26,48 @@ Route::get('/main',function(){
    return view('');
 });
 
-//Route::get('/', function () {
-//    return view('welcome2');
-//});
-Route::get('/users/teachers', [UserController::class, 'teacherListing'])->name('page.teacher-listing');
-Route::get('/users/children', [UserController::class, 'childrenListing'])->name('page.children-listing');
-Route::get('/users/parent', [UserController::class, 'parentListing'])->name('page.parent-listing');
+
+Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard');
+
+Route::get('/users/teacher', [UserController::class, 'teacherIndex'])->name('page.teacher-index');
+Route::get('/users/children', [UserController::class, 'childrenIndex'])->name('page.children-index');
+Route::get('/users/parent', [UserController::class, 'parentIndex'])->name('page.parent-index');
+
+Route::get('/users/teacher/create', [UserController::class, 'teacherCreate'])->name('page.teachercreate');
+Route::get('/users/children/create', [UserController::class, 'childrenCreate'])->name('page.childrencreate');
+Route::get('/users/parent/create', [UserController::class, 'parentCreate'])->name('page.parentcreate');
+
+Route::get('/users/teacher/{id}/edit', [UserController::class, 'edit'])->name('teacher.edit');
+Route::get('/users/children/{id}/edit', [UserController::class, 'edit'])->name('children.edit');
+Route::get('/users/parent/{id}/edit', [UserController::class, 'edit'])->name('parent.edit');
+
+Route::put('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
+
+Route::post('/users/childrens', [UserController::class, 'store'])->name('page.store');
+
+//interest
+Route::get('/interest', [InterestController::class, 'index'])->name('interest.index');
+Route::get('/hobby', [InterestController::class, 'hobbyIndex'])->name('hobby.index');
+Route::get('/interest/create', [InterestController::class, 'create'])->name('interest.create');
+Route::post('/interest/', [InterestController::class, 'store'])->name('interest.store');
+Route::get('/interest/{id}/edit', [InterestController::class, 'edit'])->name('interest.edit');
+Route::put('/interest/{id}/update', [InterestController::class, 'update'])->name('interest.update');
+Route::delete('/interest/{id}', [InterestController::class, 'destroy'])->name('interest.destroy');
+
+
+
+
+Route::get('/packages/subscriber', [PackageController::class, 'subscriberIndex'])->name('subscriber.index');
+Route::get('/packages/subscriber/{package}/edit', [PackageController::class, 'subscriberEdit'])->name('subscriber.edit');
+Route::put('/packages/subscriber/{package}/update', [PackageController::class, 'subscriberUpdate'])->name('subscriber.update');
+Route::delete('/packages/subscriber/{package}/delete', [PackageController::class, 'subscriberDestroy'])->name('subscriber.destroy');
+
+
+
+Route::get('/packages/package', [PackageController::class, 'packageIndex'])->name('package.index');
+Route::get('/packages/package/{package}/edit', [PackageController::class, 'packageEdit'])->name('package.edit');
+Route::put('/packages/package/{package}/update', [PackageController::class, 'packageUpdate'])->name('package.update');
+Route::delete('/packages/package/{package}/delete', [PackageController::class, 'destroy'])->name('package.destroy');
 
 //    Route::get('login','main\auth@login')->name('login');
 //    Route::get('register','main\auth@register')->name('register');
