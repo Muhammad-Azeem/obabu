@@ -111,3 +111,10 @@ Route::get('/student', function () {
 Route::get('/coming-soon', function () {
     return view('home.coming-soon');
 });
+
+Route::get('/community-teacher', function () {
+    return view('home.community');
+});
+Route::get('/community-student', function () {
+    return view('home.community_student');
+});
