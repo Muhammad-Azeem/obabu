@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\InterestController;
+use App\Http\Controllers\VideoStreamingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,19 @@ use App\Http\Controllers\Admin\InterestController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Route::get('/',function() => view('welcome'));
 
-Route::get('/', function () {
-    return view('home.index');
+Route::get('/rooms', [VideoStreamingController::class,'index'])->name('room.index');
+
+Route::group(['prefix' => 'room' , 'as' => 'room.'],function() {
+
+    Route::get('join/{room}', [VideoStreamingController::class, 'join'])->name('join');
+    Route::post('create', [VideoStreamingController::class, 'create'])->name('create');
+
+    Route::get('/', function () {
+        return view('home.index');
+
+    });
 });
 
 
