@@ -118,3 +118,7 @@ Route::get('/community-teacher', function () {
 Route::get('/community-student', function () {
     return view('home.community_student');
 });
+
+Route::get('/activity', function () {
+    return view('home.activity');
+});
