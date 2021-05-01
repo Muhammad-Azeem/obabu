@@ -197,6 +197,10 @@ p {
     transition: 0.3s;
 }
 
+.activity_header .navbar .navbar-nav .active {
+    background-color: #3c1a5b !important;
+}
+
 .header .navbar .navbar-nav .active:hover {
     opacity: 0.8;
 }
@@ -2312,6 +2316,7 @@ border-radius: 30px;
     background-position: right;
     background-position-y: bottom;
     background-size: 52%;
+    padding-bottom: 2rem;
 }
 .tch_info_head h3 , .tch_info_head i {
     color: #20BCC9;

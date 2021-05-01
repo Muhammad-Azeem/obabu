@@ -45,7 +45,7 @@
 		<main id="app">
 			<section class="about_us_main">
 				<div class="header_main">
-					<header class="header ot_headers ot_padding">
+					<header class="header ot_headers ot_padding activity_header">
 						<nav class="navbar navbar-light navbar-expand-lg bg-transparent">
 							<div class="container-fluid">
 								<a class="navbar-brand" href="#">
