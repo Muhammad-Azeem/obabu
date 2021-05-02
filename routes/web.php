@@ -26,12 +26,12 @@ Route::group(['prefix' => 'room' , 'as' => 'room.'],function() {
     Route::get('join/{room}', [VideoStreamingController::class, 'join'])->name('join');
     Route::post('create', [VideoStreamingController::class, 'create'])->name('create');
 
-    Route::get('/', function () {
-        return view('home.index');
 
-    });
 });
+Route::get('/', function () {
+    return view('home.index');
 
+});
 
 Route::get('/main',function(){
    return view('');
@@ -90,6 +90,10 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name
 Route::get('/sales', [\App\Http\Controllers\HomeController::class,'sales'])->name('sales');
 Route::get('/about-us', [\App\Http\Controllers\HomeController::class,'about_us'])->name('about_us');
 
+
+Route::post('update_user_profile','user\studentController@updateProfile')->name('update_user_profile');
+Route::post('update_student_education','user\studentController@updateEducation')->name('update_student_education');
+Route::post('edit_language','user\userController@updateLanguage')->name('edit_language');
 Auth::routes();
 
 // Umair Work
@@ -105,9 +109,7 @@ Route::get('/success', function () {
 Route::get('/teacher', function () {
     return view('home.teacher_profile');
 });
-Route::get('/student', function () {
-    return view('home.student_profile');
-});
+Route::get('/student', 'user\studentController@studentProfile');
 Route::get('/coming-soon', function () {
     return view('home.coming-soon');
 });
