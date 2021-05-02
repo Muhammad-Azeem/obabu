@@ -43,16 +43,18 @@ Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard'
 Route::get('/users/teacher', [UserController::class, 'teacherIndex'])->name('page.teacher-index');
 Route::get('/users/children', [UserController::class, 'childrenIndex'])->name('page.children-index');
 Route::get('/users/parent', [UserController::class, 'parentIndex'])->name('page.parent-index');
+Route::get('/users/coordinator', [UserController::class, 'coordinatorIndex'])->name('page.coordinator-index');
 
 Route::get('/users/teacher/create', [UserController::class, 'teacherCreate'])->name('page.teachercreate');
 Route::get('/users/children/create', [UserController::class, 'childrenCreate'])->name('page.childrencreate');
 Route::get('/users/parent/create', [UserController::class, 'parentCreate'])->name('page.parentcreate');
+Route::get('/users/coordinator/create', [UserController::class, 'coordinatorCreate'])->name('page.coordinatorCreate');
 
 Route::get('/users/teacher/{id}/edit', [UserController::class, 'edit'])->name('teacher.edit');
 Route::get('/users/children/{id}/edit', [UserController::class, 'edit'])->name('children.edit');
 Route::get('/users/parent/{id}/edit', [UserController::class, 'edit'])->name('parent.edit');
 
-Route::put('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
+Route::post('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
 
 Route::post('/users/childrens', [UserController::class, 'store'])->name('page.store');
 
@@ -119,4 +121,8 @@ Route::get('/community-teacher', function () {
 });
 Route::get('/community-student', function () {
     return view('home.community_student');
+});
+
+Route::get('/activity', function () {
+    return view('home.activity');
 });

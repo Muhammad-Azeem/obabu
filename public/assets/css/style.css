@@ -324,6 +324,10 @@ p {
     transition: 0.3s;
 }
 
+.activity_header .navbar .navbar-nav .active {
+    background-color: #3c1a5b !important;
+}
+
 .header .navbar .navbar-nav .active:hover {
     opacity: 0.8;
 }
@@ -2108,6 +2112,10 @@ i.bx.bx-log-in {
     padding-bottom: 2rem;
     background-size: contain;
 }
+.comm_bottom_image {
+    position: absolute;
+    bottom: 0;
+}
 .add_padding_sli .swiper-container {
         padding-left: 25px;
     }
@@ -2416,6 +2424,27 @@ border-radius: 30px;
     border-bottom: 2px solid #fac61a;
     position: relative;
 }
+.add_profile_bg_teacher {
+    background: url(../images/main_teacher_bg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: bottom;
+    background-size: 42%;
+}
+.student_header .nav-item.active {
+    background: #3c1a5b;
+    filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.24));
+    border-radius: 33px;
+    font-weight: 800;
+}
+.add_profile_bg_student {
+    background: url(../images/student_bg_profile.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: bottom;
+    background-size: 52%;
+    padding-bottom: 2rem;
+}
 .tch_info_head h3 , .tch_info_head i {
     color: #20BCC9;
 }
@@ -2528,6 +2557,13 @@ color: #fac61a;
     font-size: 2rem;
     color: #fc22b6;
 }
+.teacher_booking_sec {
+    background: url(../images/booking_teacher.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 52%;
+    background-position-x: right;
+}
 .category_list img {
     width: 100px;
     margin-top: 2rem;
@@ -2538,9 +2574,21 @@ color: #fac61a;
     margin-bottom: 0;
     margin-top: 1rem;
 }
+.link_tech h3 {
+    color: #20BCC9 !important;
+}
+.link_tech .join_head {
+    border-color: #20BCC9 !important;
+}
 .tech_techer .purple_fill {
     background: #663086;
     color: #fff;
+}
+.add_spc_top_tch {
+    margin-top: 6rem;
+}
+.left_more_tech {
+    margin-top: 7rem !important;
 }
 .tech_techer .blue_fill {
     background: #20BCC9;
@@ -2549,6 +2597,23 @@ color: #fac61a;
 .tech_techer .pink_fill {
     background: #FC22B6;
     color: #fff;
+}
+.add_spc_top_tch .tech_top_image {
+    position: absolute;
+    right: 21px;
+}
+.add_spc_top_tch  .tech_top_image img {
+    position: initial;
+    width: 66%;
+}
+.add_spc_top_tch .tch_bl_im {
+        position: absolute;
+    text-align: right;
+    right: 11%;
+}
+.add_spc_top_tch .tch_bl_im img {
+    position: initial !important;
+        width: 37%;
 }
 .tech_techer .yellow_fill {
     background: #FAC61A;
@@ -2718,11 +2783,103 @@ color: #fac61a;
 }
 
 /*Activity page*/
+.main_teacher  .swiper-slide{
+        height: 205px;
+    display: flex;
+    align-items: center;
+}
+.align_aciti h6 {
+        font-size: 12px;
+}
+.align_aciti p {
+    font-size: 10px !important;
+}
+.small_fonton_time.tech_techer .time_date p {
+    font-size: 10px !important;
+}
+.main_annoucment {
+    border: 4px solid #3c1a5b;
+    filter: drop-shadow(6px 6px 15px #a6dae8);
+    border-radius: 6px;
+    /*padding: 0 10px;*/
+}
+.activity_section {
+    background: url(../images/activity_sec.png);
+    padding-bottom: 2rem;
+        background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: right;
+}
+.meeting_noraml h3 {
+    font-weight: 400 !important;
+}
+.calendar_section {
+    margin-bottom: 3rem;
+}
+.main_annoucment .annouc_top {
+    text-align: center;
+}
+.annouc_top h4 {
+background: #fac61a;
+    box-shadow: 6px 6px 10px rgb(4 4 4 / 24%);
+    padding: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+}
+.annouc_listing {
+    display: flex;
+    align-items: center;    color: #fff;
+    padding: 13px 8px;
+}
+.annouc_listing.purple_ann {
+        background: #663086;
+}
+.annouc_listing.yellow_ann{
+        background: #20BCC9;
+}
+.main_slider_text.purple_main_slider h3 {
+    color: #663086;
+}
+.main_slider_text.purple_main_slider {
+        border-bottom: 2px solid #663086;
+
+}
+.more_annouc {
+    padding: 16px 0 6px;
+}
+.more_annouc a {
+    color: #FAC61A;
+        display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+.more_annouc a i {
+    padding-left: 10px;
+    font-size: 19px !important;
+}
+.annouc_img_sec {
+    display: flex;
+    align-items: center;
+}
+.annouc_img_data h4 {
+        font-size: 14px;
+    margin: 0;
+}
+.annouc_img_data p {
+        font-size: 11px;
+        margin-bottom: 0;
+        color: #fff;
+}
 .main_pod_head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid #FC22B6;
+}
+.main_pod_head h3 , .main_pod_head a {
+    color: #fac61a !important;
 }
 .main_pod h5 {
     font-size: 10px;
@@ -2739,6 +2896,12 @@ color: #fac61a;
 .main_pod {
     padding: 12px 8px 8px;
     border-radius: 6px;
+    transition: .3s ease-out;
+}
+.main_pod:hover {
+    transform: scale(1.22);
+    filter: none !important;
+    box-shadow: none !important;
 }
 .main_pod.blue_pod {
     background: #20bcc9;
@@ -2758,9 +2921,348 @@ color: #fac61a;
     filter: drop-shadow(6px 6px 8px #8e10d8);
     padding: 14px;
     font-size: 38px;
+    transition: .2s linear;
     color: #fff;
     border-radius: 34px;
+}
+.add_pod i:hover {
+    transform: scale(.9);
 }
 .pod_section {
     padding-top: 1rem;
 }
+
+.activity_main_table .fic_Width .stu_detail img {
+    width: 40px;
+    height: 40px;
+}
+.activity_main_table .tech_techer .fic_Width .stu_detail p {
+        font-size: 12px;
+}
+.activity_stat_btn button {
+    font-size: 8px;
+    background: #34323285;
+    font-weight: 600;
+    text-align: center;
+    color: #fffcfc;
+    border-radius: 33px;
+}
+.activity_main_table .tech_techer .time_date p {
+    font-size: 12px;
+}
+.high_fiv_btn button {
+    color: #fff;
+    font-size: 14px;
+    background: #34323285;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    border-radius: 30px;
+    padding: 4px 30px;
+}
+.activity_main_table .purple_fill th {
+    filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.22));
+        padding: 2px !important;
+    font-weight: 400;
+}
+.main_more_image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+.main_more_data  h5 {
+    font-size: 24px;
+    color: #095178;
+    font-weight: 600;
+}
+.main_more_data  button {
+     background: #006ba6;
+    filter: drop-shadow(6px 6px 8px rgba(9, 81, 120, 0.41));
+    color: #ffff;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 39px;
+    margin-top: 10px;
+}
+.main_more_data.green_more_data h5 {
+    color: #265B1A;
+}
+.main_more_data.green_more_data button {
+    background: #034c3c;
+    filter: drop-shadow(6px 6px 8px #63ba5d);
+}
+.table_ac_he {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #20BCC9;
+}
+.table_ac_he h3 {
+    color: #20BCC9;
+}
+
+.table_ac_he a {
+    font-weight: 500;
+    color: #20BCC9;
+}
+
+/*Activity page all style inpage*/
+
+.swiper-container-teacher , .swiper-container-meeting {
+        overflow: hidden;
+    }
+    .swiper-button-next-teacher, .swiper-button-prev-teacher , .swiper-button-next-meeting, .swiper-button-prev-meeting {
+        position: absolute;
+        top: 50%;
+        width: calc(var(--swiper-navigation-size)/ 44 * 27);
+        height: var(--swiper-navigation-size);
+        margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+        z-index: 10;
+        position: initial;
+        cursor: pointer;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--swiper-navigation-color,var(--swiper-theme-color));
+    }
+    .swiper-button-next-teacher, .swiper-container-rtl .swiper-button-prev-teacher ,
+    .swiper-button-next-meeting, .swiper-container-rtl .swiper-button-prev-meeting {
+        right: 10px;
+        left: auto;
+    }
+    .swiper-button-next-teacher.swiper-button-disabled, .swiper-container-rtl .swiper-button-prev-teacher.swiper-button-disabled ,
+    .swiper-button-next-meeting.swiper-button-disabled, .swiper-container-rtl .swiper-button-prev-meeting.swiper-button-disabled {
+        right: 10px;
+        left: auto;
+    }
+
+    .slider_icons .swiper-button-prev-teacher:after, .swiper-container-rtl .swiper-button-next-teacher:after , .slider_icons .swiper-button-prev-meeting:after, .swiper-container-rtl .swiper-button-next-meeting:after {
+        font-size: 14px;
+        font-weight: 800;
+        color: #663086;
+        outline: none;
+    }
+    .slider_icons .swiper-button-next-teacher:after, .swiper-container-rtl .swiper-button-prev-teacher:after , .slider_icons .swiper-button-next-meeting:after, .swiper-container-rtl .swiper-button-prev-meeting:after {
+        font-size: 14px;
+        font-weight: 800;
+        color: #663086;
+        outline: none;
+    }
+    .swiper-button-next-teacher:after, .swiper-container-rtl .swiper-button-prev-teacher:after ,
+    .swiper-button-next-meeting:after, .swiper-container-rtl .swiper-button-prev-meeting:after {
+        content: 'next';
+        font-family: swiper-icons;
+    }
+    .swiper-button-prev-teacher:after, .swiper-container-rtl .swiper-button-next-teacher:after ,
+    .swiper-button-prev-meeting:after, .swiper-container-rtl .swiper-button-next-meeting:after {
+        content: 'prev';
+        font-family: swiper-icons;
+    }
+    .slider_icons {
+        flex-direction: row-reverse;
+    }
+.main_teacher .main_slider_comm {
+    padding: 12px 13px 10px;
+}
+.main_teacher .main_slider_comm .img_section h3 {
+        font-size: 12px;
+}
+.main_teacher .main_slider_comm .img_section a {
+        font-size: 9px;
+}
+.main_teacher .main_slider_comm .img_icon i {
+    font-size: 16px;
+}
+.main_teacher .main_slider_comm .img_buttons button {
+    font-size: 7px;
+}
+.main_teacher {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+.activity_tble_slider .fic_Width .stu_detail img {
+        width: 40px;
+    height: 40px;
+}
+
+
+
+
+ul {
+    list-style-type: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.calendar {
+position: relative;
+    max-width: 20em;
+    min-height: 15em;
+    margin: .5em auto;
+    overflow: hidden;
+    background: rgb(255 255 255);
+    border-radius: 16px !important;
+    border: 3px solid #3c1a5b;
+}
+
+/*Styles for dropdown*/
+.calendar-ympicker{
+  position: absolute;
+  max-width: 19.5em; /*stop more years causing overflow*/
+  min-height: 15em;
+  padding: .5em .5em 1em;
+  transform: translateY(-100%); /*Start offscreen*/
+  transition: transform ease-in-out 0.2s;
+  background: rgb(102 48 134);
+  z-index: 2;
+  color: #fff;
+  top: 0;
+}
+.calendar-ympicker-header div{
+display: inline-block;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+}
+.calendar-ympicker .close{
+  text-align: right;
+  border: 1px transparent solid;
+}
+.calendar-ympicker li{
+  display: inline-block;
+  line-height: 2em;
+  border: 1px transparent solid;
+  text-align: center;
+  cursor: pointer;
+}
+.calendar-ympicker li:hover{
+    color: #fff;
+    font-weight: bold;
+}
+.calendar-ympicker-months{
+  border-bottom: 1px solid #444;
+}
+.calendar-ympicker-months li{
+  width: 30%;
+}
+.calendar-ympicker-years{
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 0.5em 0;
+}
+.calendar-ympicker-years li{
+  width: 25%;
+}
+/*Years scroll bar*/
+.calendar-ympicker-years::-webkit-scrollbar-thumb:horizontal:hover {
+  background:#428bca;
+}
+.calendar-ympicker-years::-webkit-scrollbar {
+  height: 8px;
+}
+.calendar-ympicker-years::-webkit-scrollbar-track {
+  background-color: #555;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.calendar-ympicker-years::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/*Styles for main part of calander*/
+.calendar-header {
+  padding: .5em  0 0 ;
+  color: #428bca;
+  position: relative;
+}
+.calendar-header .arrow{
+position: absolute;
+    width: 10%;
+    top: 8px;
+    margin: 0;
+    color: #fff;
+}
+.calendar-header .addmonth{
+  right: 0.5em;
+  text-align: right;
+}
+.calendar-header .arrow span{
+display: inline-block;
+    transition: transform ease-in-out 0.2s;
+    font-size: 25px;
+    padding-left: 6px;
+    padding-right: 6px;}
+.calendar-header .monthname:hover ~ .addmonth span{
+  transform: rotateZ(90deg);
+}
+.calendar-header .monthname:hover ~ .minusmonth span{
+  transform: rotateZ(-90deg);
+}
+
+.calendar-days{
+    color: #3c1a5b;
+    background: #20bcc9;
+    font-weight: 600;
+}
+.calendar-days li {
+    padding: 0 !important;
+    align-items: center !important;
+}
+/*Dates*/
+.calendar-body{
+  padding: 0 .5em .5em .5em;
+}
+.calendar-body li, .calendar-days li{
+  float: left;
+  width: -webkit-calc(100%/7);
+  padding: .25em 0;
+  text-align: center;
+  cursor: pointer;
+      height: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center
+}
+.calendar-body li:hover {
+  color: #20bcc9;
+}
+.calendar li.active{
+    background: #fc22b6;
+    border: 3px solid #20bcc9;
+    color: #fff;
+    border-radius: 10px;
+}
+.calendar-body .today{
+border: 3px solid #622e81;
+    background: #fac61a;
+    border-radius: 10px;
+    color: #fff;
+}
+.calendar-body li.noclick{
+  cursor: default;
+}
+.top_calen {
+    text-align: center;
+    background: #663086;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 10px;
+}
+.change_day_color {
+    background: #FAC61A !important;
+}
+.top_head_clndr h4 {
+    text-align: center;
+    color: #663086;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding: 9px 9px 4px;
+}
+
+/*End Activity page inpage style*/

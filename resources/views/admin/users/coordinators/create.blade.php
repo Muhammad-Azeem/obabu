@@ -45,7 +45,7 @@
                         <label class="col-form-label col-lg-3 col-sm-12 @error('name') text-danger @enderror">Name *</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <div class='input-group'>
-                                <input type="hidden" name="type" value="3">
+                                <input type="hidden" name="type" value="1">
                                 <input type='text' class="form-control @error('name') border-danger @enderror" name="name" value="{{old('name')}}"/>
                             </div>
                             @error('name')
@@ -87,22 +87,22 @@
                             @enderror
                         </div>
                     </div>
-                    {{--                    <div class="form-group row">--}}
-                    {{--                        <label class="col-form-label col-lg-3 col-sm-12 @error('coordinator_id') text-danger @enderror">Co-ordinator *</label>--}}
-                    {{--                        <div class="col-lg-4 col-md-9 col-sm-12">--}}
-                    {{--                            <select class="form-control column_select @error('coordinator_id') border-danger @enderror"  id="column_select" name="coordinator_id" value="{{old('teacher')}}">--}}
-                    {{--                                <option selected value="none">Select Co-ordinato</option>--}}
-                    {{--                                @foreach($users as $user)--}}
-                    {{--                                    <option value="{{$user->id}}">{{$user->name}}</option>--}}
-                    {{--                                @endforeach--}}
+{{--                    <div class="form-group row">--}}
+{{--                        <label class="col-form-label col-lg-3 col-sm-12 @error('coordinator_id') text-danger @enderror">Co-ordinator *</label>--}}
+{{--                        <div class="col-lg-4 col-md-9 col-sm-12">--}}
+{{--                            <select class="form-control column_select @error('coordinator_id') border-danger @enderror"  id="column_select" name="coordinator_id" value="{{old('teacher')}}">--}}
+{{--                                <option selected value="none">Select Co-ordinato</option>--}}
+{{--                                @foreach($users as $user)--}}
+{{--                                    <option value="{{$user->id}}">{{$user->name}}</option>--}}
+{{--                                @endforeach--}}
 
-                    {{--                            </select>--}}
-                    {{--                            <span class="form-text text-muted">Please select an option.</span>--}}
-                    {{--                            @error('coordinator_id')--}}
-                    {{--                            <div class="alert alert-danger mt-2"> {{ $message }} </div>--}}
-                    {{--                            @enderror--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
+{{--                            </select>--}}
+{{--                            <span class="form-text text-muted">Please select an option.</span>--}}
+{{--                            @error('coordinator_id')--}}
+{{--                            <div class="alert alert-danger mt-2"> {{ $message }} </div>--}}
+{{--                            @enderror--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
 
 

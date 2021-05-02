@@ -726,6 +726,9 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 								<a href="#">www.helloe@gmail.com</a>
 								<button type="button" class="contact_btn">View Profile</button>
 							</div>
+							<div class="comm_bottom_image">
+								<img src="assets/images/cartooons.png" class="img-fluid">
+							</div>
 						</div>
 					</div>
 				</div>
