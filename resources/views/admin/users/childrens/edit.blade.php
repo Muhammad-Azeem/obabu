@@ -26,7 +26,7 @@
 								<!--begin::Form-->
 								<form class="kt-form kt-form--label-right" action="{{ route('page.update', $user->id) }}" method="post" id="kt_form_1">
 								@csrf
-								
+
                                 <div class="kt-portlet__body">
 										<div class="kt-form__content">
 											<div class="kt-alert m-alert--icon alert alert-danger mt-2 kt-hidden" role="alert" id="kt_form_1_msg">
@@ -46,7 +46,8 @@
 											<label class="col-form-label col-lg-3 col-sm-12">Name *</label>
 											<div class="col-lg-4 col-md-9 col-sm-12">
 												<div class='input-group'>
-													<input type='text' class="form-control" name="name" value="{{$user->name}}"/>													
+													<input type='hidden' class="form-control" name="id" value="{{$user->id}}"/>
+													<input type='text' class="form-control" name="name" value="{{$user->name}}"/>
 												</div>
 											</div>
 										</div>
@@ -62,8 +63,8 @@
 										<div class="form-group row">
 											<label class="col-form-label col-lg-3 col-sm-12 ">Type *</label>
 											<div class="col-lg-9 col-md-9 col-sm-12 form-group-sub">
-												<select class="form-control column_select "  id="column_select" name="type" value="{{$user->type}}"> 
-												<option selected value="none">Select data type</option>	
+												<select class="form-control column_select "  id="column_select" name="type" value="{{$user->type}}">
+												<option selected value="none">Select data type</option>
 												<option value="coordinator" {{ ($user->type) == 'coordinator' ? 'selected' : '' }} >Coordinator</option>
 													<option value="teacher" {{ ($user->type) == 'teacher' ? 'selected' : '' }}>Teacher</option>
 													<option value="parent" {{ ($user->type) == 'parent' ? 'selected' : '' }}>Parent</option>
@@ -76,15 +77,15 @@
 										<div class="form-group row box ">
 											<label class="col-form-label col-lg-3 col-sm-12 ">Coordinator Name *</label>
 											<div class="col-lg-9 col-md-9 box col-sm-12 form-group-sub">
-												<select class="form-control box  " id="coordinator_name" name="coordinator_name " value="{{$user->coordinator_name}}"> 
+												<select class="form-control box  " id="coordinator_name" name="coordinator_name " value="{{$user->coordinator_name}}">
 												<option selected value="">Select data type</option>
-												<option disabled="disabled">Select Teacher type</option>	
+												<option disabled="disabled">Select Teacher type</option>
 												<option value="{{$user->coordinator_name}}" {{ ($user->coordinator_name) == 'children' ? 'selected' : '' }}>{{$user->coordinator_name}}</option>
 												</select>
-												
+
 												<span class="form-text text-muted">Please select an option.</span>
 											</div>
-										
+
 
 										</div>
 
@@ -93,7 +94,7 @@
 											<label class="col-form-label col-lg-3 col-sm-12">Age *</label>
 											<div class="col-lg-4 col-md-9 col-sm-12">
 												<div class='input-group'>
-													<input type='number' class="form-control" name="age" value="{{$user->age}}" />													
+													<input type='number' class="form-control" name="age" value="{{$user->age}}" />
 												</div>
 											</div>
 										</div>
@@ -102,15 +103,15 @@
 											<label class="col-form-label col-lg-3 col-sm-12 ">Password *</label>
 											<div class="col-lg-4 col-md-9 col-sm-12">
 												<div class='input-group'>
-													<input type='text' class="form-control " name="password"   />													
+													<input type='text' class="form-control " name="password"   />
 												</div>
-											
+
 											</div>
 										</div>
 
                                         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-                                        
+
 @endsection
 
 @push('scripts')
@@ -136,7 +137,7 @@ $(document).ready(function() {
             "option": "<option value='" + this.value + "'>" + this.text + "</option>"
         }
     })
-        
+
     $("#column_select").change(function() {
         $("#coordinator_name").children('option').remove();
         var addoptarr = [];

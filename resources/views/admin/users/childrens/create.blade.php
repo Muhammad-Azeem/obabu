@@ -25,7 +25,7 @@
 
 								<!--begin::Form-->
 								<form class="kt-form kt-form--label-right" action="{{ route('page.store')}}" method="post" id="kt_form_1">
-								@csrf	
+								@csrf
                                 <div class="kt-portlet__body">
 										<div class="kt-form__content">
 											<div class="kt-alert m-alert--icon alert alert-danger mt-2 kt-hidden" role="alert" id="kt_form_1_msg">
@@ -33,7 +33,7 @@
 													<i class="la la-warning"></i>
 												</div>
 												<div class="kt-alert__text">
-													Oh snap! Change a few things up and try submitting again.
+{{--													Oh snap! Change a few things up and try submitting again.--}}
 												</div>
 												<div class="kt-alert__close">
 													<button type="button" class="close" data-close="alert" aria-label="Close">
@@ -45,64 +45,82 @@
 											<label class="col-form-label col-lg-3 col-sm-12 @error('name') text-danger @enderror">Name *</label>
 											<div class="col-lg-4 col-md-9 col-sm-12">
 												<div class='input-group'>
-													<input type='text' class="form-control @error('name') border-danger @enderror" name="name" value="{{old('name')}}"/>													
+                                                    <input type="hidden" name="type" value="4">
+
+                                                    <input type='text' class="form-control @error('name') border-danger @enderror" name="name" value="{{old('name')}}"/>
 												</div>
 												@error('name')
 												<div class="alert alert-danger mt-2"> {{ $message }} </div>
 												@enderror
 											</div>
 										</div>
-
-                                        <div class="form-group row">
+                                    <div class="form-group row">
 											<label class="col-form-label col-lg-3 col-sm-12 @error('email') text-danger @enderror">Email *</label>
-											<div class="col-lg-9 col-md-9 col-sm-12">
-												<input type="text" class="form-control @error('email') border-danger @enderror" name="email" value="{{old('email')}}" placeholder="Enter your email">
-											@error('email')
-											<span class="alert alert-danger mt-2"> {{ $message }} </span>
-											@enderror
-												<span class="form-text text-muted">We'll never share your email with anyone else.</span>
-											</div>
-										</div>
-
-										<div class="form-group row">
-											<label class="col-form-label col-lg-3 col-sm-12 @error('type') text-danger @enderror">Type *</label>
-											<div class="col-lg-9 col-md-9 col-sm-12 form-group-sub">
-												<select class="form-control column_select @error('type') border-danger @enderror"  id="column_select" name="type" value="{{old('type')}}"> 
-												<option selected value="none">Select data type</option>	
-												<option value="coordinator">Coordinator</option>
-													<option value="teacher">Teacher</option>
-													<option value="parent">Parent</option>
-													<option value="children">Children</option>
-												</select>
-												<span class="form-text text-muted">Please select an option.</span>
-											</div>
-										</div>
-
-										<div class="form-group row box ">
-											<label class="col-form-label col-lg-3 col-sm-12 @error('coordinator_name') text-danger @enderror">Coordinator Name *</label>
-											<div class="col-lg-9 col-md-9 box col-sm-12 form-group-sub">
-												<select class="form-control box  @error('coordinator_name') border-danger @enderror" id="coordinator_name" name="coordinator_name"> 
-												<option selected value="">Select data type</option>
-												<option disabled="disabled">Select Teacher type</option>	
-												@foreach($users as $user)	
-												<option value="teacher" class=>{{$user->coordinator_name}}</option>
-												@endforeach
-												</select>
-												
-												<span class="form-text text-muted">Please select an option.</span>
-											</div>
-										
-
-										</div>
-
-
-                                        <div class="form-group row">
-											<label class="col-form-label col-lg-3 col-sm-12 @error('age') text-danger @enderror">Age *</label>
 											<div class="col-lg-4 col-md-9 col-sm-12">
 												<div class='input-group'>
-													<input type='number' class="form-control @error('age') border-danger @enderror" name="age" value="{{old('age')}} " />													
+													<input type='email' class="form-control @error('email') border-danger @enderror" name="email" value="{{old('email')}}"/>
+												</div>
+												@error('email')
+												<div class="alert alert-danger mt-2"> {{ $message }} </div>
+												@enderror
+											</div>
+										</div>
+
+                                    <div class="form-group row">
+											<label class="col-form-label col-lg-3 col-sm-12 @error('phone') text-danger @enderror">phone *</label>
+											<div class="col-lg-4 col-md-9 col-sm-12">
+												<div class='input-group'>
+													<input type='number' class="form-control @error('phone') border-danger @enderror" name="phone" value="{{old('phone')}}"/>
+												</div>
+												@error('phone')
+												<div class="alert alert-danger mt-2"> {{ $message }} </div>
+												@enderror
+											</div>
+										</div>
+                                    <div class="form-group row">
+											<label class="col-form-label col-lg-3 col-sm-12 @error('age') text-danger @enderror">age *</label>
+											<div class="col-lg-4 col-md-9 col-sm-12">
+												<div class='input-group'>
+													<input type='number' class="form-control @error('age') border-danger @enderror" name="age" value="{{old('age')}}"/>
 												</div>
 												@error('age')
+												<div class="alert alert-danger mt-2"> {{ $message }} </div>
+												@enderror
+											</div>
+										</div>
+                                    <div class="form-group row">
+											<label class="col-form-label col-lg-3 col-sm-12 @error('teacher_id') text-danger @enderror">Teacher *</label>
+											<div class="col-lg-4 col-md-9 col-sm-12">
+                                                <select class="form-control column_select @error('teacher_id') border-danger @enderror"  id="column_select" name="teacher_id" value="{{old('teacher')}}">
+                                                    <option selected value="none">Select Teacher</option>
+                                                    @foreach($users as $user)
+                                                        <option value="{{$user->id}}">{{$user->name}}</option>
+                                                    @endforeach
+
+                                                </select>
+                                                <span class="form-text text-muted">Please select an option.</span>
+												@error('teacher_id')
+												<div class="alert alert-danger mt-2"> {{ $message }} </div>
+												@enderror
+											</div>
+										</div>
+
+
+
+
+
+
+
+
+
+                                    <div class="form-group row">
+											<label class="col-form-label col-lg-3 col-sm-12 @error('gender') text-danger @enderror">Gender *</label>
+											<div class="col-lg-4 col-md-9 col-sm-12">
+												<div class='input-group'>
+													<input type='radio' class="form-control @error('gender') border-danger @enderror" name="gender" value="male" />Male
+													<input type='radio' class="form-control @error('gender') border-danger @enderror" name="gender" value="female" />Female
+												</div>
+												@error('gender')
 												<div class="alert alert-danger mt-2"> {{ $message }} </div>
 												@enderror
 											</div>
@@ -112,17 +130,21 @@
 											<label class="col-form-label col-lg-3 col-sm-12 @error('password') text-danger @enderror">Password *</label>
 											<div class="col-lg-4 col-md-9 col-sm-12">
 												<div class='input-group'>
-													<input type='text' class="form-control @error('password') border-danger @enderror" name="password"   />													
+													<input type='text' class="form-control @error('password') border-danger @enderror" name="password"   />
 												</div>
 												@error('password')
 												<div class="alert alert-danger mt-2"> {{ $message }} </div>
 												@enderror
 											</div>
 										</div>
+                                </div>
 
                                         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-                                        
+                            </div>
+                        </div>
+
+
 @endsection
 
 @push('scripts')
@@ -148,7 +170,7 @@ $(document).ready(function() {
             "option": "<option value='" + this.value + "'>" + this.text + "</option>"
         }
     })
-        
+
     $("#column_select").change(function() {
         $("#coordinator_name").children('option').remove();
         var addoptarr = [];

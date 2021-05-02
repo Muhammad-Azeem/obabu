@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('coordinator_name')->nullable();
             $table->text('photo')->nullable();
             $table->text('phone')->nullable();
-            $table->string('type')->default('user');
+            $table->integer('type')->default(4);
             $table->rememberToken();
             $table->timestamps();
         });
