@@ -31,7 +31,7 @@
                                             <a class="kt-link" href="#">Total Co-ordinators</a>
                                         </h3>
                                         <div class="kt-iconbox__content">
-                                            <b>{{$teachercount}}</b>
+                                            <b>{{$coordinatorcount}}</b>
                                         </div>
                                     </div>
                                 </div>
