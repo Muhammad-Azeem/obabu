@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use FontLib\Table\Type\name;
 use Illuminate\Http\Request;
 use App\Models\Interest;
 use Illuminate\Http\File;
@@ -25,6 +26,28 @@ class InterestController extends Controller
     public function hobbyIndex(){
         $interests = Interest::where('type', 'hobbies')->get();
         return view('admin.interest.hobbyindex', compact('interests'));
+    }
+
+    public function getInterest()
+    {
+        $interests = Interest::where('type', 'interest')->get();
+        $Hobbies = Interest::where('type', 'hobbies')->get();
+        $interestHtml = '';
+        $hobbyHtml = '';
+       foreach ($interests as $interest)
+       {
+           $interestHtml .= '<option>'.$interest->name.'</option>';
+       }
+        foreach ($Hobbies as $Hobby)
+        {
+            $hobbyHtml .= '<option>'.$Hobby->name.'</option>';
+        }
+       $html = [
+           'interest'=>$interestHtml,
+           'hobby'=>$hobbyHtml,
+       ];
+
+        return response()->json($html);
     }
 
     /**
@@ -62,14 +85,14 @@ class InterestController extends Controller
                 }else{
                     $data['image'] = [];
                 }
-            
+
             $interest = Interest::create($data);
             if($interest->type == 'interest'){
-                return redirect()->route('interest.index')->with('success', 'Interest has been added successfully');    
+                return redirect()->route('interest.index')->with('success', 'Interest has been added successfully');
             }else{
-                return redirect()->route('hobby.index')->with('success', 'Interest has been added successfully');     
+                return redirect()->route('hobby.index')->with('success', 'Interest has been added successfully');
             }
-         
+
     }
 
     /**
@@ -109,7 +132,7 @@ class InterestController extends Controller
             'type' => ['nullable'],
             'image' => ['nullable'],
             ]);
-                    
+
             $interest = $interest::find($id);
             $data = $request->all();
 
@@ -124,7 +147,7 @@ class InterestController extends Controller
                 $image = $request->imageName;
             }
             $interest = $interest->update($data);
-        return redirect()->route('interest.index')->with('success', 'Interest has been updated successfully');   
+        return redirect()->route('interest.index')->with('success', 'Interest has been updated successfully');
     }
 
     /**
@@ -140,6 +163,6 @@ class InterestController extends Controller
         }
         $interest = Interest::find($id);
         $interest->delete();
-        return redirect()->route('interest.index')->with('success', 'Interest has been deleted successfully');   
+        return redirect()->route('interest.index')->with('success', 'Interest has been deleted successfully');
     }
 }

@@ -1,49 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6de8610-fb02-442d-bd0c-1f21f4a5b620" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_02_200953_add_feilds_to_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/activity_sec.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/booking_teacher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bulb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/cartooons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/main_more1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/main_more2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/main_teacher_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/student_bg_profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/childrens/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/coordinators/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/coordinators/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/activity.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/interest/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/interest/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/interest/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/interest/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/interest/hobbyindex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/interest/hobbyindex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/interest/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/interest/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/packages/packages-option/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/packages/packages-option/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/packages/packages-option/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/packages/packages-option/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/packages/subscriber/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/packages/subscriber/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/packages/subscriber/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/packages/subscriber/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/childrens/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/childrens/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/childrens/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/childrens/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/parents/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/parents/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/parents/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/parents/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/parents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/parents/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/teachers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/teachers/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/teachers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/teachers/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/teachers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/community.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/community.blade.php" afterDir="false" />
+    <list default="true" id="57a64dd9-a04f-4c0d-9d74-b87b2b93e82b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/user/teacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/obabu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/obabu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/InterestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/InterestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/studentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/studentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/userController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/userController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/StudentClassStudents.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/StudentClassStudents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/community_student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/community_student.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navigation/nav-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navigation/nav-admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../roadsideapi/resources/views/terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../roadsideapi/resources/views/terms.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +161,8 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1rzPjOFBEDyDym3nNIxaFFWJAkD" />
+  <component name="ProjectId" id="1s1zkm4IGMikXramofRe6KgKXaI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -206,12 +183,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d6de8610-fb02-442d-bd0c-1f21f4a5b620" name="Default Changelist" comment="" />
-      <created>1619976079958</created>
+      <changelist id="57a64dd9-a04f-4c0d-9d74-b87b2b93e82b" name="Default Changelist" comment="" />
+      <created>1620055028438</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1619976079958</updated>
-      <workItem from="1619976081280" duration="8754000" />
+      <updated>1620055028438</updated>
+      <workItem from="1620055030513" duration="14919000" />
     </task>
     <servers />
   </component>
