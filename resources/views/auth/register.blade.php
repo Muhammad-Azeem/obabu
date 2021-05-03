@@ -95,8 +95,9 @@
                                     </span>
                             @enderror
                         </div>
-                    </form>
                     <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit">{{ __('Create') }}</button>
+                    </form>
+
                 </div>
             </div>
         </div>

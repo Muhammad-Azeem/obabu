@@ -18,7 +18,34 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
+
+<style>
+	.slider_arrows__ div {
+    position: inherit !important;
+}
+.slider_arrows__ {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.slider_arrows__ .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fc22b6;
+    outline: none;
+}
+.slider_arrows__ .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fc22b6;
+    outline: none;
+}
+</style>
 
 <body>
 
@@ -48,8 +75,15 @@
 							<div class="join_head">
 								<h3>ClASS SCHEDULE</h3>
 								<img src="assets/images/tble_top.png" class="img-fluid">
+								<div class="slider_arrows__">
+									<div class="swiper-button-next"></div>
+							    	<div class="swiper-button-prev"></div>
+								</div>
 							</div>
-							<div class="jn_tbl">
+
+							 <div class="swiper-container">
+							    <div class="swiper-wrapper">
+							      <div class="swiper-slide"><div class="jn_tbl">
 							   <table>
 						        <tr class="yellow_tr">
 						          <th class="add_left_brdr">USER</th>
@@ -154,10 +188,124 @@
 						          <td class="add_right_brdr">TUESDAY</td>
 						        </tr>
 						      </table>
-							</div>
+							</div></div>
+							      <div class="swiper-slide"><div class="jn_tbl">
+							   <table>
+						        <tr class="yellow_tr">
+						          <th class="add_left_brdr">USER</th>
+						          <th>CLASS</th>
+						          <th>DATE/TIME</th>
+						          <th class="add_right_brdr">DAY</th>
+						        </tr>
+						        <tr class="blue_tr">
+						          <td class="td add_left_brdr fic_Width">
+						          	<div class="stu_detail">
+						          		<img src="assets/images/tble_img.png" class="img-fluid">
+						          		<p>Hane Carmela</p>
+						          	</div>
+						          </td>
+						          <td>ENGLISH</td>
+						          <td>
+						          	<div class="time_date">
+						          		<p>14 - JAN - 2021</p>
+						          		<p>AT 4 pm to 4:50 pm</p>
+						          	</div>
+						          </td>
+						          <td class="add_right_brdr">MONDAY</td>
+						        </tr>
+						       	<tr class="pink_tr">
+						          <td class="td add_left_brdr fic_Width">
+						          	<div class="stu_detail">
+						          		<img src="assets/images/tble_img.png" class="img-fluid">
+						          		<p>Hane Carmela</p>
+						          	</div>
+						          </td>
+						          <td>ENGLISH</td>
+						          <td>
+						          	<div class="time_date">
+						          		<p>14 - JAN - 2021</p>
+						          		<p>AT 4 pm to 4:50 pm</p>
+						          	</div>
+						          </td>
+						          <td class="add_right_brdr">TUESDAY</td>
+						        </tr>
+						        <tr class="purple_tr">
+						          <td class="td add_left_brdr fic_Width">
+						          	<div class="stu_detail">
+						          		<img src="assets/images/tble_img.png" class="img-fluid">
+						          		<p>Hane Carmela</p>
+						          	</div>
+						          </td>
+						          <td>ENGLISH</td>
+						          <td>
+						          	<div class="time_date">
+						          		<p>14 - JAN - 2021</p>
+						          		<p>AT 4 pm to 4:50 pm</p>
+						          	</div>
+						          </td>
+						          <td class="add_right_brdr">WEDNESDAY</td>
+						        </tr>
+						        <tr class="yellow_tr">
+						          <td class="td add_left_brdr fic_Width">
+						          	<div class="stu_detail">
+						          		<img src="assets/images/tble_img.png" class="img-fluid">
+						          		<p>Hane Carmela</p>
+						          	</div>
+						          </td>
+						          <td>ENGLISH</td>
+						          <td>
+						          	<div class="time_date">
+						          		<p>14 - JAN - 2021</p>
+						          		<p>AT 4 pm to 4:50 pm</p>
+						          	</div>
+						          </td>
+						          <td class="add_right_brdr">THURSDAY</td>
+						        </tr>
+						        <tr class="blue_tr">
+						          <td class="td add_left_brdr fic_Width">
+						          	<div class="stu_detail">
+						          		<img src="assets/images/tble_img.png" class="img-fluid">
+						          		<p>Hane Carmela</p>
+						          	</div>
+						          </td>
+						          <td>ENGLISH</td>
+						          <td>
+						          	<div class="time_date">
+						          		<p>14 - JAN - 2021</p>
+						          		<p>AT 4 pm to 4:50 pm</p>
+						          	</div>
+						          </td>
+						          <td class="add_right_brdr">MONDAY</td>
+						        </tr>
+						       	<tr class="pink_tr">
+						          <td class="td add_left_brdr fic_Width">
+						          	<div class="stu_detail">
+						          		<img src="assets/images/tble_img.png" class="img-fluid">
+						          		<p>Hane Carmela</p>
+						          	</div>
+						          </td>
+						          <td>ENGLISH</td>
+						          <td>
+						          	<div class="time_date">
+						          		<p>14 - JAN - 2021</p>
+						          		<p>AT 4 pm to 4:50 pm</p>
+						          	</div>
+						          </td>
+						          <td class="add_right_brdr">TUESDAY</td>
+						        </tr>
+						      </table>
+							</div></div>
+
+							    <!-- Add Arrows -->
+							    
+							  </div>
+
+
+							
 						</div>
 						
 					</div>
+				</div>
 					<div class="col-md-6">
 						<div class="main_session">
 							<div class="session_top">
@@ -191,5 +339,13 @@
 			</div>
 		</section>
 	</main>
+	  <script>
+	    var swiper = new Swiper('.swiper-container', {
+	      navigation: {
+	        nextEl: '.swiper-button-next',
+	        prevEl: '.swiper-button-prev',
+	      },
+	    });
+	  </script>
 </body>
 </html>

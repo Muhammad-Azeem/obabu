@@ -1,11 +1,17 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9559e81-1fe2-44ca-9782-375037b1c082" name="Default Changelist" comment="">
+    <list default="true" id="426e5b44-9acb-4f4c-bea9-57af7c5504bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/obabu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/obabu.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/children-listing.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/parent-listing.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/teacher-listing.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navigation/nav-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navigation/nav-admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,120 +134,49 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
-      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
-      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
-      <path value="$PROJECT_DIR$/vendor/ankurk91/laravel-stripe-exceptions" />
-      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
-      <path value="$PROJECT_DIR$/vendor/laravel/cashier" />
-      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
-      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
-      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
-      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1qaIOtIqChrwYlfsj4EpjyMvSXk" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1r5K6GegcG02XDHS6eSIPmfzV8g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/auth" />
-      <recent name="$PROJECT_DIR$/public/assets/images" />
-      <recent name="$PROJECT_DIR$/public/assets/css" />
-      <recent name="$PROJECT_DIR$/public/public" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f9559e81-1fe2-44ca-9782-375037b1c082" name="Default Changelist" comment="" />
-      <created>1617311244540</created>
+      <changelist id="426e5b44-9acb-4f4c-bea9-57af7c5504bb" name="Default Changelist" comment="" />
+      <created>1618260335573</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1617311244540</updated>
-      <workItem from="1617311245677" duration="25647000" />
-      <workItem from="1618332702249" duration="5885000" />
-      <workItem from="1618587501860" duration="2789000" />
-      <workItem from="1618641763366" duration="286000" />
-      <workItem from="1619074693279" duration="537000" />
-      <workItem from="1619251072113" duration="2721000" />
-      <workItem from="1619336217644" duration="454000" />
+      <updated>1618260335573</updated>
+      <workItem from="1618260347632" duration="685000" />
+      <workItem from="1618751468852" duration="590000" />
+      <workItem from="1618769206702" duration="50000" />
+      <workItem from="1618769291028" duration="596000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="241" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617311343347">
-      <screen x="0" y="25" width="1440" height="820" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1618260441353">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="460" y="241" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.820@0.25.1440.820" timestamp="1617311343347" />
-    <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617470434958">
-      <screen x="0" y="25" width="1440" height="820" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618260441353" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618769255167">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.820@0.25.1440.820" timestamp="1617470434958" />
-    <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617530506386">
-      <screen x="0" y="25" width="1440" height="820" />
-    </state>
-    <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.820@0.25.1440.820" timestamp="1617530506386" />
-    <state width="1358" height="197" key="GridCell.Tab.0.bottom" timestamp="1617381173314">
-      <screen x="0" y="25" width="1440" height="820" />
-    </state>
-    <state width="1358" height="197" key="GridCell.Tab.0.bottom/0.25.1440.820@0.25.1440.820" timestamp="1617381173314" />
-    <state width="1358" height="197" key="GridCell.Tab.0.center" timestamp="1617381173313">
-      <screen x="0" y="25" width="1440" height="820" />
-    </state>
-    <state width="1358" height="197" key="GridCell.Tab.0.center/0.25.1440.820@0.25.1440.820" timestamp="1617381173313" />
-    <state width="1358" height="197" key="GridCell.Tab.0.left" timestamp="1617381173313">
-      <screen x="0" y="25" width="1440" height="820" />
-    </state>
-    <state width="1358" height="197" key="GridCell.Tab.0.left/0.25.1440.820@0.25.1440.820" timestamp="1617381173313" />
-    <state width="1358" height="197" key="GridCell.Tab.0.right" timestamp="1617381173314">
-      <screen x="0" y="25" width="1440" height="820" />
-    </state>
-    <state width="1358" height="197" key="GridCell.Tab.0.right/0.25.1440.820@0.25.1440.820" timestamp="1617381173314" />
-    <state x="385" y="169" width="670" height="678" key="search.everywhere.popup" timestamp="1619265847901">
-      <screen x="0" y="25" width="1440" height="822" />
-    </state>
-    <state x="385" y="169" width="670" height="676" key="search.everywhere.popup/0.25.1440.820@0.25.1440.820" timestamp="1617539888576" />
-    <state x="385" y="169" width="670" height="677" key="search.everywhere.popup/0.25.1440.821@0.25.1440.821" timestamp="1618496680283" />
-    <state x="385" y="169" width="670" height="678" key="search.everywhere.popup/0.25.1440.822@0.25.1440.822" timestamp="1619265847901" />
-    <state x="385" y="170" width="670" height="681" key="search.everywhere.popup/0.25.1440.825@0.25.1440.825" timestamp="1618503419585" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618769255167" />
   </component>
 </project>

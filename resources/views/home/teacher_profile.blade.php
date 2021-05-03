@@ -62,10 +62,10 @@
 					</header>
 				</div>
 			</section>
-			<section class="teacher_section">
+			<section class="teacher_section add_profile_bg_teacher">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-3 ">
 							<div class="profile_section text-center">
 								<img src="assets/images/teacher_profile.png" class="img-fluid">
 								<h3>Bergstrom Eudora</h3>

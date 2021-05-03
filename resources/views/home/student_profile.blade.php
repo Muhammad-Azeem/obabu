@@ -40,10 +40,10 @@
 										<li class="nav-item ">
 											<a class="nav-link">ABOUT US</a>
 										</li>
-										<li class="nav-item active">
+										<li class="nav-item ">
 											<a class="nav-link">ACTIVITY</a>
 										</li>
-										<li class="nav-item">
+										<li class="nav-item active">
 											<a class="nav-link">SALES</a>
 										</li>
 										<li class="nav-item">
@@ -62,7 +62,7 @@
 					</header>
 				</div>
 			</section>
-			<section class="teacher_section">
+			<section class="teacher_section add_profile_bg_student">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-3">

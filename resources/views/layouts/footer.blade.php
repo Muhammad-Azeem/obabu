@@ -5,10 +5,10 @@
                 <img src="assets/images/footer-logo.png" class="img-fluid" alt="footer logo">
                 <div class="social-icons mt-3">
                     <!-- <i class="fa fa-facebook"></i> -->
-                    <i class='bx bxl-facebook-circle' ></i>
-                    <i class='bx bxl-google' ></i>
-                    <i class='bx bxl-linkedin-square' ></i>
-                    <i class='bx bxl-twitter' ></i>
+{{--                    <i class='bx bxl-facebook-circle' ></i>--}}
+{{--                    <i class='bx bxl-google' ></i>--}}
+{{--                    <i class='bx bxl-linkedin-square' ></i>--}}
+{{--                    <i class='bx bxl-twitter' ></i>--}}
                     <!-- <fa-icon [icon]="faFacebook" class="fa-facebook p-2"></fa-icon>
                     <fa-icon [icon]="faGoogle" class="fa-google p-2"></fa-icon>
                     <fa-icon [icon]="faLinkedin" class="fa-linkedin p-2"></fa-icon>
