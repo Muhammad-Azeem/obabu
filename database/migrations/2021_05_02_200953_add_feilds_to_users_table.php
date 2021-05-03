@@ -21,6 +21,7 @@ class AddFeildsToUsersTable extends Migration
             $table->bigInteger('coordinator_id')->unsigned()->nullable();
             $table->foreign('coordinator_id')->references('id')->on('users')->onDelete('cascade');
             $table->text('address')->nullable();
+            $table->text('gender')->nullable();
         });
     }
 

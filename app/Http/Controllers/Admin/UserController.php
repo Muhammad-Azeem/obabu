@@ -11,7 +11,7 @@ class UserController extends Controller
 {
 
     public function teacherIndex(){
-        $teacherUsers = User::where('type' , 2)->get();
+        $teacherUsers = User::with('coordinator')->where('type' , 2)->get();
         return view('admin.users.teachers.index', compact('teacherUsers'));
     }
 
@@ -21,7 +21,7 @@ class UserController extends Controller
     }
 
     public function childrenIndex(){
-        $childrenUsers = User::where('type' , 4)->get();
+        $childrenUsers = User::with('teacher')->where('type' , 4)->get();
         return view('admin.users.childrens.index', compact('childrenUsers'));
     }
 
@@ -56,8 +56,11 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'type' => 'required',
-            'teacher' => 'required_if:user_type,serviceman',
+            'teacher_id' => 'required_if:type,4',
+            'coordinator_id' => 'required_if:type,2',
             'age' => 'required',
+            'gender' => 'required',
+//            'phone' => 'required',
             'password' => 'required|min:6',
             ]);
 
