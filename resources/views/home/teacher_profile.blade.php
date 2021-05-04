@@ -14,9 +14,25 @@
             <div class="col-md-9">
                 <div class="teacher_data">
                     <div class="about_teacher">
+                        <div class="edit_icon">
+                            <i class='bx bxs-pencil' id="edit_teacher_about"></i>
+                        </div>
                         <h3>ABOUT ME</h3>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit</p>
-                    </div>
+                        <div id="about_user">
+                        <p class="m-0">{{$user->about}}</p>
+                        </div>
+                        <div id="edit_about">
+                        <form action="{{route('edit_user_about')}}" method="POST">
+                            @csrf
+                            <div class="cntcn_inpp">
+                            <textarea name="about" class="form-control">
+                            {{$user->about}}
+                            </textarea>
+                            </div>
+                            <button class="form-control btn btn-primary" type="submit" >Save</button>
+                        </form>
+                        </div>
+                        </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -80,9 +96,11 @@
                                 </div>
                                 <div class="edu_data">
                                     <h3>EDUCATION</h3>
-                                    <h5>Bachelors Of Arts In Culinary Arts</h5>
-                                    <p>Kendall Collage</p>
+                                    @foreach($userEducation as $useredu)
+                                    <h5>{{$useredu->degree}}</h5>
+                                    <p>{{$useredu->institute}}</p>
                                     <p>September 2015 - Present</p>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="main_edu add_edu_mrgin">
@@ -91,13 +109,18 @@
                                 </div>
                                 <div class="edu_data">
                                     <h3>WORK EXPERIENCE</h3>
-                                    <h5>Junior Sous Cheif </h5>
-                                    <p>Lorem ipsum dolor sit amet</p>
-                                    <p>December 2015 - Present</p>
+                                    @foreach($userExp as $exp)
+                                    <h5>{{$exp->designation}} </h5>
+                                    <p>{{$exp->school}}</p>
+                                    <p>December 2015 - {{$exp->status}}</p>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="edit_icon">
-                                <i class='bx bxs-pencil'></i>
+                                <i class='bx bxs-pencil' id="edit_teacher_education"></i>
+                            </div>
+                            <div class="">
+                                <i class='bx bxs-pencil' id="edit_teacher_expernce"></i>
                             </div>
                         </div>
                         <div class="languag_sec">
@@ -171,6 +194,32 @@
                                 <option value="{{$interest->name}}">{{$interest->name}}</option>
                             @endforeach
                         </select>
+
+                    </div>
+                    <button type="" class="btn btn-primary" > save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="teacher_education">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal_content_expe">
+                <form action="{{route('teacher_education')}}" method="POST" >
+                    @csrf
+                    <div class="cntcn_inp">
+                       <input name="institute" type="text" class="form-control" placeholder="Institute">
+
+                    </div>
+                    <div class="cntcn_inp">
+                            <input name="degree" class="form-control" type="text" placeholder="Degree">
 
                     </div>
                     <button type="" class="btn btn-primary" > save</button>

@@ -104,14 +104,14 @@
 
                             <h3>EDUCATION <i class='bx bxs-pencil' id="edit_education_student"></i> </h3>
                          <div id="update_student_data">
-                            @if(isset($userEducation->school))
-                                 <h5>{{$userEducation->school}}</h5>
-                                 <h5>Current Class : {{$userEducation->class}}</h5>
+                             @foreach($userEducation as $userEdu)
+                            @if(isset($userEdu->school))
+                                 <h5>School : {{$userEdu->school}}</h5>
+                                 <h5> Class : {{$userEdu->class}}</h5>
                                 @endif
+                             @endforeach
                          </div>
-                           <div id="edit_student_education_form">
 
-                           </div>
                         </div>
                     </div>
                 </div>
@@ -139,6 +139,7 @@
         </div>
     </div>
 </section>
+
 <div class="modal" tabindex="-1" role="dialog" id="edit_Modal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -154,6 +155,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal" tabindex="-1" role="dialog" id="user_interest1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -186,6 +188,32 @@
                    </div>
                    <button type="" class="btn btn-primary" > save</button>
                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="edit_education">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal_content">
+                <form action="{{route('update_student_education')}}" method="POST" >
+                    @csrf
+                    <input name="id" value="" type="hidden">
+                    <div class="cntcn_inp">
+                      <input type="text" name="school_student" class="form-control" placeholder="Education">
+                    </div>
+                    <div class="cntcn_inp">
+                        <input type="text" name="class_student" class="form-control" placeholder="standard">
+                    </div>
+                    <button type="" class="btn btn-primary" > save</button>
+                </form>
             </div>
         </div>
     </div>

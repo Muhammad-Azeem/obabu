@@ -25,7 +25,7 @@ class userController extends Controller{
             $userLang->level    = $re->level;
             $userLang->save();
         }
-        if(Auth::user()->type == 4)
+        if(Auth::user()->type == 2)
         {
             return redirect('/teacher');
         }

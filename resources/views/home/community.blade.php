@@ -26,12 +26,12 @@
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	</head>
 	<style>
-		
+
     .swiper-container {
       width: 100%;
       height: 100%;
     }
-    
+
     .swiper-slide {
       text-align: center;
       font-size: 18px;
@@ -213,7 +213,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 				<div class="container-fluid">
 					<div class="main_heading_comm">
 						<h2><span>My</span> Community</h2>
-						
+
 					</div>
 					<div class="row">
 						<div class="col-md-10">
@@ -370,12 +370,14 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 										</div>
 										<div class="swiper-container-cordinator">
 											<div class="swiper-wrapper">
+                                                @foreach($userCords as $usercord)
 												<div class="swiper-slide">
 													<div class="main_slider_comm text-center blu_slider_color">
+
 														<div class="img_section">
 															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
+															<h3>{{$usercord->name}}</h3>
+															<a href="#">{{$usercord->email}}</a>
 															<div class="img_icon">
 																<a href="#"><i class='bx bxs-message-detail' ></i></a>
 																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
@@ -390,112 +392,15 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 														</div>
 													</div>
 												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center yel_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn blue_btn">Profile</button>
-															<button type="button" class="btn purple_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center purple_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn blue_btn">Profile</button>
-															<button type="button" class="btn pink_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
+                                                @endforeach
+
+
 											</div>
 										</div>
 										<div class="show_more_slider text-right w-100">
 											<button type="button" class="btn">Show More!</button>
 										</div>
-										
+
 									</div>
 								</div>
 							</div>
@@ -509,206 +414,30 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 							<div class="row add_padding_sli">
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center blu_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn pink_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center yel_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn blue_btn">Profile</button>
-													<button type="button" class="btn purple_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center purple_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn blue_btn">Profile</button>
-													<button type="button" class="btn pink_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
+                                        @foreach($users as $user)
+                                            @if($user->id !=Illuminate\Support\Facades\Auth::id())
+                                                <div class="swiper-slide">
+                                                    <div class="main_slider_comm text-center blu_slider_color">
+                                                        <div class="img_section">
+                                                            <img src="assets/images/slider_1.png" class="img-fluid">
+                                                            <h3>{{$user->name}} </h3>
+                                                            <a href="#">{{$user->email}}</a>
+                                                            <div class="img_icon">
+                                                                <a href="#"><i class='bx bxs-message-detail' ></i></a>
+                                                                <a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img_buttons">
+                                                            <button type="button" class="btn yellow_btn">Profile</button>
+                                                            <button type="button" class="btn pink_btn ml-1">Contact</button>
+                                                        </div>
+                                                        <div class="cross_slider">
+                                                            <i class='bx bx-x'></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        @endforeach
 									</div>
 								</div>
 								<div class="show_more_slider text-right w-100">
