@@ -61,6 +61,7 @@ Route::post('/users/childrens', [UserController::class, 'store'])->name('page.st
 //interest
 Route::get('/interest', [InterestController::class, 'index'])->name('interest.index');
 Route::get('/hobby', [InterestController::class, 'hobbyIndex'])->name('hobby.index');
+
 Route::get('/interest/create', [InterestController::class, 'create'])->name('interest.create');
 Route::post('/interest/', [InterestController::class, 'store'])->name('interest.store');
 Route::get('/interest/{id}/edit', [InterestController::class, 'edit'])->name('interest.edit');
@@ -94,8 +95,11 @@ Route::get('/about-us', [\App\Http\Controllers\HomeController::class,'about_us']
 
 
 Route::post('update_user_profile','user\studentController@updateProfile')->name('update_user_profile');
+Route::post('update_teacher_profile','user\teacherController@updateProfile')->name('update_teacher_profile');
 Route::post('update_student_education','user\studentController@updateEducation')->name('update_student_education');
 Route::post('edit_language','user\userController@updateLanguage')->name('edit_language');
+Route::get('get_user_language','user\userController@getLanguage')->name('get_user_language');
+Route::post('user_interest','user\userController@addInterest')->name('user_interest');
 Auth::routes();
 
 // Umair Work
@@ -108,10 +112,8 @@ Route::get('/video', function () {
 Route::get('/success', function () {
     return view('home.success');
 });
-Route::get('/teacher', function () {
-    return view('home.teacher_profile');
-});
-Route::get('/student', 'user\studentController@studentProfile');
+Route::get('/teacher', 'user\teacherController@teacherIndex')->middleware('auth');
+Route::get('/student', 'user\studentController@studentProfile')->middleware('auth');
 Route::get('/coming-soon', function () {
     return view('home.coming-soon');
 });
@@ -119,9 +121,7 @@ Route::get('/coming-soon', function () {
 Route::get('/community-teacher', function () {
     return view('home.community');
 });
-Route::get('/community-student', function () {
-    return view('home.community_student');
-});
+Route::get('/community-student','user\studentController@studentCommunity')->middleware('auth');
 
 Route::get('/activity', function () {
     return view('home.activity');
