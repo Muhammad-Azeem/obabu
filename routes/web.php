@@ -129,6 +129,7 @@ Route::get('/coming-soon', function () {
     return view('home.coming-soon');
 });
 
+Route::post('update_profile','user\userController@updateProfile')->name('update_profile')->middleware('auth');
 
 });
 

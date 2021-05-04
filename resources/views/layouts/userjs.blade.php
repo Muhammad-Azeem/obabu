@@ -146,4 +146,26 @@ $('#edit_user_profile').on('click',function(){
         $('#about_user').hide();
         $('#edit_about').show();
     });
+
+    $('#profile-imgs').change(function(){
+        var file_data = $('#profile-imgs').prop('files')[0];
+        var form_data = new FormData();
+        var url = '{{route('update_profile')}}';
+
+        form_data.append('file', file_data);
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: form_data,
+            contentType: false,
+            cache: false,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            processData:false,
+            success: function(data){
+                location.reload();
+            }
+        })
+    });
 </script>

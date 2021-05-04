@@ -4,6 +4,8 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\user_interest;
 use App\Models\userLanguage;
+use App\Models\User;
+use File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -53,5 +55,19 @@ class userController extends Controller{
         }
         return redirect('/student');
     }
+public function updateProfile(Request $re)
+{
+    $user = User::find(Auth::user()->id);
+    $path = public_path() . '/svg/';
+    File::delete($path . $user->avatar);
+    $image = $re->file('file');
 
+    $filename = Auth::user()->name . '.' . $image->getClientOriginalExtension();
+
+    $image->move($path, $filename);
+    $user->profile_pic = $filename;
+    $user->save();
+
+    return "done";
+}
 }

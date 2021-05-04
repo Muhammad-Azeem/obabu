@@ -5,9 +5,14 @@
         <div class="row">
             <div class="col-md-3 ">
                 <div class="profile_section text-center">
+                    @if($user->profile_pic == '')
                     <img src="assets/images/teacher_profile.png" class="img-fluid">
+                    @else
+                        <img src="svg/{{$user->profile_pic}}" class="img-fluid">
+                        @endif
                     <h3>{{$user->name}}</h3>
                     <a href="#">{{$user->email}}</a>
+                    <input type="file" name="p_image" id="profile-imgs" >
                     <button type="button" class="contact_btn">CONTACT ME !</button>
                 </div>
             </div>
