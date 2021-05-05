@@ -9,5 +9,7 @@ class StudentClassDays extends Model
 {
     use HasFactory;
     protected $guarded = [''];
-
+    public function class(){
+        return $this->belongsTo(StudentClass::class);
+    }
 }
