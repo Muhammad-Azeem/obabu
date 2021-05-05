@@ -60,18 +60,23 @@ class studentController extends Controller
 
     public function studentCommunity()
     {
-        $authUser = Auth::user();
-        $classId = DB::table('student_class_students')->where('student_id',Auth::id())->distinct()->get();
+        $authUser = User::with('student_classes','student_classes.student','student_classes.class','teacher')->where('id',Auth::id())->first();
+        $classId = StudentClassStudents::where('student_id',Auth::id())->distinct('class_id')->pluck('class_id');
+        $users = User::with('student_classes','student_classes.student','student_classes.class')->where('id',Auth::id())->get();
 
-        $users = DB::table('student_class_students')
-            ->whereIn('class_id', [''.$classId[0]->class_id.''])
-            ->join('users', 'users.id', '=', 'student_class_students.student_id')
-            ->get();
-        $userst = DB::table('student_classes')
-            ->where('student_classes.id', $classId[0]->class_id)
-            ->join('users', 'users.id', '=', 'student_classes.teacher_id')
-            ->distinct()
-            ->get();
+        $user_ids = StudentClassStudents::whereIn('class_id',$classId)->where('student_id','!=',Auth::id())->distinct('student_id')->pluck('student_id');
+        $userst =  User::with('student_classes','student_classes.student','student_classes.class')->whereIn('id',$user_ids)->get();
+//        $users = DB::table('student_class_students')
+//            ->whereIn('class_id', [''.$classId[0]->class_id.''])
+//            ->join('users', 'users.id', '=', 'student_class_students.student_id')
+//            ->get();
+//        $userst = DB::table('student_classes')
+//            ->where('student_classes.id', $classId[0]->class_id)
+//            ->join('users', 'users.id', '=', 'student_classes.teacher_id')
+//            ->distinct()
+//            ->get();
+//        dd($authUser->teacher);
+
         return view('home.community_student',compact('users','userst','authUser'));
     }
 
