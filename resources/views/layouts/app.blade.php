@@ -87,11 +87,13 @@
                                     </li>
                             </ul>
                             <div class="my-2 my-lg-0">
-                                @if(Illuminate\Support\Facades\Auth::user()->profile_pic == '')
+                                @auth
+                                @if(isset(Illuminate\Support\Facades\Auth::user()->profile_pic) and Illuminate\Support\Facades\Auth::user()->profile_pic == '')
                                     <img src="assets/images/teacher_profile.png" alt="User Image" class="img-fluid" width="124" height="124">
                                 @else
                                     <img src="svg/{{Illuminate\Support\Facades\Auth::user()->profile_pic}}" alt="User Image" class="img-fluid" width="124" height="124">
                                 @endif
+                                @endauth
                             </div>
                         </div>
                     </div>

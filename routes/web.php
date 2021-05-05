@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\SiteController;
+use App\Http\Controllers\ClassController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PackageController;
@@ -15,7 +16,7 @@ use App\Http\Controllers\VideoStreamingController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+|users/parent
 */
 //Route::get('/',function() => view('welcome'));
 
@@ -39,6 +40,23 @@ Route::get('/main',function(){
 
 
 Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard');
+//classes
+Route::get('/classes/index', [ClassController::class, 'index'])->name('page.classes-index');
+Route::get('/classes/add', [ClassController::class, 'create'])->name('page.classes-add');
+Route::post('/classes/add', [ClassController::class, 'store'])->name('page.classes-store');
+Route::get('/classes/edit/{class_id}', [ClassController::class, 'edit'])->name('class.edit');
+Route::post('/classes/edit', [ClassController::class, 'update'])->name('page.classes-update');
+Route::get('/classes/view/timings/{class_id}', [ClassController::class, 'view_timings'])->name('class.view-timings');
+Route::get('/students/view/classes/{teacher_id}', [ClassController::class, 'studentViewClasses'])->name('student.view-class');
+
+
+
+
+//classes end
+
+
+Route::get('/users/parent/view/childs/{parent_id}', [UserController::class, 'parentChilds'])->name('page.parent-child-view');
+
 
 Route::get('/users/teacher', [UserController::class, 'teacherIndex'])->name('page.teacher-index');
 Route::get('/users/children', [UserController::class, 'childrenIndex'])->name('page.children-index');
@@ -49,10 +67,12 @@ Route::get('/users/teacher/create', [UserController::class, 'teacherCreate'])->n
 Route::get('/users/children/create', [UserController::class, 'childrenCreate'])->name('page.childrencreate');
 Route::get('/users/parent/create', [UserController::class, 'parentCreate'])->name('page.parentcreate');
 Route::get('/users/coordinator/create', [UserController::class, 'coordinatorCreate'])->name('page.coordinatorCreate');
+Route::get('/users/coordinator/view/teachers/{coordinate_id}', [UserController::class, 'coordinateTeachers'])->name('page.coordinator.view-teachers');
 
 Route::get('/users/teacher/{id}/edit', [UserController::class, 'edit'])->name('teacher.edit');
 Route::get('/users/children/{id}/edit', [UserController::class, 'edit'])->name('children.edit');
 Route::get('/users/parent/{id}/edit', [UserController::class, 'edit'])->name('parent.edit');
+Route::get('/users/teacher/view/students/{teacher_id}', [UserController::class, 'teacher_student'])->name('parent.teacher_student');
 
 Route::post('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
 
@@ -138,3 +158,7 @@ Route::post('update_profile','user\userController@updateProfile')->name('update_
 Route::get('/activity', function () {
     return view('home.activity');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
