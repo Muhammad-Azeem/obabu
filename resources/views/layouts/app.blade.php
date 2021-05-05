@@ -101,7 +101,7 @@
             </header>
         </div>
     </section>
-    @yield('content')
+    @section('content')
     @show
     @include('layouts.footer')
     @include('layouts.userjs')
