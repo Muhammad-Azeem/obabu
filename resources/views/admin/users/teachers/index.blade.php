@@ -28,11 +28,13 @@
             <th scope="col">age</th>
             <th scope="col">gender</th>
             <th scope="col">Photo</th>
+            <th scope="col">Co-ordinator</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
         @forelse($teacherUsers as $key => $user)
+{{--            @dd($user)--}}
             <tr>
             <th>{{$key +1}}</th>
                 <td>{{isset($user->name)?$user->name:"N/A"}}</td>
@@ -41,7 +43,9 @@
                 <td>{{isset($user->age)?$user->age:"N/A"}}</td>
                 <td>{{isset($user->gender)?$user->gender:"N/A"}}</td>
                 <td>{{isset($user->photo)?$user->photo:"N/A"}}</td>
-            <td>
+                <td>{{isset($user->coordinator)?$user->coordinator->name:"N/A"}}</td>
+
+                <td>
                 <a href=" {{route('teacher.edit', $user->id)}} ">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>

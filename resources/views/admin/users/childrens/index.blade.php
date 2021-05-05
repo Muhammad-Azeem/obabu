@@ -29,6 +29,7 @@
             <th scope="col">age</th>
             <th scope="col">gender</th>
             <th scope="col">Photo</th>
+            <th scope="col">Teacher</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
@@ -42,6 +43,7 @@
             <td>{{isset($user->age)?$user->age:"N/A"}}</td>
             <td>{{isset($user->gender)?$user->gender:"N/A"}}</td>
             <td>{{isset($user->photo)?$user->photo:"N/A"}}</td>
+            <td>{{isset($user->teacher_id)?$user->teacher->name:"N/A"}}</td>
                 <td>
                 <a href=" {{route('children.edit', $user->id)}} ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">

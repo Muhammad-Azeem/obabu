@@ -28,6 +28,7 @@ class UserSeeder extends Seeder
             'email' => 'j@gmail.com',
             'password' => bcrypt('123456'),
             'type' => 2,
+            'coordinator_id' => 1,
             'age' => '27',
 
         ]);
@@ -44,6 +45,7 @@ class UserSeeder extends Seeder
             'name' => 'joy',
             'email' => 'j@gmail.com',
             'password' => bcrypt('123456'),
+            'teacher_id' => 2,
             'type' => 4,
             'age' => '3',
 

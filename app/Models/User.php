@@ -42,4 +42,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function teacher(){
+
+        return $this->belongsTo(User::class,'teacher_id','id');
+    }
+    public function coordinator(){
+
+        return $this->belongsTo(User::class,'coordinator_id','id');
+    }
+    public function student_classes(){
+
+        return $this->hasMany(StudentClassStudents::class,'student_id','id');
+    }
 }
