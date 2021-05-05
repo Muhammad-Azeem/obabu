@@ -75,8 +75,11 @@ class teacherController extends Controller
     public function community()
     {
         $userId = Auth::id();
-        $userCords = CoordinatorTeacher::where('teacher_id',Auth::id())->with('user')->first();
-        $userCords  = $userCords->user;
+        $userCords = User::where('id',Auth::user()->coordinator_id)->first();
+        if($userCords == Null)
+        {
+            $userCords = [];
+        };
         $classId = DB::table('student_classes')->where('teacher_id',Auth::id())->distinct()->get();
         $array = [];
         foreach($classId  as $class)
