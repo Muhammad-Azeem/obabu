@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0480ea60-dd4f-4d30-94bd-bc797de549a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/obabu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/obabu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/userController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/userController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/community.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/community.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -181,7 +171,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620141523198</updated>
-      <workItem from="1620141525348" duration="16261000" />
+      <workItem from="1620141525348" duration="16970000" />
+      <workItem from="1620192472576" duration="110000" />
     </task>
     <servers />
   </component>
