@@ -5,14 +5,16 @@
         <div class="row">
             <div class="col-md-3 ">
                 <div class="profile_section text-center">
+                    @if(Illuminate\Support\Facades\Auth::id() == $user->id)
+                        <i class='bx bxs-pencil' id="edit_user_profile_image"></i>
+                    @endif
                     @if($user->profile_pic == '')
-                    <img src="assets/images/teacher_profile.png" class="img-fluid">
+                        <img src="assets/images/teacher_profile.png" class="img-fluid">
                     @else
                         <img src="svg/{{$user->profile_pic}}" class="img-fluid">
-                        @endif
+                    @endif
                     <h3>{{$user->name}}</h3>
                     <a href="#">{{$user->email}}</a>
-                    <input type="file" name="p_image" id="profile-imgs" >
                     <button type="button" class="contact_btn">CONTACT ME !</button>
                 </div>
             </div>
@@ -20,7 +22,7 @@
                 <div class="teacher_data">
                     <div class="about_teacher">
                         <div class="edit_icon">
-                            <i class='bx bxs-pencil' id="edit_teacher_about"></i>
+
                         </div>
                         <h3>ABOUT ME</h3>
                         <div id="about_user">
@@ -44,7 +46,9 @@
                         <div class="per_info">
                             <div class="per_info_head d-flex justify-content-between">
                                 <h3>PERSONAL INFORMATION</h3>
+                                @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                                 <i class='bx bxs-pencil' id="edit_teacher_profile"></i>
+                                    @endif
                             </div>
                             <div class="info_detail">
                                 <div class="row">
@@ -78,7 +82,9 @@
                         <div class="intrest_info">
                             <div class="per_info_head pink_head d-flex justify-content-between">
                                 <h3>INTEREST & SKILLS</h3>
+                                @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                                 <i class='bx bxs-pencil' onclick="add_inrest()"></i>
+                                @endif
                             </div>
                             <div class="row">
                                 @foreach($interestUser as $interest)
@@ -121,17 +127,21 @@
                                     @endforeach
                                 </div>
                             </div>
+                            @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                             <div class="edit_icon">
                                 <i class='bx bxs-pencil' id="edit_teacher_education"></i>
                             </div>
                             <div class="">
                                 <i class='bx bxs-pencil' id="edit_teacher_expernce"></i>
                             </div>
+                                @endif
                         </div>
                         <div class="languag_sec">
                             <div class="per_info_head yellow_head d-flex justify-content-between">
                                 <h3>LANGUAGE PROFICIENCY</h3>
+                                @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                                 <i class='bx bxs-pencil' onclick="add_language()"></i>
+                                @endif
                             </div>
                             <div class="row">
                                 @foreach($userLanuage as $userL)
@@ -229,6 +239,21 @@
                     </div>
                     <button type="" class="btn btn-primary" > save</button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="teacher_education12">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal_content_expe">
+                <div class="cntcn_inp"><input type="file" class="form-control" name="p_image" id="profile-imgs" ></div>
             </div>
         </div>
     </div>

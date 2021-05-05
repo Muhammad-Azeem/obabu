@@ -5,7 +5,14 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="profile_section profile_section2 text-center">
-                    <img src="assets/images/teacher2.png" class="img-fluid">
+                    @if(Illuminate\Support\Facades\Auth::id() == $user->id)
+                        <i class='bx bxs-pencil' id="edit_user_profile_image"></i>
+                    @endif
+                    @if($user->profile_pic == '')
+                        <img src="assets/images/teacher_profile.png" class="img-fluid">
+                    @else
+                        <img src="svg/{{$user->profile_pic}}" class="img-fluid">
+                    @endif
                     <h3>{{$user->name}}</h3>
                     <a href="#">{{$user->email}}</a>
                     <!-- <button type="button" class="contact_btn">CONTACT ME !</button> -->
@@ -14,6 +21,7 @@
                     <img src="assets/images/teacher3.png" class="img-fluid">
                     <h3>Bergstrom Eudora</h3>
                     <a href="#">{{$user->email}}</a>
+
                     <button type="button" class="contact_btn">Acount Setting</button>
                 </div>
             </div>
@@ -21,7 +29,9 @@
                 <div class="teacher_info">
                     <div class="tch_info_head d-flex justify-content-between">
                         <h3>PERSONAL INFORMATION</h3>
+                        @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                         <i class='bx bxs-pencil' id="edit_user_profile"></i>
+                        @endif
                     </div>
                     <div class="tch_details">
                         <div class="row">
@@ -62,7 +72,9 @@
                 <div class="intrest_info2">
                     <div class="per_info_head _main_image_haed_ad d-flex justify-content-between">
                         <h3>INTEREST & SKILLS</h3>
+                        @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                         <i class='bx bxs-pencil' onclick="add_inrest()"></i>
+                        @endif
                         <img src="assets/images/tble_top.png" class="intrest_poision">
                     </div>
                     <div class="row">
@@ -102,7 +114,11 @@
                         </div>
                         <div class="edu_data">
 
-                            <h3>EDUCATION <i class='bx bxs-pencil' id="edit_education_student"></i> </h3>
+                            <h3>EDUCATION
+                                @if(Illuminate\Support\Facades\Auth::id() == $user->id)
+                                <i class='bx bxs-pencil' id="edit_education_student"></i>
+                                @endif
+                            </h3>
                          <div id="update_student_data">
                              @foreach($userEducation as $userEdu)
                             @if(isset($userEdu->school))
@@ -118,7 +134,9 @@
                 <div class="languag_sec languag_sec2">
                     <div class="per_info_head yellow_head d-flex justify-content-between">
                         <h3>LANGUAGE PROFICIENCY</h3>
+                        @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                         <i class='bx bxs-pencil' onclick="add_language()"></i>
+                        @endif
                     </div>
                     <div class="row">
                         @foreach($userLanuage as $userL)
@@ -203,17 +221,33 @@
                 </button>
             </div>
             <div class="modal-body" id="modal_content">
-                <form action="{{route('update_student_education')}}" method="POST" >
-                    @csrf
-                    <input name="id" value="" type="hidden">
-                    <div class="cntcn_inp">
-                      <input type="text" name="school_student" class="form-control" placeholder="Education">
-                    </div>
-                    <div class="cntcn_inp">
-                        <input type="text" name="class_student" class="form-control" placeholder="standard">
-                    </div>
-                    <button type="" class="btn btn-primary" > save</button>
-                </form>
+                <div id="modeling"><form action="{{route('update_student_education')}}" method="POST" >
+                        @csrf
+                        <input name="id" value="" type="hidden">
+                        <div class="cntcn_inp">
+                            <input type="text" name="school_student" class="form-control" placeholder="Education">
+                        </div>
+                        <div class="cntcn_inp">
+                            <input type="text" name="class_student" class="form-control" placeholder="standard">
+                        </div>
+                        <button type="" class="btn btn-primary" > save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="teacher_education12">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal_content_expe">
+                <div class="cntcn_inp"><input type="file" class="form-control" name="p_image" id="profile-imgs" ></div>
             </div>
         </div>
     </div>

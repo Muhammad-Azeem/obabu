@@ -233,7 +233,11 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
                                             </li>
                                     </ul>
                                     <div class="my-2 my-lg-0">
-                                        <img src="assets/images/profile.png" alt="User Image" class="img-fluid" width="124" height="124"/>
+                                        @if(Illuminate\Support\Facades\Auth::user()->profile_pic == '')
+                                            <img src="assets/images/teacher_profile.png" alt="User Image" class="img-fluid" width="124" height="124">
+                                        @else
+                                            <img src="svg/{{Illuminate\Support\Facades\Auth::user()->profile_pic}}" alt="User Image" class="img-fluid" width="124" height="124">
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -260,127 +264,37 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 											</div>
 										</div>
 										<div class="swiper-container-teacher">
+
 											<div class="swiper-wrapper">
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center blu_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn pink_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center yel_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn blue_btn">Profile</button>
-															<button type="button" class="btn purple_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center purple_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn blue_btn">Profile</button>
-															<button type="button" class="btn pink_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
+                                                @foreach($teachers as $usercord)
+                                                    <div class="swiper-slide">
+                                                        <div class="main_slider_comm text-center blu_slider_color">
+
+                                                            <div class="img_section">
+                                                                @if($usercord->profile_pic == '')
+                                                                    <img src="assets/images/teacher_profile.png" class="img-fluid">
+                                                                @else
+                                                                    <img src="svg/{{$usercord->profile_pic}}" class="img-fluid">
+                                                                @endif
+
+                                                                <h3>{{$usercord->name}}</h3>
+                                                                <a href="#">{{$usercord->email}}</a>
+                                                                <div class="img_icon">
+                                                                    <a href="#"><i class='bx bxs-message-detail' ></i></a>
+                                                                    <a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="img_buttons">
+                                                                <a href="{{route('profile',['id'=>$usercord->id])}}" type="button" class="btn yellow_btn">Profile</a>
+                                                                <button type="button" class="btn pink_btn ml-1">Contact</button>
+                                                            </div>
+                                                            <div class="cross_slider">
+                                                                <i class='bx bx-x'></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+
 											</div>
 										</div>
 										<div class="show_more_slider text-right w-100">
@@ -402,12 +316,18 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 										</div>
 										<div class="swiper-container-cordinator">
 											<div class="swiper-wrapper">
+
                                                 @foreach($userCords as $usercord)
 												<div class="swiper-slide">
 													<div class="main_slider_comm text-center blu_slider_color">
 
 														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
+                                                            @if($usercord->profile_pic == '')
+                                                                <img src="assets/images/teacher_profile.png" class="img-fluid">
+                                                            @else
+                                                                <img src="svg/{{$usercord->profile_pic}}" class="img-fluid">
+                                                            @endif
+
 															<h3>{{$usercord->name}}</h3>
 															<a href="#">{{$usercord->email}}</a>
 															<div class="img_icon">
@@ -416,7 +336,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 															</div>
 														</div>
 														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
+															<a href="{{route('profile',['id'=>$usercord->id])}}" type="button" class="btn yellow_btn">Profile</a>
 															<button type="button" class="btn pink_btn ml-1">Contact</button>
 														</div>
 														<div class="cross_slider">
@@ -451,7 +371,11 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
                                                 <div class="swiper-slide">
                                                     <div class="main_slider_comm text-center blu_slider_color">
                                                         <div class="img_section">
-                                                            <img src="assets/images/slider_1.png" class="img-fluid">
+                                                            @if($user->profile_pic == '')
+                                                                <img src="assets/images/teacher_profile.png" class="img-fluid">
+                                                            @else
+                                                                <img src="svg/{{$user->profile_pic}}" class="img-fluid">
+                                                            @endif
                                                             <h3>{{$user->name}} </h3>
                                                             <a href="#">{{$user->email}}</a>
                                                             <div class="img_icon">
@@ -460,7 +384,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
                                                             </div>
                                                         </div>
                                                         <div class="img_buttons">
-                                                            <button type="button" class="btn yellow_btn">Profile</button>
+                                                            <a href="{{route('profile',['id'=>$user->id])}}" type="button" class="btn yellow_btn">Profile</a>
                                                             <button type="button" class="btn pink_btn ml-1">Contact</button>
                                                         </div>
                                                         <div class="cross_slider">

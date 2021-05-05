@@ -75,7 +75,9 @@ class teacherController extends Controller
     public function community()
     {
         $userId = Auth::id();
-        $userCords = User::where('id',Auth::user()->coordinator_id)->first();
+        $userCords = User::where('id',Auth::user()->coordinator_id)->get();
+        $teachers = User::where('id','!=',$userId)->where('type','2')->get();
+
         if($userCords == Null)
         {
             $userCords = [];
@@ -96,7 +98,7 @@ class teacherController extends Controller
 
         }
 
-      return  view('home.community',compact('userCords','users'));
+      return  view('home.community',compact('userCords','users','teachers'));
 
     }
 }

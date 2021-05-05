@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad065024-779d-43bb-9834-2c73536c7658" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_04_05_2021__11_32_PM.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_5_5_21__10_27_AM.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/obabu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/obabu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/teacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/teacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/userController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/userController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/svg/bill.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/svg/bill.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/about_us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/community.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/community.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/community_student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/community_student.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +185,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620235899209</updated>
-      <workItem from="1620235900552" duration="282000" />
+      <workItem from="1620235900552" duration="15354000" />
     </task>
     <servers />
   </component>

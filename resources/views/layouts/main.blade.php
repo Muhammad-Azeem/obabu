@@ -23,7 +23,17 @@
 </head>
 <body>
 <main id="app">
+
+
     @include('layouts.header')
+    @if($errors->any())
+        <div class="alert alert-success" role="alert">
+            <strong>Our team Contact you soon!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
         @section('maincontent')
         @show
             @include('layouts.footer')
