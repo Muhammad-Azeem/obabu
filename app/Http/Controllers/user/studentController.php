@@ -22,7 +22,7 @@ class studentController extends Controller
         $Hobbies = Interest::where('type', 'hobbies')->get();
         $hobbyUser = user_interest::where(['user_id'=>Auth::id(),'type'=>'hobby'])->get();
         $interestUser = user_interest::where(['user_id'=>Auth::id(),'type'=>'interest'])->get();
-        $userEducation = studenEducation::where('user_id',$user->id)->first();
+        $userEducation = studenEducation::where('user_id',$user->id)->get();
         $userLanuage   = userLanguage::where('user_id',$user->id)->get();
         return view('home.student_profile',compact('user','userEducation','userLanuage','Hobbies','interests','hobbyUser','interestUser'));
     }
@@ -77,6 +77,23 @@ class studentController extends Controller
 //            ->get();
 //        dd($authUser->teacher);
 
+        
+//        $users = [];
+//        $classId = DB::table('student_class_students')->where('student_id',Auth::id())->distinct()->get();
+//        if(isset($classId[0]->class_id)) {
+//            $users = DB::table('student_class_students')
+//                ->whereIn('class_id', ['' . $classId[0]->class_id . ''])
+//                ->join('users', 'users.id', '=', 'student_class_students.student_id')
+//                ->get();
+//        }
+//        $userst =[];
+//        if(isset($classId[0]->class_id)) {
+//            $userst = DB::table('student_classes')
+//                ->where('student_classes.id', $classId[0]->class_id)
+//                ->join('users', 'users.id', '=', 'student_classes.teacher_id')
+//                ->distinct()
+//                ->get();
+//        }
         return view('home.community_student',compact('users','userst','authUser'));
     }
 

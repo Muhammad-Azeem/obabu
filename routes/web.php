@@ -112,16 +112,27 @@ Route::get('/video', function () {
 Route::get('/success', function () {
     return view('home.success');
 });
-Route::get('/teacher', 'user\teacherController@teacherIndex')->middleware('auth');
-Route::get('/student', 'user\studentController@studentProfile')->middleware('auth');
+Route::group(['middleware' => 'App\Http\Middleware\studentMiddleware'], function()
+{
+    Route::get('/community-student','user\studentController@studentCommunity')->middleware('auth');
+    Route::get('/student', 'user\studentController@studentProfile')->middleware('auth');
+
+});
+
+Route::group(['middleware' => 'App\Http\Middleware\teacherMiddleware'], function()
+{   Route::post('teacher_education','user\teacherController@addEducation')->name('teacher_education');
+  Route::post('teacher_expernce','user\teacherController@addExpe')->name('teacher_expernce');
+  Route::post('edit_user_about','user\teacherController@edit_user_about')->name('edit_user_about');
+    Route::get('/teacher', 'user\teacherController@teacherIndex')->middleware('auth');
+    Route::get('/community-teacher','user\teacherController@community');
 Route::get('/coming-soon', function () {
     return view('home.coming-soon');
 });
 
-Route::get('/community-teacher', function () {
-    return view('home.community');
+Route::post('update_profile','user\userController@updateProfile')->name('update_profile')->middleware('auth');
+
 });
-Route::get('/community-student','user\studentController@studentCommunity')->middleware('auth');
+
 
 Route::get('/activity', function () {
     return view('home.activity');

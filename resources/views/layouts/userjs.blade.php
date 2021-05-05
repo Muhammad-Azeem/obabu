@@ -1,6 +1,7 @@
 <script>
     $(document).ready(function(){
         $('#edit_student_education_form').hide();
+        $('#edit_about').hide();
         $htmlE = `<form action="{{route('update_student_education')}}" method="POST">
                                    @csrf
            @if(isset($userEducation->id))
@@ -55,10 +56,13 @@ $('#edit_user_profile').on('click',function(){
         $('#teacher_form_user').show();
     });
     $('#edit_education_student').on('click',function(){
-        $('#update_student_data').hide();
-        $('#edit_student_education_form').show();
-    });
 
+        $('#edit_education').modal('show');
+    });
+    $('#edit_teacher_education').on('click',function(){
+
+        $('#teacher_education').modal('show');
+    });
     function editLanguage($id)
     {
         $.ajax({
@@ -120,4 +124,48 @@ $('#edit_user_profile').on('click',function(){
         $('#user_interest1').modal('show');
 
     }
+
+    $('#edit_teacher_expernce').on('click',function (){
+        $html = `<form action="{{route('teacher_expernce')}}" method="POST" >
+                    @csrf
+        <div class="cntcn_inp">
+           <input name="school" type="text" class="form-control" placeholder="School">
+
+        </div>
+        <div class="cntcn_inp">
+                <input name="designation" class="form-control" type="text" placeholder="Designation">
+
+        </div>
+        <button type="" class="btn btn-primary" > save</button>
+    </form>`;
+        $('#modal_content_expe').html($html);
+        $('#teacher_education').modal('show');
+    });
+
+    $('#edit_teacher_about').on('click',function(){
+        $('#about_user').hide();
+        $('#edit_about').show();
+    });
+
+    $('#profile-imgs').change(function(){
+        var file_data = $('#profile-imgs').prop('files')[0];
+        var form_data = new FormData();
+        var url = '{{route('update_profile')}}';
+
+        form_data.append('file', file_data);
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: form_data,
+            contentType: false,
+            cache: false,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            processData:false,
+            success: function(data){
+                location.reload();
+            }
+        })
+    });
 </script>
