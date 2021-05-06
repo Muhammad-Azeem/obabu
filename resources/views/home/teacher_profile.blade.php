@@ -21,25 +21,27 @@
             <div class="col-md-9">
                 <div class="teacher_data">
                     <div class="about_teacher">
-                        <div class="edit_icon">
-
-                        </div>
+                        @if(Illuminate\Support\Facades\Auth::id() == $user->id)
+                            <div class="edit_icon">
+                            <i class='bx bxs-pencil' id="edit_teacher_about"></i>
+                            </div>
+                        @endif
                         <h3>ABOUT ME</h3>
                         <div id="about_user">
-                        <p class="m-0">{{$user->about}}</p>
+                            <p class="m-0">{{$user->about}}</p>
                         </div>
                         <div id="edit_about">
-                        <form action="{{route('edit_user_about')}}" method="POST">
-                            @csrf
-                            <div class="cntcn_inpp">
+                            <form action="{{route('edit_user_about')}}" method="POST">
+                                @csrf
+                                <div class="cntcn_inpp">
                             <textarea name="about" class="form-control">
                             {{$user->about}}
                             </textarea>
-                            </div>
-                            <button class="form-control btn btn-primary" type="submit" >Save</button>
-                        </form>
+                                </div>
+                                <button class="form-control btn btn-primary" type="submit" >Save</button>
+                            </form>
                         </div>
-                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -47,8 +49,8 @@
                             <div class="per_info_head d-flex justify-content-between">
                                 <h3>PERSONAL INFORMATION</h3>
                                 @if(Illuminate\Support\Facades\Auth::id() == $user->id)
-                                <i class='bx bxs-pencil' id="edit_teacher_profile"></i>
-                                    @endif
+                                    <i class='bx bxs-pencil' id="edit_teacher_profile"></i>
+                                @endif
                             </div>
                             <div class="info_detail">
                                 <div class="row">
@@ -83,7 +85,7 @@
                             <div class="per_info_head pink_head d-flex justify-content-between">
                                 <h3>INTEREST & SKILLS</h3>
                                 @if(Illuminate\Support\Facades\Auth::id() == $user->id)
-                                <i class='bx bxs-pencil' onclick="add_inrest()"></i>
+                                    <i class='bx bxs-pencil' onclick="add_inrest()"></i>
                                 @endif
                             </div>
                             <div class="row">
@@ -108,9 +110,9 @@
                                 <div class="edu_data">
                                     <h3>EDUCATION</h3>
                                     @foreach($userEducation as $useredu)
-                                    <h5>{{$useredu->degree}}</h5>
-                                    <p>{{$useredu->institute}}</p>
-                                    <p>September 2015 - Present</p>
+                                        <h5>{{$useredu->degree}}</h5>
+                                        <p>{{$useredu->institute}}</p>
+                                        <p>September 2015 - Present</p>
                                     @endforeach
                                 </div>
                             </div>
@@ -121,26 +123,26 @@
                                 <div class="edu_data">
                                     <h3>WORK EXPERIENCE</h3>
                                     @foreach($userExp as $exp)
-                                    <h5>{{$exp->designation}} </h5>
-                                    <p>{{$exp->school}}</p>
-                                    <p>December 2015 - {{$exp->status}}</p>
+                                        <h5>{{$exp->designation}} </h5>
+                                        <p>{{$exp->school}}</p>
+                                        <p>December 2015 - {{$exp->status}}</p>
                                     @endforeach
                                 </div>
                             </div>
                             @if(Illuminate\Support\Facades\Auth::id() == $user->id)
-                            <div class="edit_icon">
-                                <i class='bx bxs-pencil' id="edit_teacher_education"></i>
-                            </div>
-                            <div class="">
-                                <i class='bx bxs-pencil' id="edit_teacher_expernce"></i>
-                            </div>
-                                @endif
+                                <div class="edit_icon">
+                                    <i class='bx bxs-pencil' id="edit_teacher_education"></i>
+                                </div>
+                                <div class="">
+                                    <i class='bx bxs-pencil' id="edit_teacher_expernce"></i>
+                                </div>
+                            @endif
                         </div>
                         <div class="languag_sec">
                             <div class="per_info_head yellow_head d-flex justify-content-between">
                                 <h3>LANGUAGE PROFICIENCY</h3>
                                 @if(Illuminate\Support\Facades\Auth::id() == $user->id)
-                                <i class='bx bxs-pencil' onclick="add_language()"></i>
+                                    <i class='bx bxs-pencil' onclick="add_language()"></i>
                                 @endif
                             </div>
                             <div class="row">
@@ -169,7 +171,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Add</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -184,7 +186,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Add Hobbies/Interest</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -221,7 +223,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Add Education</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -247,7 +249,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Add Picture</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
