@@ -33,13 +33,13 @@
                 <div class="text-center login-main">
                     <h1>Log In</h1>
                     <div class="social_login">
-
-
-
-
+                        
+                        
+                        
+                        
                     </div>
                     <form class="d-flex flex-column align-items-center justify-content-center mt-4" method="POST" action="<?php echo e(route('login')); ?>">
-                       <?php echo csrf_field(); ?>
+                        <?php echo csrf_field(); ?>
                         <div class="input-group mb-3 w-50 ">
                             <div class="input-group-prepend">
 										<span class="input-group-text">
@@ -95,15 +95,15 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
 
+                        
+                        <?php if(Route::has('password.request')): ?>
+                            <a class="text-dark h6 mt-2 forgot_link" href="<?php echo e(route('password.request')); ?>">
+                                <?php echo e(__('Forgot Your Password?')); ?>
 
-                    <?php if(Route::has('password.request')): ?>
-                        <a class="text-dark h6 mt-2 forgot_link" href="<?php echo e(route('password.request')); ?>">
-                            <?php echo e(__('Forgot Your Password?')); ?>
-
-                        </a>
-                    <?php endif; ?>
-                    <hr class="text-center"/>
-                    <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit"><?php echo e(__('Submit')); ?></button>
+                            </a>
+                        <?php endif; ?>
+                        <hr class="text-center"/>
+                        <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit"><?php echo e(__('Submit')); ?></button>
                     </form>
                 </div>
             </div>

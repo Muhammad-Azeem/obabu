@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\contactUs;
 use App\Models\Package;
 use App\Models\PackageOption;
 use App\Models\Transaction;
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Stripe\Stripe;
+use Redirect;
 use Stripe\Token;
 use Stripe\Customer;
 use Stripe\Charge;
@@ -172,5 +174,18 @@ class HomeController extends Controller
     $session = Package::whereNotNull('is_session_count')->get();
 
     return view('home.membership_discount',compact('membership','session'));
+}
+
+public function saveContactUs(Request $re)
+{
+    $contact = contactUs::create([
+        'email'=>$re->email,
+        'location'=>$re->location,
+        'city'=>$re->city,
+        'state'=>$re->state,
+        'number'=>$re->number,
+        'enrollie'=>$re->enrollie
+    ]);
+    return back()->withErrors(['name.required', 'Name is required']);
 }
 }

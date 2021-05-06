@@ -40,10 +40,10 @@
                 <div class="text-center signup-main">
                     <h1 class="mt-2 mt-sm-3 mt-md-3">Create Account</h1>
                     <div class="social_login">
-{{--                        <i class="bx bxl-facebook"></i>--}}
-{{--                        <i class="bx bxl-google mx-lg-3"></i>--}}
-{{--                        <i class="bx bxl-linkedin"></i>--}}
-{{--                        <p>Or use your email account:</p>--}}
+                        {{--                        <i class="bx bxl-facebook"></i>--}}
+                        {{--                        <i class="bx bxl-google mx-lg-3"></i>--}}
+                        {{--                        <i class="bx bxl-linkedin"></i>--}}
+                        {{--                        <p>Or use your email account:</p>--}}
                     </div>
                     <form class="d-flex flex-column align-items-center justify-content-center mt-4" method="POST" action="{{ route('register') }}">
                         @csrf

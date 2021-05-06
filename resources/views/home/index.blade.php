@@ -377,47 +377,48 @@
                         <p>Get in touch and let us know  how we can help</p>
                     </div>
                     <div class="contact_form">
-                        <div class="cntcn_inp">
-                            <input type="text" class="form-control" name="" placeholder="Program Director Email">
-                        </div>
-                        <div class="cntcn_inp">
-                            <select class="form-control">
-                                <option>Location</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
+                        <form action="{{route('contactus')}}" method="POST">
+                            @csrf
+                            <div class="contact_form">
                                 <div class="cntcn_inp">
-                                    <select class="form-control">
-                                        <option>Location</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="email" placeholder="Program Director Email">
+                                </div>
+                                <div class="cntcn_inp">
+                                    <input type="text" class="form-control" name="location" placeholder="Program Director Email">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="cntcn_inp">
+                                            <select class="form-control" name="city">
+                                                <option value="NY">New York</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="cntcn_inp">
+                                            <select class="form-control" name="state">
+                                                <option value="DC">DC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="cntcn_inp">
+                                            <input type="number" class="form-control" name="number" placeholder="Program Director Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="cntcn_inp">
+                                            <select class="form-control" name="enrollie">
+                                                <option value="Potential">Potential Enrollees</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cntct_btn">
+                                    <button type="submit" class="btn">SEND</button>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="cntcn_inp">
-                                    <select class="form-control">
-                                        <option>State</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="cntcn_inp">
-                                    <select class="form-control">
-                                        <option>Phone Number</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="cntcn_inp">
-                                    <select class="form-control">
-                                        <option>Potential Enrollees</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cntct_btn">
-                            <button type="submit" class="btn">SEND</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

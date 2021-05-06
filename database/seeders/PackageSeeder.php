@@ -24,19 +24,20 @@ class PackageSeeder extends Seeder
             'per_day_price' => '5',
             'name' => 'Pathfinder'
 
+
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' => 2,
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' => 5,
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' => 6,
         ]);
@@ -50,17 +51,17 @@ class PackageSeeder extends Seeder
             'name' => 'Explore',
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' => 3,
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' => 5,
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' => 4,
         ]);
@@ -71,35 +72,36 @@ class PackageSeeder extends Seeder
             'discount' => '30',
             'days_per_week' => '5',
             'per_day_price' => '3',
+
             'name' => 'adventurer',
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' =>93,
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' => 1,
         ]);
 
-        PackageOption::create([
+        PackageOption::updateOrCreate([
             'package_id' => $package->id,
             'number' => 2,
         ]);
 
-        $package = Package::create([
+        $package = Package::updateOrCreate([
             'per_day_price' => '6',
             'is_session_count' => '3',
         ]);
 
-        $package = Package::create([
+        $package = Package::updateOrCreate([
             'per_day_price' => '3',
             'is_session_count' => '10',
         ]);
 
-        $package = Package::create([
+        $package = Package::updateOrCreate([
             'per_day_price' => '2',
             'is_session_count' => '15',
         ]);
