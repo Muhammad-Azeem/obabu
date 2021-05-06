@@ -95,8 +95,11 @@
             <div class="col-md-5">
                 <div class="hobbies_sections">
                     <div class="hobbies">
-                        <h3>HOBBIES</h3>
+                        <h3>HOBBIES     @if(Illuminate\Support\Facades\Auth::id() == $user->id)
+                                <i class='bx bxs-pencil' onclick="add_inrest()"></i>
+                            @endif</h3>
                         <div class="main_hobbies_images">
+
                             <div class="images_hobby">
                                 @foreach($hobbyUser as $hobby)
                                     <div class="img_hobby text-center blue_color">
