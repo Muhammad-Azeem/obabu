@@ -218,27 +218,44 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
                                                 </a>
 
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                                       onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
-                                                        {{ __('Logout') }}
-                                                    </a>
+                                                    @if(\Illuminate\Support\Facades\Auth::user()->type == 4)
+                                                        <a class="dropdown-item" href="{{ url('student') }}">
+                                                            {{ __('Edit Profile') }}
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ url('community-student') }}">
+                                                            {{ __('Community') }}
+                                                        </a>
+                                                    @elseif(\Illuminate\Support\Facades\Auth::user()->type == 2)
+                                                        <a class="dropdown-item" href="{{ url('teacher') }}">
+                                                            {{ __('Edit Profile') }}
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ url('community-teacher') }}">
+                                                            {{ __('Community') }}
+                                                        </a>
+                                                    @endif
 
-                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                        @csrf
-                                                    </form>
+
+                                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                                           onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                                            {{ __('Logout') }}
+                                                        </a>
+
+                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                            @csrf
+                                                        </form>
                                                 </div>
                                             </li>
-                                            @endguest
                                             </li>
                                     </ul>
                                     <div class="my-2 my-lg-0">
                                         @if(Illuminate\Support\Facades\Auth::user()->profile_pic == '')
-                                            <img src="assets/images/teacher_profile.png" alt="User Image" class="img-fluid" width="124" height="124">
+                                            <img src="assets/images/profile.png" alt="User Image" class="img-fluid" width="124" height="124">
                                         @else
                                             <img src="svg/{{Illuminate\Support\Facades\Auth::user()->profile_pic}}" alt="User Image" class="img-fluid" width="124" height="124">
                                         @endif
                                     </div>
+                                    @endguest
                                 </div>
                             </div>
                         </nav>
