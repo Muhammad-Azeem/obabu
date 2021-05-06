@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/obabu.iml" filepath="$PROJECT_DIR$/.idea/obabu.iml" />
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/../roadsideapi/.idea/roadsideapi.iml" filepath="$PROJECT_DIR$/../roadsideapi/.idea/roadsideapi.iml" />
+>>>>>>> 3500e04c9c32ea1d130dcf0e509ce03ed3d14239
     </modules>
   </component>
 </project>

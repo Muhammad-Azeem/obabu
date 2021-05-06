@@ -84,6 +84,7 @@ Route::post('/users/childrens', [UserController::class, 'store'])->name('page.st
 //interest
 Route::get('/interest', [InterestController::class, 'index'])->name('interest.index');
 Route::get('/hobby', [InterestController::class, 'hobbyIndex'])->name('hobby.index');
+
 Route::get('/interest/create', [InterestController::class, 'create'])->name('interest.create');
 Route::post('/interest/', [InterestController::class, 'store'])->name('interest.store');
 Route::get('/interest/{id}/edit', [InterestController::class, 'edit'])->name('interest.edit');
@@ -115,6 +116,13 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name
 Route::get('/sales', [\App\Http\Controllers\HomeController::class,'sales'])->name('sales');
 Route::get('/about-us', [\App\Http\Controllers\HomeController::class,'about_us'])->name('about_us');
 
+
+Route::post('update_user_profile','user\studentController@updateProfile')->name('update_user_profile');
+Route::post('update_teacher_profile','user\teacherController@updateProfile')->name('update_teacher_profile');
+Route::post('update_student_education','user\studentController@updateEducation')->name('update_student_education');
+Route::post('edit_language','user\userController@updateLanguage')->name('edit_language');
+Route::get('get_user_language','user\userController@getLanguage')->name('get_user_language');
+Route::post('user_interest','user\userController@addInterest')->name('user_interest');
 Auth::routes();
 
 // Umair Work
@@ -127,22 +135,27 @@ Route::get('/video', function () {
 Route::get('/success', function () {
     return view('home.success');
 });
-Route::get('/teacher', function () {
-    return view('home.teacher_profile');
+Route::group(['middleware' => 'App\Http\Middleware\studentMiddleware'], function()
+{
+    Route::get('/community-student','user\studentController@studentCommunity')->middleware('auth');
+    Route::get('/student', 'user\studentController@studentProfile')->middleware('auth');
+
 });
-Route::get('/student', function () {
-    return view('home.student_profile');
-});
+
+Route::group(['middleware' => 'App\Http\Middleware\teacherMiddleware'], function()
+{   Route::post('teacher_education','user\teacherController@addEducation')->name('teacher_education');
+  Route::post('teacher_expernce','user\teacherController@addExpe')->name('teacher_expernce');
+  Route::post('edit_user_about','user\teacherController@edit_user_about')->name('edit_user_about');
+    Route::get('/teacher', 'user\teacherController@teacherIndex')->middleware('auth');
+    Route::get('/community-teacher','user\teacherController@community');
 Route::get('/coming-soon', function () {
     return view('home.coming-soon');
 });
 
-Route::get('/community-teacher', function () {
-    return view('home.community');
+Route::post('update_profile','user\userController@updateProfile')->name('update_profile')->middleware('auth');
+
 });
-Route::get('/community-student', function () {
-    return view('home.community_student');
-});
+
 
 Route::get('/activity', function () {
     return view('home.activity');

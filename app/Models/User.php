@@ -51,4 +51,8 @@ class User extends Authenticatable
 
         return $this->belongsTo(User::class,'coordinator_id','id');
     }
+    public function student_classes(){
+
+        return $this->hasMany(StudentClassStudents::class,'student_id','id');
+    }
 }

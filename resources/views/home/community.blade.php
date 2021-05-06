@@ -26,12 +26,12 @@
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	</head>
 	<style>
-		
+
     .swiper-container {
       width: 100%;
       height: 100%;
     }
-    
+
     .swiper-slide {
       text-align: center;
       font-size: 18px;
@@ -171,41 +171,73 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 			<section class="about_us_main">
 				<div class="header_main">
 					<header class="header ot_headers ot_padding">
-						<nav class="navbar navbar-light navbar-expand-lg bg-transparent">
-							<div class="container-fluid">
-								<a class="navbar-brand" href="#">
-									<img src="assets/images/logo.png" class="img-fluid mx-auto" height="114" width="139" alt="logo">
-								</a>
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-								</button>
-								<div class="collapse navbar-collapse" id="navbarToggler">
-									<ul class="navbar-nav ml-auto">
-										<li class="nav-item">
-											<a class="nav-link text-white">HOME</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link">ABOUT US</a>
-										</li>
-										<li class="nav-item active">
-											<a class="nav-link">ACTIVITY</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link">SALES</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link">CHAT VIEW</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link">LOGIN</a>
-										</li>
-									</ul>
-									<div class="my-2 my-lg-0">
-										<img src="assets/images/profile.png" alt="User Image" class="img-fluid" width="124" height="124"/>
-									</div>
-								</div>
-							</div>
-						</nav>
+                        <nav class="navbar navbar-light navbar-expand-lg bg-transparent">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">
+                                    <img src="assets/images/logo.png" class="img-fluid mx-auto" height="114" width="139" alt="logo">
+                                    <img src="assets/images/logo_bg.png" class="bg_logo">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarToggler">
+                                    @php
+                                        $segment = \Illuminate\Support\Facades\Request::segment(1);
+                                    @endphp
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item {{($segment == '') ? 'active' :''}}">
+                                            <a class="nav-link text-white" href="{{url('/')}}">HOME</a>
+                                        </li>
+                                        <li class="nav-item {{($segment == 'about-us') ? 'active' :''}}">
+                                            <a class="nav-link" href="{{route('about_us')}}">ABOUT US</a>
+                                        </li>
+                                        <li class="nav-item {{($segment == 'sales') ? 'active' :''}}">
+                                            <a class="nav-link" href="{{route('sales')}}">SALES</a>
+                                        </li>
+                                        <li class="nav-item {{($segment == 'membership') ? 'active' :''}}">
+                                            <a class="nav-link" href="{{route('membership')}}">MEMBERSHIPS</a>
+                                        </li>
+                                        <li class="nav-item {{($segment == 'chat_view') ? 'active' :''}}">
+                                            <a class="nav-link">CHAT VIEW</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        @guest
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                            </li>
+                                            @if (Route::has('register'))
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                </li>
+                                            @endif
+                                        @else
+                                            <li class="nav-item dropdown">
+                                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                    {{ Auth::user()->name }}
+                                                </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                                       onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                                        {{ __('Logout') }}
+                                                    </a>
+
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                        @csrf
+                                                    </form>
+                                                </div>
+                                            </li>
+                                            @endguest
+                                            </li>
+                                    </ul>
+                                    <div class="my-2 my-lg-0">
+                                        <img src="assets/images/profile.png" alt="User Image" class="img-fluid" width="124" height="124"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
 					</header>
 				</div>
 			</section>
@@ -213,7 +245,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 				<div class="container-fluid">
 					<div class="main_heading_comm">
 						<h2><span>My</span> Community</h2>
-						
+
 					</div>
 					<div class="row">
 						<div class="col-md-10">
@@ -370,12 +402,14 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 										</div>
 										<div class="swiper-container-cordinator">
 											<div class="swiper-wrapper">
+                                                @foreach($userCords as $usercord)
 												<div class="swiper-slide">
 													<div class="main_slider_comm text-center blu_slider_color">
+
 														<div class="img_section">
 															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
+															<h3>{{$usercord->name}}</h3>
+															<a href="#">{{$usercord->email}}</a>
 															<div class="img_icon">
 																<a href="#"><i class='bx bxs-message-detail' ></i></a>
 																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
@@ -390,112 +424,15 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 														</div>
 													</div>
 												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center yel_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn blue_btn">Profile</button>
-															<button type="button" class="btn purple_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center purple_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn blue_btn">Profile</button>
-															<button type="button" class="btn pink_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="main_slider_comm text-center pink_slider_color">
-														<div class="img_section">
-															<img src="assets/images/slider_1.png" class="img-fluid">
-															<h3>Grant Nyasia </h3>
-															<a href="#">www.sunny@gmail,com</a>
-															<div class="img_icon">
-																<a href="#"><i class='bx bxs-message-detail' ></i></a>
-																<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-															</div>
-														</div>
-														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
-															<button type="button" class="btn blue_btn ml-1">Contact</button>
-														</div>
-														<div class="cross_slider">
-															<i class='bx bx-x'></i>
-														</div>
-													</div>
-												</div>
+                                                @endforeach
+
+
 											</div>
 										</div>
 										<div class="show_more_slider text-right w-100">
 											<button type="button" class="btn">Show More!</button>
 										</div>
-										
+
 									</div>
 								</div>
 							</div>
@@ -509,206 +446,30 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 							<div class="row add_padding_sli">
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center blu_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn pink_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center yel_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn blue_btn">Profile</button>
-													<button type="button" class="btn purple_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center purple_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn blue_btn">Profile</button>
-													<button type="button" class="btn pink_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="main_slider_comm text-center pink_slider_color">
-												<div class="img_section">
-													<img src="assets/images/slider_1.png" class="img-fluid">
-													<h3>Grant Nyasia </h3>
-													<a href="#">www.sunny@gmail,com</a>
-													<div class="img_icon">
-														<a href="#"><i class='bx bxs-message-detail' ></i></a>
-														<a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
-													</div>
-												</div>
-												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
-													<button type="button" class="btn blue_btn ml-1">Contact</button>
-												</div>
-												<div class="cross_slider">
-													<i class='bx bx-x'></i>
-												</div>
-											</div>
-										</div>
+                                        @foreach($users as $user)
+                                            @if($user->id !=Illuminate\Support\Facades\Auth::id())
+                                                <div class="swiper-slide">
+                                                    <div class="main_slider_comm text-center blu_slider_color">
+                                                        <div class="img_section">
+                                                            <img src="assets/images/slider_1.png" class="img-fluid">
+                                                            <h3>{{$user->name}} </h3>
+                                                            <a href="#">{{$user->email}}</a>
+                                                            <div class="img_icon">
+                                                                <a href="#"><i class='bx bxs-message-detail' ></i></a>
+                                                                <a href="#"><i class='bx bxs-hand-up ml-1' ></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img_buttons">
+                                                            <button type="button" class="btn yellow_btn">Profile</button>
+                                                            <button type="button" class="btn pink_btn ml-1">Contact</button>
+                                                        </div>
+                                                        <div class="cross_slider">
+                                                            <i class='bx bx-x'></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        @endforeach
 									</div>
 								</div>
 								<div class="show_more_slider text-right w-100">
