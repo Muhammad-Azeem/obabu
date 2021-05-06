@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ad065024-779d-43bb-9834-2c73536c7658" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/community.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/community.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/community_student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/community_student.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar-admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/dbb2932ada6ecc4c1db095e5c01813fa3b1760ba.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/dbb2932ada6ecc4c1db095e5c01813fa3b1760ba.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,6 +162,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -187,9 +194,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="385" y="162" width="670" height="676" key="search.everywhere.popup" timestamp="1620331082287">
+    <state x="421" y="183" width="597" height="490" key="find.popup" timestamp="1620332304214">
       <screen x="0" y="25" width="1440" height="813" />
     </state>
-    <state x="385" y="162" width="670" height="676" key="search.everywhere.popup/0.25.1440.813@0.25.1440.813" timestamp="1620331082287" />
+    <state x="421" y="183" width="597" height="490" key="find.popup/0.25.1440.813@0.25.1440.813" timestamp="1620332304214" />
+    <state x="385" y="162" width="670" height="676" key="search.everywhere.popup" timestamp="1620332229681">
+      <screen x="0" y="25" width="1440" height="813" />
+    </state>
+    <state x="385" y="162" width="670" height="676" key="search.everywhere.popup/0.25.1440.813@0.25.1440.813" timestamp="1620332229681" />
   </component>
 </project>

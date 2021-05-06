@@ -51,51 +51,35 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                @guest
+                                        @if(\Illuminate\Support\Facades\Auth::user()->type == 4)
+                                            <a class="dropdown-item" href="{{ url('student') }}">
+                                                {{ __('Edit Profile') }}
+                                            </a>
+                                            <a class="dropdown-item" href="{{ url('community-student') }}">
+                                                {{ __('Community') }}
+                                            </a>
+                                        @elseif(\Illuminate\Support\Facades\Auth::user()->type == 2)
+                                            <a class="dropdown-item" href="{{ url('teacher') }}">
+                                                {{ __('Edit Profile') }}
+                                            </a>
+                                            <a class="dropdown-item" href="{{ url('community-teacher') }}">
+                                                {{ __('Community') }}
+                                            </a>
+                                        @endif
 
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </li>
-                                    @if (Route::has('register'))
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                        </li>
-                                    @endif
-                                @else
-                                    <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ Auth::user()->name }}
+
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
                                         </a>
 
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            @if(\Illuminate\Support\Facades\Auth::user()->type == 4)
-                                                <a class="dropdown-item" href="{{ url('student') }}">
-                                                    {{ __('Edit Profile') }}
-                                                </a>
-                                                <a class="dropdown-item" href="{{ url('community-student') }}">
-                                                    {{ __('Community') }}
-                                                </a>
-                                            @elseif(\Illuminate\Support\Facades\Auth::user()->type == 2)
-                                                <a class="dropdown-item" href="{{ url('teacher') }}">
-                                                    {{ __('Edit Profile') }}
-                                                </a>
-                                                <a class="dropdown-item" href="{{ url('community-teacher') }}">
-                                                    {{ __('Community') }}
-                                                </a>
-                                            @endif
-
-                                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                                   onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
-                                                </a>
-
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                    @csrf
-                                                </form>
-                                        </div>
-                                    </li>
-                                    </li>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                                </li>
                         </ul>
                         <div class="my-2 my-lg-0">
                             @if(Illuminate\Support\Facades\Auth::user()->profile_pic == '')

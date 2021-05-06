@@ -415,7 +415,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 {{--                                @dd($authUser)--}}
 								<h3>{{$authUser->name}}</h3>
 								<a href="#">{{$authUser->email}}</a>
-								<a href="{{url('student')}}" type="button" class="contact_btn">View Profile</a>
+                                    <a href="{{url('student')}}"><button type="button" class="contact_btn">View Profile</button></a>
 							</div>
 							<div class="comm_bottom_image">
 								<img src="assets/images/cartooons.png" class="img-fluid">

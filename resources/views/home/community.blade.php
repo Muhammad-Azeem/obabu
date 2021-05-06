@@ -427,7 +427,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 								<img src="assets/images/teacher_profile.png" class="img-fluid">
 								<h3>Bergstrom Eudora</h3>
 								<a href="#">www.helloe@gmail.com</a>
-								<button type="button" class="contact_btn">View Profile</button>
+								<a href="{{url('teacher')}}"><button type="button" class="contact_btn">View Profile</button></a>
 							</div>
 							<div class="comm_bottom_image">
 								<img src="assets/images/cartooons.png" class="img-fluid">
