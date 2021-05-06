@@ -10,7 +10,7 @@ use App\Http\Controllers\VideoStreamingController;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routusers/teacheres
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -48,6 +48,7 @@ Route::get('/classes/edit/{class_id}', [ClassController::class, 'edit'])->name('
 Route::post('/classes/edit', [ClassController::class, 'update'])->name('page.classes-update');
 Route::get('/classes/view/timings/{class_id}', [ClassController::class, 'view_timings'])->name('class.view-timings');
 Route::get('/students/view/classes/{teacher_id}', [ClassController::class, 'studentViewClasses'])->name('student.view-class');
+Route::post('/class/delete', [ClassController::class, 'delete'])->name('class-delete');
 
 
 
@@ -73,6 +74,8 @@ Route::get('/users/teacher/{id}/edit', [UserController::class, 'edit'])->name('t
 Route::get('/users/children/{id}/edit', [UserController::class, 'edit'])->name('children.edit');
 Route::get('/users/parent/{id}/edit', [UserController::class, 'edit'])->name('parent.edit');
 Route::get('/users/teacher/view/students/{teacher_id}', [UserController::class, 'teacher_student'])->name('parent.teacher_student');
+Route::get('/users/teacher/view/classes/{teacher_id}', [UserController::class, 'teacher_classes'])->name('parent.teacher_student');
+
 
 Route::post('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
 

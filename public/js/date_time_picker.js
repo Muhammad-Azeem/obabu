@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+$(document).ready(function() {
 
 
     // assuming the controls you want to attach the plugin to

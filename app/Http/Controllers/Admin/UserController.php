@@ -4,13 +4,24 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\CoordinatorTeacher;
+use App\Models\StudentClass;
+use App\Models\StudentClassDays;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    public function teacher_classes($teacher_id){
+//        dd($teacher_id);
+        $classes = StudentClass::where('teacher_id' , $teacher_id)->get();
+        foreach ($classes as $class){
+            $class->teacher_name = User::where('id' , $class->teacher_id)->pluck('name')->first();
+            $class->days = StudentClassDays::where('class_id' , $class->id)->get();
+        }
+        return view('admin.classes.index' ,compact('classes'));
 
+    }
     public function parentChilds($parent_id){
         $childrenUsers = User::where('parent_id' , $parent_id)->where('type' , 4)->get();
 //        dd($childrenUsers);

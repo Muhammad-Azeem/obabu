@@ -66,18 +66,92 @@
                                     <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                 </svg>
                             </a>
-
-{{--                            <a class="btn btn-sm btn-info" href="{{route('class.view-timings',$class->id)}}">--}}
-{{--                                View Classes--}}
-{{--                            </a>--}}
+                            <a class="btn btn-sm delete" data-id="{{$class->id}}" ><i class="la la-trash"></i> Delete </a>
                         </td>
                     </tr>
                 @empty
-                    <h1 class="text-center"> No Data Found</h1>
+                    <h1 class="text-center" id="btn-delete"> No Data Found</h1>
                 @endforelse
                 </tbody>
             </table>
         </div>
+        <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+        <link href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css">
+        <script type="text/javascript">
+
+            $( "body" ).on( "click", ".delete", function () {
+
+                var task_id = $( this ).attr( "data-id" );
+
+                var form_data = {
+
+                    class_id: task_id
+
+                };
+
+                swal({
+
+                    title: "Do you want to delete this Class",
+
+                    //text: "category.delete_category_msg",
+
+                    type: 'info',
+
+                    showCancelButton: true,
+
+                    confirmButtonColor: '#F79426',
+
+                    cancelButtonColor: '#d33',
+
+                    confirmButtonText: 'Yes',
+
+                    showLoaderOnConfirm: true
+
+                }).then( ( result ) => {
+
+                    if ( result.value == true ) {
+
+                        $.ajax( {
+
+                            type: 'POST',
+
+                            headers: {
+
+                                'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
+
+                            },
+
+                            url: '<?php echo url('/class/delete'); ?>',
+
+                            data: form_data,
+
+                            success: function ( msg ) {
+
+                                // alert('hlo');
+
+                                // swal(msg)
+
+                                swal( "Class Deleted Successfully", '', 'success' )
+
+                                setTimeout( function () {
+
+                                    location.reload();
+
+                                }, 9000 );
+
+                            }
+
+                        } );
+
+                    }
+
+                } );
+
+            } );
+
+        </script>
 @endsection
+
 @section('javascript')
+
 @endsection

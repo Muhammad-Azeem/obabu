@@ -8,6 +8,8 @@
     <title>CRM</title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
 
     <!--begin::Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
@@ -21,7 +23,6 @@
 
     <!--begin::Global Theme Styles(used by all pages) -->
      {{-- Zebra date time picker   --}}
-    <script src="{{asset('js/date_time_picker.js')}}"></script>
     <!--begin:: Vendor Plugins -->
     <link href="{{asset('assets/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/plugins/general/tether/dist/css/tether.css" rel="stylesheet')}}" type="text/css" />
@@ -79,6 +80,7 @@
     <link href="{{asset('assets/plugins/custom/jstree/dist/themes/default/style.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/plugins/custom/jqvmap/dist/jqvmap.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/plugins/custom/uppy/dist/uppy.min.css') }}" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <!--end:: Vendor Plugins for custom pages -->
 
@@ -88,6 +90,8 @@
 
     <!--end::Layout Skins -->
     <link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico') }}" />
+    <script src="{{asset('js/date_time_picker.js')}}"></script>
+
 </head>
 
 <!-- end::Head -->

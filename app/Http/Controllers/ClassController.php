@@ -11,8 +11,11 @@ use Illuminate\Support\Facades\Hash;
 
 class ClassController extends Controller
 {
-
+    public function delete(Request $request){
+        StudentClass::where('id' , $request->class_id)->delete();
+    }
     public function studentViewClasses($teacher_id){
+
         $classes = StudentClass::where('teacher_id' , $teacher_id)->get();
         foreach ($classes as $class){
             $class->teacher_name = User::where('id' , $class->teacher_id)->pluck('name')->first();
