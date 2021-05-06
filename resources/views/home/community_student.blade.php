@@ -233,7 +233,11 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
                                             </li>
                                     </ul>
                                     <div class="my-2 my-lg-0">
-                                        <img src="assets/images/profile.png" alt="User Image" class="img-fluid" width="124" height="124"/>
+                                        @if(Illuminate\Support\Facades\Auth::user()->profile_pic == '')
+                                            <img src="assets/images/teacher_profile.png" alt="User Image" class="img-fluid" width="124" height="124">
+                                        @else
+                                            <img src="svg/{{Illuminate\Support\Facades\Auth::user()->profile_pic}}" alt="User Image" class="img-fluid" width="124" height="124">
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +279,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 															</div>
 														</div>
 														<div class="img_buttons">
-															<button type="button" class="btn yellow_btn">Profile</button>
+                                                            <a href="{{route('profile',['id'=>$authUser->teacher->id])}}" type="button" class="btn yellow_btn">Profile</a>
 															<button type="button" class="btn pink_btn ml-1">Contact</button>
 														</div>
 														<div class="cross_slider">
@@ -319,7 +323,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
                                                                 </div>
                                                             </div>
                                                             <div class="img_buttons">
-                                                                <button type="button" class="btn yellow_btn">Profile</button>
+                                                                <a href="{{route('profile',['id'=>$userst->id])}}" type="button" class="btn yellow_btn">Profile</a>
                                                                 <button type="button" class="btn pink_btn ml-1">Contact</button>
                                                             </div>
                                                             <div class="cross_slider">
@@ -363,7 +367,7 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 													</div>
 												</div>
 												<div class="img_buttons">
-													<button type="button" class="btn yellow_btn">Profile</button>
+                                                    <a href="{{route('profile',['id'=>$user->id])}}" type="button" class="btn yellow_btn">Profile</a>
 													<button type="button" class="btn pink_btn ml-1">Contact</button>
 												</div>
 												<div class="cross_slider">
@@ -386,11 +390,15 @@ filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
 						</div>
 						<div class="col-md-2">
 							<div class="profile_section community_pf text-center student_color">
-								<img src="assets/images/student_acti.png" class="img-fluid">
+                                @if(Illuminate\Support\Facades\Auth::user()->profile_pic == '')
+                                    <img src="assets/images/teacher_profile.png" alt="User Image" class="img-fluid" >
+                                @else
+                                    <img src="svg/{{Illuminate\Support\Facades\Auth::user()->profile_pic}}" alt="User Image" class="img-fluid" width="124" height="124">
+                                @endif
 {{--                                @dd($authUser)--}}
 								<h3>{{$authUser->name}}</h3>
 								<a href="#">{{$authUser->email}}</a>
-								<button type="button" class="contact_btn">View Profile</button>
+								<a href="{{url('student')}}" type="button" class="contact_btn">View Profile</a>
 							</div>
 							<div class="comm_bottom_image">
 								<img src="assets/images/cartooons.png" class="img-fluid">

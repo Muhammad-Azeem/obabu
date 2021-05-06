@@ -168,4 +168,10 @@ $('#edit_user_profile').on('click',function(){
             }
         })
     });
+
+    $('#edit_user_profile_image').on('click',function ()
+    {
+
+       $('#teacher_education12').modal('show');
+    });
 </script>

@@ -75,8 +75,13 @@ class teacherController extends Controller
     public function community()
     {
         $userId = Auth::id();
-        $userCords = CoordinatorTeacher::where('teacher_id',Auth::id())->with('user')->first();
-        $userCords  = $userCords->user;
+        $userCords = User::where('id',Auth::user()->coordinator_id)->get();
+        $teachers = User::where('id','!=',$userId)->where('type','2')->get();
+
+        if($userCords == Null)
+        {
+            $userCords = [];
+        };
         $classId = DB::table('student_classes')->where('teacher_id',Auth::id())->distinct()->get();
         $array = [];
         foreach($classId  as $class)
@@ -93,7 +98,7 @@ class teacherController extends Controller
 
         }
 
-      return  view('home.community',compact('userCords','users'));
+      return  view('home.community',compact('userCords','users','teachers'));
 
     }
 }

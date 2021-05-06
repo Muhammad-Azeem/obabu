@@ -115,7 +115,7 @@ Route::get('/discount_membership', [\App\Http\Controllers\HomeController::class,
 Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
 Route::get('/sales', [\App\Http\Controllers\HomeController::class,'sales'])->name('sales');
 Route::get('/about-us', [\App\Http\Controllers\HomeController::class,'about_us'])->name('about_us');
-
+Route::post('contactus',[\App\Http\Controllers\HomeController::class,'saveContactUs'])->name('contactus');
 
 Route::post('update_user_profile','user\studentController@updateProfile')->name('update_user_profile');
 Route::post('update_teacher_profile','user\teacherController@updateProfile')->name('update_teacher_profile');
@@ -141,6 +141,7 @@ Route::group(['middleware' => 'App\Http\Middleware\studentMiddleware'], function
     Route::get('/student', 'user\studentController@studentProfile')->middleware('auth');
 
 });
+Route::get('profile','user\userController@profile')->middleware('auth')->name('profile');
 
 Route::group(['middleware' => 'App\Http\Middleware\teacherMiddleware'], function()
 {   Route::post('teacher_education','user\teacherController@addEducation')->name('teacher_education');
@@ -152,10 +153,10 @@ Route::get('/coming-soon', function () {
     return view('home.coming-soon');
 });
 
-Route::post('update_profile','user\userController@updateProfile')->name('update_profile')->middleware('auth');
+
 
 });
-
+Route::post('update_profile','user\userController@updateProfile')->name('update_profile');
 
 Route::get('/activity', function () {
     return view('home.activity');
