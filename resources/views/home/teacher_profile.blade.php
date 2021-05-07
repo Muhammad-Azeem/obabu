@@ -5,14 +5,17 @@
         <div class="row">
             <div class="col-md-3 ">
                 <div class="profile_section text-center">
+                    <div class="main_edit_image">
                     @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                         <i class='bx bxs-pencil' id="edit_user_profile_image"></i>
                     @endif
                     @if($user->profile_pic == '')
                         <img src="assets/images/teacher_profile.png" class="img-fluid">
-                    @else
+                         @else
                         <img src="svg/{{$user->profile_pic}}" class="img-fluid">
-                    @endif
+                        @endif
+                    </div>
+                    
                     <h3>{{$user->name}}</h3>
                     <a href="#">{{$user->email}}</a>
                     <button type="button" class="contact_btn">CONTACT ME !</button>
@@ -33,12 +36,14 @@
                         <div id="edit_about">
                             <form action="{{route('edit_user_about')}}" method="POST">
                                 @csrf
-                                <div class="cntcn_inpp">
-                            <textarea name="about" class="form-control">
+                                <div class="main_text_edit">
+                            <textarea col="6" rows="4" name="about" class="form-control cntcn_inpp">
                             {{$user->about}}
                             </textarea>
                                 </div>
-                                <button class="form-control btn btn-primary" type="submit" >Save</button>
+                                <div class="main_Save_btn text-right">
+                                    <button class="btn btn-primary" type="submit" >Save</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -61,7 +66,7 @@
                                         <h3>EMAIL :</h3>
                                     </div>
                                     <div class="col-md-9">
-                                        <div class="info_detail" id="edit_teacher_profile_data">
+                                        <div class="custom_info_detail" id="edit_teacher_profile_data">
                                             <p>{{$user->name}}</p>
                                             <p>{{$user->age}}</p>
                                             <p>@if($user->address == Null)
@@ -75,7 +80,7 @@
 
                                             <p>{{$user->gender}}</p>
                                         </div>
-                                        <div class="info_detail" id="teacher_form_user">
+                                        <div class="add_data_user" id="teacher_form_user">
                                         </div>
                                     </div>
                                 </div>
@@ -117,26 +122,29 @@
                                 </div>
                             </div>
                             <div class="main_edu add_edu_mrgin">
-                                <div class="edu_img">
-                                    <img src="assets/images/experience.png" class="img-fluid">
+                                <div class="main_edu_img">
+                                    <div class="edu_img">
+                                        <img src="assets/images/experience.png" class="img-fluid">
+                                    </div>
+                                    <div class="edu_data">
+                                        <h3>WORK EXPERIENCE</h3>
+                                        @foreach($userExp as $exp)
+                                            <h5>{{$exp->designation}} </h5>
+                                            <p>{{$exp->school}}</p>
+                                            <p>December 2015 - {{$exp->status}}</p>
+                                        @endforeach
+                                    </div>
                                 </div>
-                                <div class="edu_data">
-                                    <h3>WORK EXPERIENCE</h3>
-                                    @foreach($userExp as $exp)
-                                        <h5>{{$exp->designation}} </h5>
-                                        <p>{{$exp->school}}</p>
-                                        <p>December 2015 - {{$exp->status}}</p>
-                                    @endforeach
-                                </div>
-                            </div>
+                            
                             @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                                 <div class="edit_icon">
                                     <i class='bx bxs-pencil' id="edit_teacher_education"></i>
                                 </div>
-                                <div class="">
+                                <div class="main_experience">
                                     <i class='bx bxs-pencil' id="edit_teacher_expernce"></i>
                                 </div>
                             @endif
+                            </div>
                         </div>
                         <div class="languag_sec">
                             <div class="per_info_head yellow_head d-flex justify-content-between">
@@ -167,8 +175,8 @@
     </div>
     </div>
 </section>
-<div class="modal" tabindex="-1" role="dialog" id="edit_Modal">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" tabindex="-1" role="dialog" id="edit_Modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Add</h5>
@@ -182,8 +190,8 @@
         </div>
     </div>
 </div>
-<div class="modal" tabindex="-1" role="dialog" id="user_interest1">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" tabindex="-1" role="dialog" id="user_interest1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Add Hobbies/Interest</h5>
@@ -213,14 +221,16 @@
                         </select>
 
                     </div>
-                    <button type="" class="btn btn-primary" > save</button>
+                    <div class="modal_footer text-right">
+                        <button type="" class="btn btn-primary" > save</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<div class="modal" tabindex="-1" role="dialog" id="teacher_education">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" tabindex="-1" role="dialog" id="teacher_education">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Add Education</h5>
@@ -239,14 +249,18 @@
                             <input name="degree" class="form-control" type="text" placeholder="Degree">
 
                     </div>
-                    <button type="" class="btn btn-primary" > save</button>
+                    <div class="modal_footer text-right">
+                        <div class="text-right">
+                            <button type="" class="btn btn-primary" > save</button>
+                        </div>
+                </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<div class="modal" tabindex="-1" role="dialog" id="teacher_education12">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" tabindex="-1" role="dialog" id="teacher_education12">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Add Picture</h5>

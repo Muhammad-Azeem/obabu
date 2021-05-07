@@ -17,7 +17,7 @@
                                    <label for="class_student">Class</label>
                                    <input name="class_student" value="">
             @endif
-                                   <button type="submit" >save</input>
+                                   <div class='text-right'><button type="submit" >save</input></div>
                                </form>`;
         $('#edit_student_education_form').html($htmlE);
         $('#profile_form_user').hide();
@@ -31,7 +31,7 @@
                                         <input type="text form-controll" name="phone" value="{{$user->phone}}" }}>
                                         <input type="text form-controll" name="age" value="{{$user->age}}">
                                         <input type="text form-controll" name="gender" value="{{$user->gender}}" }}>
-                                        <button type="submit" >save</input>
+                                        <div class='user_edit_btn text-right'><button type="submit" class='btn btn-primary mt-2'>save</input></div>
                                     </form>`;
         $('#profile_form_user').html($html);
         $('#teacher_form_user').hide();
@@ -42,7 +42,10 @@
         <input type="text form-controll" name="age" value="{{$user->age}}">
                                         <input type="text form-controll" name="address" value="{{$user->address}}">
                                         <input type="text form-controll" name="email" value="{{$user->email}}">
-                                        <button type="submit" >save</input>
+                                        <div class='text-right'>
+                                            <button type="submit" class='btn btn-primary'>save</button>
+
+                                        </div>
                                     </form>`;
         $('#teacher_form_user').html($html1);
     });
@@ -79,14 +82,16 @@ $('#edit_user_profile').on('click',function(){
         <div class="cntcn_inp">
         <input class="form-control" type="text" value="" name="language">
         </div>
-        <label for="level">level</label>
+        <label for="level">Level</label>
         <div class="cntcn_inp">
            <select class="form-control" name="level">
                <option value="native">Native</option>
                <option>Native</option>
                <option>Native</option>
            </select>
-           <button type="" class="btn btn-primary" > save</button>
+           <div class='text-right'>
+            <button type="" class="btn btn-primary" > save</button>
+           </div>
         </div></form>`;
         $('#modal_content').html($html);
         $('#edit_Modal').modal('show');
@@ -100,14 +105,16 @@ $('#edit_user_profile').on('click',function(){
         <div class="cntcn_inp">
         <input class="form-control" type="text" value="" name="language">
         </div>
-        <label for="level">level</label>
+        <label for="level">Level</label>
         <div class="cntcn_inp">
            <select class="form-control" name="level">
                <option value="native">Native</option>
                <option>Native</option>
                <option>Native</option>
            </select>
-           <button type="" class="btn btn-primary" > save</button>
+           <div class='text-right'>
+            <button type="" class="btn btn-primary" > save</button>
+           </div>
         </div></form>`;
         $('#modal_content').html($html);
         $('#edit_Modal').modal('show');
@@ -136,7 +143,7 @@ $('#edit_user_profile').on('click',function(){
                 <input name="designation" class="form-control" type="text" placeholder="Designation">
 
         </div>
-        <button type="" class="btn btn-primary" > save</button>
+        <div class='text-right'><button type="" class="btn btn-primary" > save</button></div>
     </form>`;
         $('#modal_content_expe').html($html);
         $('#teacher_education').modal('show');
