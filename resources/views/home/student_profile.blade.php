@@ -17,13 +17,15 @@
                     <a href="#">{{$user->email}}</a>
                     <!-- <button type="button" class="contact_btn">CONTACT ME !</button> -->
                 </div>
+                @if($user->type == 2)
                 <div class="profile_section change_profie_clr text-center">
                     <img src="assets/images/teacher3.png" class="img-fluid">
-                    <h3>Bergstrom Eudora</h3>
-                    <a href="#">{{$user->email}}</a>
+                    <h3>{{isset($user->parent)??$user->parent->name}}</h3>
+                    <a href="#">{{isset($user->parent)??$user->parent->name}}</a>
 
-                    <button type="button" class="contact_btn">Acount Setting</button>
+{{--                    <button type="button" class="contact_btn">Acount Setting</button>--}}
                 </div>
+                    @endif
             </div>
             <div class="col-md-4">
                 <div class="teacher_info">
@@ -39,7 +41,7 @@
                                 <div class="info_detail">
                                     <h3>NAME :</h3>
                                     <h3>FATHER NAME :</h3>
-                                    <h3>FATHER NAME :</h3>
+                                    <h3>MOTHER NAME :</h3>
                                     <h3>ADDRESS :</h3>
                                     <h3>EMAIL :</h3>
                                     <h3>MOBILE NUMBER:</h3>
@@ -50,8 +52,8 @@
                             <div class="col-md-7">
                                 <div class="info_detail" id="edit_user_profile_data">
                                     <p>{{$user->name}}</p>
-                                    <p>Bergstrom Eudora</p>
-                                    <p>Bergstrom Eudora</p>
+                                    <p>N/A</p>
+                                    <p>N/A</p>
                                     <p>@if($user->address == Null)
                                     XXXXXXXX-XXXX-XXXX
                                         @else
@@ -162,7 +164,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -178,7 +180,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Add Interest/Hobbies</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -215,7 +217,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Add Education</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -241,7 +243,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
+                <h5 class="modal-title">Add Picture</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

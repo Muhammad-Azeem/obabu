@@ -17,6 +17,7 @@ class CreateUserInterestsTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->string('interest');
+            $table->text('type')->nullable();
             $table->timestamps();
         });
     }
