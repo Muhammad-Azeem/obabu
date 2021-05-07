@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3ba6035-3b97-4921-9d5e-61548661aa9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,9 +164,9 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="385" y="163" width="670" height="676" key="search.everywhere.popup" timestamp="1620333755218">
+    <state x="385" y="163" width="670" height="676" key="search.everywhere.popup" timestamp="1620337771935">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state x="385" y="163" width="670" height="676" key="search.everywhere.popup/0.25.1440.814@0.25.1440.814" timestamp="1620333755218" />
+    <state x="385" y="163" width="670" height="676" key="search.everywhere.popup/0.25.1440.814@0.25.1440.814" timestamp="1620337771935" />
   </component>
 </project>
