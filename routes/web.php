@@ -38,46 +38,45 @@ Route::get('/main',function(){
    return view('');
 });
 
+Route::group(["middleware" =>  ['auth', 'is_admin'] ], function () {
+    Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard');
+    Route::get('/admin', [SiteController::class, 'dashboard'])->name('admin');
 
-Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard');
-//classes
-Route::get('/classes/index', [ClassController::class, 'index'])->name('page.classes-index');
-Route::get('/classes/add', [ClassController::class, 'create'])->name('page.classes-add');
-Route::post('/classes/add', [ClassController::class, 'store'])->name('page.classes-store');
-Route::get('/classes/edit/{class_id}', [ClassController::class, 'edit'])->name('class.edit');
-Route::post('/classes/edit', [ClassController::class, 'update'])->name('page.classes-update');
-Route::get('/classes/view/timings/{class_id}', [ClassController::class, 'view_timings'])->name('class.view-timings');
-Route::get('/students/view/classes/{teacher_id}', [ClassController::class, 'studentViewClasses'])->name('student.view-class');
+    //classes
+    Route::get('/classes/index', [ClassController::class, 'index'])->name('page.classes-index');
+    Route::get('/classes/add', [ClassController::class, 'create'])->name('page.classes-add');
+    Route::post('/classes/add', [ClassController::class, 'store'])->name('page.classes-store');
+    Route::get('/classes/edit/{class_id}', [ClassController::class, 'edit'])->name('class.edit');
+    Route::post('/classes/edit', [ClassController::class, 'update'])->name('page.classes-update');
+    Route::get('/classes/view/timings/{class_id}', [ClassController::class, 'view_timings'])->name('class.view-timings');
+    Route::get('/students/view/classes/{teacher_id}', [ClassController::class, 'studentViewClasses'])->name('student.view-class');
 
-
+    Route::get('/edit_user/{role}/{type}/{id}', [UserController::class, 'edit_user'])->name('edit_user');
+    Route::post('/edit_user', [UserController::class, 'update_user'])->name('update_user');
 
 
 //classes end
 
 
-Route::get('/users/parent/view/childs/{parent_id}', [UserController::class, 'parentChilds'])->name('page.parent-child-view');
+    Route::get('/users/parent/view/childs/{parent_id}', [UserController::class, 'parentChilds'])->name('page.parent-child-view');
+    Route::get('/users/teacher', [UserController::class, 'teacherIndex'])->name('page.teacher-index');
+    Route::get('/users/children', [UserController::class, 'childrenIndex'])->name('page.children-index');
+    Route::get('/users/parent', [UserController::class, 'parentIndex'])->name('page.parent-index');
+    Route::get('/users/coordinator', [UserController::class, 'coordinatorIndex'])->name('page.coordinator-index');
 
+    Route::get('/users/teacher/create', [UserController::class, 'teacherCreate'])->name('page.teachercreate');
+    Route::get('/users/children/create', [UserController::class, 'childrenCreate'])->name('page.childrencreate');
+    Route::get('/users/parent/create', [UserController::class, 'parentCreate'])->name('page.parentcreate');
+    Route::get('/users/coordinator/create', [UserController::class, 'coordinatorCreate'])->name('page.coordinatorCreate');
+    Route::get('/users/coordinator/view/teachers/{coordinate_id}', [UserController::class, 'coordinateTeachers'])->name('page.coordinator.view-teachers');
 
-Route::get('/users/teacher', [UserController::class, 'teacherIndex'])->name('page.teacher-index');
-Route::get('/users/children', [UserController::class, 'childrenIndex'])->name('page.children-index');
-Route::get('/users/parent', [UserController::class, 'parentIndex'])->name('page.parent-index');
-Route::get('/users/coordinator', [UserController::class, 'coordinatorIndex'])->name('page.coordinator-index');
-
-Route::get('/users/teacher/create', [UserController::class, 'teacherCreate'])->name('page.teachercreate');
-Route::get('/users/children/create', [UserController::class, 'childrenCreate'])->name('page.childrencreate');
-Route::get('/users/parent/create', [UserController::class, 'parentCreate'])->name('page.parentcreate');
-Route::get('/users/coordinator/create', [UserController::class, 'coordinatorCreate'])->name('page.coordinatorCreate');
-Route::get('/users/coordinator/view/teachers/{coordinate_id}', [UserController::class, 'coordinateTeachers'])->name('page.coordinator.view-teachers');
-
-Route::get('/users/teacher/{id}/edit', [UserController::class, 'edit'])->name('teacher.edit');
-Route::get('/users/children/{id}/edit', [UserController::class, 'edit'])->name('children.edit');
-Route::get('/users/parent/{id}/edit', [UserController::class, 'edit'])->name('parent.edit');
-Route::get('/users/teacher/view/students/{teacher_id}', [UserController::class, 'teacher_student'])->name('parent.teacher_student');
-
-Route::post('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
-
-Route::post('/users/childrens', [UserController::class, 'store'])->name('page.store');
-
+    Route::get('/users/teacher/{id}/edit', [UserController::class, 'edit'])->name('teacher.edit');
+    Route::get('/users/children/{id}/edit', [UserController::class, 'edit'])->name('children.edit');
+    Route::get('/users/parent/{id}/edit', [UserController::class, 'edit'])->name('parent.edit');
+    Route::get('/users/teacher/view/students/{teacher_id}', [UserController::class, 'teacher_student'])->name('parent.teacher_student');
+    Route::post('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
+    Route::post('/users/childrens', [UserController::class, 'store'])->name('page.store');
+});
 //interest
 Route::get('/interest', [InterestController::class, 'index'])->name('interest.index');
 Route::get('/hobby', [InterestController::class, 'hobbyIndex'])->name('hobby.index');
