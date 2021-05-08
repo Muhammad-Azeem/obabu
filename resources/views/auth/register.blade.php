@@ -85,7 +85,7 @@
 											<i class='bx bxs-lock-alt' ></i>
 										</span>
                             </div>
-                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required>
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" minlength="6" placeholder="Password" required>
                         </div>
                         <div class="col-md-6">
 
