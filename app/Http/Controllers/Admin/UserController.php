@@ -6,12 +6,23 @@ use App\Http\Controllers\Controller;
 use App\Models\CoordinatorTeacher;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
 
+    public function user_logout(){
+        $type = auth()->user()->type;
+        Auth::logout();
+        if($type == 0) {
+            return redirect('/admin');
+        }
+        else{
+            return redirect('/');
 
+        }
+    }
     public function edit_user($role = '' , $type = '', $id=0 ){
             $user = User::find($id);
         $parent_user = [];

@@ -39,6 +39,10 @@ Route::get('/main',function(){
 });
 
 Route::group(["middleware" =>  ['auth', 'is_admin'] ], function () {
+// logout:
+    Route::get('/logout', [UserController::class, 'user_logout'])->name('user_logout');
+
+//    end
     Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard');
     Route::get('/admin', [SiteController::class, 'dashboard'])->name('admin');
 
