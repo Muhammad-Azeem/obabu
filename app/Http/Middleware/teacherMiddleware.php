@@ -18,7 +18,7 @@ class teacherMiddleware
     {
         if ($request->user() && $request->user()->type != 2)
         {
-            return redirect('/');
+            return redirect('/not_allowed');
         }
         return $next($request);
     }

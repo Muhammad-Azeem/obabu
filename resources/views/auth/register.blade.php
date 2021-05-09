@@ -85,7 +85,7 @@
 											<i class='bx bxs-lock-alt' ></i>
 										</span>
                             </div>
-                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required>
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" minlength="6" placeholder="Password" required>
                         </div>
                         <div class="col-md-6">
 
@@ -95,8 +95,9 @@
                                     </span>
                             @enderror
                         </div>
+                        <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit">{{ __('Create') }}</button>
+
                     </form>
-                    <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit">{{ __('Create') }}</button>
                 </div>
             </div>
         </div>

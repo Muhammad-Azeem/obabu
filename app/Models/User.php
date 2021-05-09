@@ -47,6 +47,10 @@ class User extends Authenticatable
 
         return $this->belongsTo(User::class,'teacher_id','id');
     }
+    public function parent(){
+
+        return $this->belongsTo(User::class,'parent_id','id');
+    }
     public function coordinator(){
 
         return $this->belongsTo(User::class,'coordinator_id','id');

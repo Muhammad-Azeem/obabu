@@ -18,8 +18,7 @@ class studentMiddleware
     {
         if ($request->user() && $request->user()->type != 4)
         {
-            dd($request->user()->type);
-            return redirect('/');
+            return redirect('/not_allowed');
         }
         return $next($request);
     }
