@@ -134,7 +134,7 @@
                             @enderror
                         </div>
                     </div>
-
+                    @if($type != 0)
                     <div class="form-group row">
                         <label class="col-form-label col-lg-3 col-sm-12 @error('type') border-danger @enderror">Type *</label>
                         <div class="col-lg-9 col-md-9 col-sm-12 form-group-sub">
@@ -151,6 +151,7 @@
                             <span class="form-text text-muted">Please select an option.</span>
                         </div>
                     </div>
+                    @endif
 
                     @if($type == 2 || $type == 4 )
                     <div class="form-group row box ">
