@@ -40,10 +40,10 @@
                 <div class="text-center signup-main">
                     <h1 class="mt-2 mt-sm-3 mt-md-3">Create Account</h1>
                     <div class="social_login">
-
-
-
-
+                        
+                        
+                        
+                        
                     </div>
                     <form class="d-flex flex-column align-items-center justify-content-center mt-4" method="POST" action="<?php echo e(route('register')); ?>">
                         <?php echo csrf_field(); ?>
@@ -137,9 +137,8 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
                         </div>
-                    <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit"><?php echo e(__('Create')); ?></button>
                     </form>
-
+                    <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit"><?php echo e(__('Create')); ?></button>
                 </div>
             </div>
         </div>
