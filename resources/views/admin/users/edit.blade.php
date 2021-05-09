@@ -123,17 +123,19 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group row">
-                        <label class="col-form-label col-lg-3 col-sm-12 @error('email') border-danger @enderror">Email *</label>
-                        <div class="col-lg-9 col-md-9 col-sm-12">
-                            <input type="text" class="form-control" name="email" value="{{$user->email}}" placeholder="Enter your email">
-                            <span class="form-text text-muted">We'll never share your email with anyone else.</span>
-                            @error('email')
-                            <div class="alert alert-danger mt-2"> {{ $message }} </div>
-                            @enderror
+                        <label class="col-form-label col-lg-3 col-sm-12 @error('email') border-danger @enderror" >Email *</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <div class='input-group'>
+                                <input type='email' class="form-control @error('email') border-danger @enderror"  name="email" value="{{$user->email}}"/>
+                                @error('email')
+                                <div class="alert alert-danger mt-2"> {{ $message }} </div>
+                                @enderror
+                            </div>
                         </div>
                     </div>
+
+
                     @if($type != 0)
                     <div class="form-group row">
                         <label class="col-form-label col-lg-3 col-sm-12 @error('type') border-danger @enderror">Type *</label>
@@ -262,7 +264,7 @@
                             @enderror
                         </div>
                     </div>
-
+                </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 
