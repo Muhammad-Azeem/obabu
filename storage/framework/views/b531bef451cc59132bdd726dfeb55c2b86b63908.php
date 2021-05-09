@@ -137,8 +137,9 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
                         </div>
+                        <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit"><?php echo e(__('Create')); ?></button>
+
                     </form>
-                    <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit"><?php echo e(__('Create')); ?></button>
                 </div>
             </div>
         </div>
