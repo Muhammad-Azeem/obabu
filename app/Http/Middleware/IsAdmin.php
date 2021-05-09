@@ -17,10 +17,10 @@ class IsAdmin
     public function handle(Request $request, Closure $next)
     {
 
-        if(auth()->user()->type == 0){
-            return $next($request);
+        if ($request->user() && $request->user()->type != 0)
+        {
+            return redirect('/not_allowed');
         }
-
-        return redirect()->back()->with(‘error’,"You don't have admin access.");
+        return $next($request);
     }
 }
