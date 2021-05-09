@@ -120,7 +120,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="password" placeholder="Password" required>
+unset($__errorArgs, $__bag); ?>" name="password" minlength="6" placeholder="Password" required>
                         </div>
                         <div class="col-md-6">
 

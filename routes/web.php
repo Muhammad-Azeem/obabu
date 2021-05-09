@@ -89,7 +89,7 @@ Route::get('/membership', [\App\Http\Controllers\HomeController::class,'membersh
 Route::post('/payment', [\App\Http\Controllers\HomeController::class,'payment'])->name('payment');
 Route::post('/charge', [\App\Http\Controllers\HomeController::class,'charge'])->name('charge');
 Route::get('/discount_membership', [\App\Http\Controllers\HomeController::class,'discount_membership'])->name('discount_membership');
-Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
+Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home_2');
 Route::get('/sales', [\App\Http\Controllers\HomeController::class,'sales'])->name('sales');
 Route::get('/about-us', [\App\Http\Controllers\HomeController::class,'about_us'])->name('about_us');
 Route::post('contactus',[\App\Http\Controllers\HomeController::class,'saveContactUs'])->name('contactus');
@@ -109,9 +109,18 @@ Route::get('/join', function () {
 Route::get('/video', function () {
     return view('home.video');
 });
-Route::get('/success', function () {
-    return view('home.success');
+Route::get('/404', function () {
+    $msg = '404 not found';
+    return view('home.success',compact('msg'));
 });
+Route::get('/not_allowed', function () {
+    $msg = 'Not Allowed';
+    return view('home.success',compact('msg'));
+});
+Route::get('/success', function () {
+    $msg = 'Successfully submitted';
+    return view('home.success',compact('msg'));
+})->name('home');
 Route::group(['middleware' => 'App\Http\Middleware\studentMiddleware'], function()
 {
     Route::get('/community-student','user\studentController@studentCommunity')->middleware('auth');
