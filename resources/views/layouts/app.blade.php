@@ -90,27 +90,24 @@
 
 
                                             <a class="dropdown-item" href="{{ route('logout') }}"
-                                                   onclick="event.preventDefault();
+                                               onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
-                                                </a>
+                                                {{ __('Logout') }}
+                                            </a>
 
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                    @csrf
-                                                </form>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
                                         </div>
                                     </li>
                                     </li>
                             </ul>
                             <div class="my-2 my-lg-0">
-
-                                @auth
-                                @if(isset(Illuminate\Support\Facades\Auth::user()->profile_pic) and Illuminate\Support\Facades\Auth::user()->profile_pic == '')
-                                    <img src="assets/images/teacher_profile.png" alt="User Image" class="img-fluid" width="124" height="124">
+                                @if(Illuminate\Support\Facades\Auth::user()->profile_pic == '')
+                                    <img src="assets/images/profile.png" alt="User Image" class="img-fluid" width="124" height="124">
                                 @else
                                     <img src="svg/{{Illuminate\Support\Facades\Auth::user()->profile_pic}}" alt="User Image" class="img-fluid" width="124" height="124">
                                 @endif
-                                @endauth
                             </div>
                             @endguest
                         </div>
@@ -119,7 +116,7 @@
             </header>
         </div>
     </section>
-    @section('content')
+    @section('maincontent')
     @show
     @include('layouts.footer')
     @include('layouts.userjs')
