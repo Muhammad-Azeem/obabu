@@ -170,6 +170,13 @@ Route::post('update_profile','user\userController@updateProfile')->name('update_
 Route::get('/activity', function () {
     return view('home.activity');
 });
+Route::get('/teacher-booking', function () {
+    return view('home.teacher_boking');
+});
+
+Route::get('/student-booking', function () {
+    return view('home.student_boking');
+});
 
 Auth::routes();
 
