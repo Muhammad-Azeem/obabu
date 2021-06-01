@@ -23,14 +23,14 @@
         $('#profile_form_user').hide();
         $html = ` <form action="{{route('update_user_profile')}}" method="POST">
         @csrf
-                                        <input type="text form-controll" name="name" value="{{$user->name}}">
-                                        <input type="text form-controll" value="{{$user->name}}">
-                                        <input type="text form-controll"value="{{$user->name}}">
-                                        <input type="text form-controll" name="address" value="{{$user->address}}">
-                                        <input type="text form-controll" name="email" value="{{$user->email}}">
-                                        <input type="text form-controll" name="phone" value="{{$user->phone}}" }}>
-                                        <input type="text form-controll" name="age" value="{{$user->age}}">
-                                        <input type="text form-controll" name="gender" value="{{$user->gender}}" }}>
+                                        <input type="text form-controll" name="name" value="{{isset($user->name)?$user->name:""}}">
+                                        <input type="text form-controll" value="{{isset($user->name)?$user->name:""}}">
+                                        <input type="text form-controll"value="{{isset($user->name)?$user->name:""}}">
+                                        <input type="text form-controll" name="address" value="{{isset($user->address)?$user->address:""}}">
+                                        <input type="text form-controll" name="email" value="{{isset($user->email)?$user->email:""}}">
+                                        <input type="text form-controll" name="phone" value="{{isset($user->phone)?$user->phone:""}}">
+                                        <input type="text form-controll" name="age" value="{{isset($user->age)?$user->age:""}}">
+                                        <input type="text form-controll" name="gender" value="{{isset($user->gender)?$user->gender:""}}" >
                                         <button type="submit" >save</input>
                                     </form>`;
         $('#profile_form_user').html($html);
@@ -38,10 +38,10 @@
         $html1 = ` <form action="{{route('update_teacher_profile')}}" method="POST">
         @csrf
             <input type="hidden" value"true" name="teacher_check">
-        <input type="text form-controll" name="name" value="{{$user->name}}">
-        <input type="text form-controll" name="age" value="{{$user->age}}">
-                                        <input type="text form-controll" name="address" value="{{$user->address}}">
-                                        <input type="text form-controll" name="email" value="{{$user->email}}">
+        <input type="text form-controll" name="name" value="{{isset($user->name)?$user->name:""}}">
+        <input type="text form-controll" name="age" value="{{isset($user->age)?$user->age:""}}">
+                                        <input type="text form-controll" name="address" value="{{isset($user->address)?$user->address:""}}">
+                                        <input type="text form-controll" name="email" value="{{isset($user->email)?$user->email:""}}">
                                         <button type="submit" >save</input>
                                     </form>`;
         $('#teacher_form_user').html($html1);

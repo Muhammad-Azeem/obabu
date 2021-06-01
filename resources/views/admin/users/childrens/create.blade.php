@@ -18,7 +18,7 @@
 								<div class="kt-portlet__head">
 									<div class="kt-portlet__head-label">
 										<h3 class="kt-portlet__head-title">
-											Form Widgets Validation Examples
+											Create Children
 										</h3>
 									</div>
 								</div>
@@ -104,6 +104,24 @@
 												@enderror
 											</div>
 										</div>
+
+
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-lg-3 col-sm-12 @error('parent_id') text-danger @enderror">Parent *</label>
+                                        <div class="col-lg-4 col-md-9 col-sm-12">
+                                            <select class="form-control column_select @error('parent_id') border-danger @enderror"  id="column_select" name="parent_id" value="{{old('parent_id')}}">
+                                                <option selected value="none">Select Parent</option>
+                                                @foreach($parents as $user)
+                                                    <option value="{{$user->id}}">{{$user->name}}</option>
+                                                @endforeach
+
+                                            </select>
+                                            <span class="form-text text-muted">Please select an option.</span>
+                                            @error('parent_id')
+                                            <div class="alert alert-danger mt-2"> {{ $message }} </div>
+                                            @enderror
+                                        </div>
+                                    </div>
 
 
 

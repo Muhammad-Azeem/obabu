@@ -20,7 +20,8 @@
     <!--end::Page Vendors Styles -->
 
     <!--begin::Global Theme Styles(used by all pages) -->
-
+     {{-- Zebra date time picker   --}}
+    <script src="{{asset('js/date_time_picker.js')}}"></script>
     <!--begin:: Vendor Plugins -->
     <link href="{{asset('assets/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/plugins/general/tether/dist/css/tether.css" rel="stylesheet')}}" type="text/css" />
@@ -54,6 +55,8 @@
 
     <!--end:: Vendor Plugins -->
     <link href="{{asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/zebra_datepicker.css')}}" rel="stylesheet">
+    <link href="{{asset('css/zebra_datepicker.min.css')}}" rel="stylesheet">
 
     <!--begin:: Vendor Plugins for custom pages -->
     <link href="{{asset('assets/plugins/custom/plugins/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet" type="text/css" />

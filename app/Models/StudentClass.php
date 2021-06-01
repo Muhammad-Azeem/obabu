@@ -9,4 +9,15 @@ class StudentClass extends Model
 {
     use HasFactory;
     protected $guarded = [''];
+
+
+
+    public function timings(){
+        return $this->hasMany(StudentClassDays::class);
+    }
+    public function teacher()
+    {
+        return $this->belongsTo(CoordinatorTeacher::class);
+    }
+
 }

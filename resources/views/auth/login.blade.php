@@ -33,13 +33,13 @@
                 <div class="text-center login-main">
                     <h1>Log In</h1>
                     <div class="social_login">
-{{--                        <i class='bx bxl-facebook'></i>--}}
-{{--                        <i class='bx bxl-google mx-lg-3' ></i>--}}
-{{--                        <i class='bx bxl-linkedin' ></i>--}}
-{{--                        <p>Or use your email account:</p>--}}
+                        {{--                        <i class='bx bxl-facebook'></i>--}}
+                        {{--                        <i class='bx bxl-google mx-lg-3' ></i>--}}
+                        {{--                        <i class='bx bxl-linkedin' ></i>--}}
+                        {{--                        <p>Or use your email account:</p>--}}
                     </div>
                     <form class="d-flex flex-column align-items-center justify-content-center mt-4" method="POST" action="{{ route('login') }}">
-                       @csrf
+                        @csrf
                         <div class="input-group mb-3 w-50 ">
                             <div class="input-group-prepend">
 										<span class="input-group-text">
@@ -67,14 +67,14 @@
                                     </span>
                         @enderror
 
-{{--                    <p class="text-dark h6 mt-2 forgot_link">Forgot your Password ?</p>--}}
-                    @if (Route::has('password.request'))
-                        <a class="text-dark h6 mt-2 forgot_link" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                    @endif
-                    <hr class="text-center"/>
-                    <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit">{{ __('Submit') }}</button>
+                        {{--                    <p class="text-dark h6 mt-2 forgot_link">Forgot your Password ?</p>--}}
+                        @if (Route::has('password.request'))
+                            <a class="text-dark h6 mt-2 forgot_link" href="{{ route('password.request') }}">
+                                {{ __('Forgot Your Password?') }}
+                            </a>
+                        @endif
+                        <hr class="text-center"/>
+                        <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit">{{ __('Submit') }}</button>
                     </form>
                 </div>
             </div>

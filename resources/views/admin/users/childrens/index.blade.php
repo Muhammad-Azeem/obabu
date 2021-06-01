@@ -51,7 +51,12 @@
                     <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
             </svg>
                 </a>
-            </td>
+                    @if($user->teacher_id)
+                    <a href="{{url('/students/view/classes/'.$user->teacher_id)}}" class="btn btn-sm btn-info"> View Classes</a>
+                    @else
+                    <button disabled class="btn btn-sm btn-warning">No Teacher Available</button>
+                    @endif
+                </td>
         </tr>
         @empty
             <h1 class="text-center"> No Data Found</h1>
