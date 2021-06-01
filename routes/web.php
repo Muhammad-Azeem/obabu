@@ -112,6 +112,7 @@ Route::get('/video', function () {
 Route::get('/success', function () {
     return view('home.success');
 });
+//
 Route::group(['middleware' => 'App\Http\Middleware\studentMiddleware'], function()
 {
     Route::get('/community-student','user\studentController@studentCommunity')->middleware('auth');

@@ -15,7 +15,7 @@ class VideoStreamingController extends Controller
     {
         $this->videoStreamingService = $videoStreamingService;
     }
-    
+
     public function index()
     {
         $response = $this->videoStreamingService->videoRooms();

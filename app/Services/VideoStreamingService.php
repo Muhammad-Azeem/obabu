@@ -10,12 +10,12 @@ class VideoStreamingService {
     protected ?string $sid;
     protected ?string $token;
     protected ?string $api_key;
-    protected ?string $api_secret; 
+    protected ?string $api_secret;
 
     public function __construct(){
 
-        $this->sid = config('services.twilio.sid');
-        $this->token = config('services.twilio.token');
+        $this->sid = 'ACafa2f6f3173c2f4d68d7a42ea0bacc94';//config('services.twilio.sid');
+        $this->token = '36e297bb8369f494607a2ce4c898a880';//config('services.twilio.token');
         $this->api_key = config('services.twilio.api_key');
         $this->api_secret = config('services.twilio.api_secret');
 
@@ -26,15 +26,14 @@ class VideoStreamingService {
         $rooms = [];
 
         try{
-
             $client = new Client($this->sid,$this->token);
             $allRooms = $client->video->rooms->read([]);
             $rooms = array_map(fn($room) => $room->uniqueName,$allRooms);
-
             $response = ['status' => true , 'message' => 'Video Rooms Successfully Load.' , 'rooms' => $rooms];
 
         }
         catch(\Exception $exception){
+
             $message = $exception->getMessage();
 
             $response = ['status' => false , 'message' => $message , 'rooms' => null];
@@ -48,7 +47,7 @@ class VideoStreamingService {
     public function createRoom(?string $name):array
     {
       try{
-           
+
         $client = new Client($this->sid,$this->token);
         $exists = $client->video->rooms->read(['uniqueNmae' => $name]);
 
@@ -69,7 +68,7 @@ class VideoStreamingService {
       }
 
       return $response;
-        
+
     }
 
 

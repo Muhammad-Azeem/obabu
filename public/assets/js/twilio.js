@@ -13,7 +13,7 @@ Twilio.Video.createLocalTracks({
    });
 }).then(function(room) {
 
-   console.log('Successfully joined a Room: ', room.name);
+   console.log( room.participants);
 
    room.participants.forEach(participantConnected);
 
@@ -40,7 +40,7 @@ Twilio.Video.createLocalTracks({
       room.localParticipant.publishTrack(screenTrack);
   }).catch(() => {
       alert('Could not share the screen.')
-  });  
+  });
  });
 
  $(document).on('click','.close-screen-test',function(){
@@ -57,11 +57,9 @@ console.log(`Participant  connected ${participant.identity}`);
 
 const div = document.createElement('div');
 div.id = participant.sid;
-div.setAttribute("style", "float: left; margin: 10px;");
-div.innerHTML = `<div style='clear:both'>${participant.identity }</div>
-<button class="bg-primary share-screen-test">Share Screen</button>
-<button class="bg-dangerous close-screen-test">Close Screen</button>`;
-
+div.setAttribute("style", "float: left; margin: 10px;     margin-left: 88px");
+div.setAttribute('class','col-md-4 d-flex align-items-center justify-content-center ')
+div.innerHTML = `<div style='clear:both'></div>`;
 participant.tracks.forEach(function(track) {
    trackAdded(div, track)
 });

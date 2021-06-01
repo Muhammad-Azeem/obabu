@@ -19,17 +19,19 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		
+
 	</head>
 	<body>
 		<section class="video_section">
 			<div class="video_main">
 				<div class="container-fluid">
+                    <input type="hidden" name="roomName" id="room-name-test" data-name = "{{$response['roomName']}}">
+                    <input type="hidden" name="token" id="token-access-test" data-token = "{{$response['accessToken']}}">
 					<div class="row">
 						<div class="col-md-4 d-flex align-items-center justify-content-center">
-							<div class="call_img">
-								<img src="assets/images/video1.png" class="img-fluid">
-							</div>
+                            <div class="card-body">
+                                <div id="media-div"></div>
+                            </div>
 						</div>
 						<div class="col-md-4 d-flex align-items-center justify-content-center">
 							<div class="call_img">
