@@ -40,10 +40,10 @@
                 <div class="text-center signup-main">
                     <h1 class="mt-2 mt-sm-3 mt-md-3">Create Account</h1>
                     <div class="social_login">
-{{--                        <i class="bx bxl-facebook"></i>--}}
-{{--                        <i class="bx bxl-google mx-lg-3"></i>--}}
-{{--                        <i class="bx bxl-linkedin"></i>--}}
-{{--                        <p>Or use your email account:</p>--}}
+                        {{--                        <i class="bx bxl-facebook"></i>--}}
+                        {{--                        <i class="bx bxl-google mx-lg-3"></i>--}}
+                        {{--                        <i class="bx bxl-linkedin"></i>--}}
+                        {{--                        <p>Or use your email account:</p>--}}
                     </div>
                     <form class="d-flex flex-column align-items-center justify-content-center mt-4" method="POST" action="{{ route('register') }}">
                         @csrf
@@ -85,7 +85,7 @@
 											<i class='bx bxs-lock-alt' ></i>
 										</span>
                             </div>
-                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required>
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" minlength="6" placeholder="Password" required>
                         </div>
                         <div class="col-md-6">
 
@@ -95,8 +95,9 @@
                                     </span>
                             @enderror
                         </div>
+                        <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit">{{ __('Create') }}</button>
+
                     </form>
-                    <button class="shadow-lg btn btn-primary mt-2 py-2 px-5 login_btn" type="submit">{{ __('Create') }}</button>
                 </div>
             </div>
         </div>

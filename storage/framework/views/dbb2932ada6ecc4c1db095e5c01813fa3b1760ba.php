@@ -23,7 +23,17 @@
 </head>
 <body>
 <main id="app">
+
+
     <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php if($errors->any()): ?>
+        <div class="alert alert-success" role="alert">
+            <strong>Our team Contact you soon!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php endif; ?>
         <?php $__env->startSection('maincontent'); ?>
         <?php echo $__env->yieldSection(); ?>
             <?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

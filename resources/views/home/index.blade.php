@@ -51,6 +51,23 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        @if(\Illuminate\Support\Facades\Auth::user()->type == 4)
+                                            <a class="dropdown-item" href="{{ url('student') }}">
+                                                {{ __('Edit Profile') }}
+                                            </a>
+                                            <a class="dropdown-item" href="{{ url('community-student') }}">
+                                                {{ __('Community') }}
+                                            </a>
+                                        @elseif(\Illuminate\Support\Facades\Auth::user()->type == 2)
+                                            <a class="dropdown-item" href="{{ url('teacher') }}">
+                                                {{ __('Edit Profile') }}
+                                            </a>
+                                            <a class="dropdown-item" href="{{ url('community-teacher') }}">
+                                                {{ __('Community') }}
+                                            </a>
+                                        @endif
+
+
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
@@ -62,12 +79,16 @@
                                         </form>
                                     </div>
                                 </li>
-                                @endguest
-                            </li>
+                                </li>
                         </ul>
                         <div class="my-2 my-lg-0">
-                            <img src="assets/images/profile.png" alt="User Image" class="img-fluid" width="124" height="124"/>
+                            @if(Illuminate\Support\Facades\Auth::user()->profile_pic == '')
+                                <img src="assets/images/profile.png" alt="User Image" class="img-fluid" width="124" height="124">
+                            @else
+                                <img src="svg/{{Illuminate\Support\Facades\Auth::user()->profile_pic}}" alt="User Image" class="img-fluid" width="124" height="124">
+                            @endif
                         </div>
+                        @endguest
                     </div>
                 </div>
             </nav>
@@ -377,47 +398,48 @@
                         <p>Get in touch and let us know  how we can help</p>
                     </div>
                     <div class="contact_form">
-                        <div class="cntcn_inp">
-                            <input type="text" class="form-control" name="" placeholder="Program Director Email">
-                        </div>
-                        <div class="cntcn_inp">
-                            <select class="form-control">
-                                <option>Location</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
+                        <form action="{{route('contactus')}}" method="POST">
+                            @csrf
+                            <div class="contact_form">
                                 <div class="cntcn_inp">
-                                    <select class="form-control">
-                                        <option>Location</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="email" placeholder="Program Director Email">
+                                </div>
+                                <div class="cntcn_inp">
+                                    <input type="text" class="form-control" name="location" placeholder="Program Director Email">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="cntcn_inp">
+                                            <select class="form-control" name="city">
+                                                <option value="NY">New York</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="cntcn_inp">
+                                            <select class="form-control" name="state">
+                                                <option value="DC">DC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="cntcn_inp">
+                                            <input type="number" class="form-control" name="number" placeholder="Program Director Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="cntcn_inp">
+                                            <select class="form-control" name="enrollie">
+                                                <option value="Potential">Potential Enrollees</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cntct_btn">
+                                    <button type="submit" class="btn">SEND</button>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="cntcn_inp">
-                                    <select class="form-control">
-                                        <option>State</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="cntcn_inp">
-                                    <select class="form-control">
-                                        <option>Phone Number</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="cntcn_inp">
-                                    <select class="form-control">
-                                        <option>Potential Enrollees</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cntct_btn">
-                            <button type="submit" class="btn">SEND</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
