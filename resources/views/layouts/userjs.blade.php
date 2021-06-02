@@ -4,7 +4,7 @@
         $('#edit_about').hide();
         $htmlE = `<form action="{{route('update_student_education')}}" method="POST">
                                    @csrf
-           @if(isset($userEducation->id))
+        @if(isset($userEducation->id))
         <input type="hidden" name="id" value="{{$userEducation->id}}">
         <label for="school_student">School</label>
         <input name="school_student" value="{{$userEducation->school == '' ? '':$userEducation->school }}">
@@ -17,14 +17,13 @@
                                    <label for="class_student">Class</label>
                                    <input name="class_student" value="">
             @endif
-                                   <div class='text-right'><button type="submit" >save</input></div>
-                               </form>`;
+        <button type="submit" >save</input>
+    </form>`;
         $('#edit_student_education_form').html($htmlE);
         $('#profile_form_user').hide();
         $html = ` <form action="{{route('update_user_profile')}}" method="POST">
         @csrf
-
-                                        <input type="text form-controll" name="name" value="{{isset($user->name)?$user->name:""}}">
+        <input type="text form-controll" name="name" value="{{isset($user->name)?$user->name:""}}">
                                         <input type="text form-controll" value="{{isset($user->name)?$user->name:""}}">
                                         <input type="text form-controll"value="{{isset($user->name)?$user->name:""}}">
                                         <input type="text form-controll" name="address" value="{{isset($user->address)?$user->address:""}}">
@@ -38,9 +37,8 @@
         $('#teacher_form_user').hide();
         $html1 = ` <form action="{{route('update_teacher_profile')}}" method="POST">
         @csrf
-            <input type="hidden" value"true" name="teacher_check">
-
-        <input type="text form-controll" name="name" value="{{isset($user->name)?$user->name:""}}">
+        <input type="hidden" value"true" name="teacher_check">
+    <input type="text form-controll" name="name" value="{{isset($user->name)?$user->name:""}}">
         <input type="text form-controll" name="age" value="{{isset($user->age)?$user->age:""}}">
                                         <input type="text form-controll" name="address" value="{{isset($user->address)?$user->address:""}}">
                                         <input type="text form-controll" name="email" value="{{isset($user->email)?$user->email:""}}">
@@ -49,10 +47,10 @@
         $('#teacher_form_user').html($html1);
     });
 
-$('#edit_user_profile').on('click',function(){
-    $('#edit_user_profile_data').hide();
-    $('#profile_form_user').show();
-});
+    $('#edit_user_profile').on('click',function(){
+        $('#edit_user_profile_data').hide();
+        $('#profile_form_user').show();
+    });
     $('#edit_teacher_profile').on('click',function(){
         $('#edit_teacher_profile_data').hide();
         $('#teacher_form_user').show();
@@ -81,16 +79,14 @@ $('#edit_user_profile').on('click',function(){
         <div class="cntcn_inp">
         <input class="form-control" type="text" value="" name="language">
         </div>
-        <label for="level">Level</label>
+        <label for="level">level</label>
         <div class="cntcn_inp">
            <select class="form-control" name="level">
                <option value="native">Native</option>
                <option>Native</option>
                <option>Native</option>
            </select>
-           <div class='text-right'>
-            <button type="" class="btn btn-primary" > save</button>
-           </div>
+           <button type="" class="btn btn-primary" > save</button>
         </div></form>`;
         $('#modal_content').html($html);
         $('#edit_Modal').modal('show');
@@ -104,16 +100,14 @@ $('#edit_user_profile').on('click',function(){
         <div class="cntcn_inp">
         <input class="form-control" type="text" value="" name="language">
         </div>
-        <label for="level">Level</label>
+        <label for="level">level</label>
         <div class="cntcn_inp">
            <select class="form-control" name="level">
                <option value="native">Native</option>
                <option>Native</option>
                <option>Native</option>
            </select>
-           <div class='text-right'>
-            <button type="" class="btn btn-primary" > save</button>
-           </div>
+           <button type="" class="btn btn-primary" > save</button>
         </div></form>`;
         $('#modal_content').html($html);
         $('#edit_Modal').modal('show');
@@ -142,7 +136,7 @@ $('#edit_user_profile').on('click',function(){
                 <input name="designation" class="form-control" type="text" placeholder="Designation">
 
         </div>
-        <div class='text-right'><button type="" class="btn btn-primary" > save</button></div>
+        <button type="" class="btn btn-primary" > save</button>
     </form>`;
         $('#modal_content_expe').html($html);
         $('#teacher_education').modal('show');
@@ -178,6 +172,13 @@ $('#edit_user_profile').on('click',function(){
     $('#edit_user_profile_image').on('click',function ()
     {
 
-       $('#teacher_education12').modal('show');
+        $('#teacher_education12').modal('show');
+    });
+
+
+
+
+    $('#create_session').on('click',function (){
+        $('#session_add_modal').modal('show');
     });
 </script>

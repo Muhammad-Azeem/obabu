@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\user;
+use App\Models\class_session;
+use App\Services\VideoStreamingService;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\Interest;
@@ -14,6 +16,13 @@ use Illuminate\Support\Facades\Auth;
 
 class studentController extends Controller
 {
+    protected VideoStreamingService $videoStreamingService;
+
+
+    public function __construct(VideoStreamingService $videoStreamingService)
+    {
+        $this->videoStreamingService = $videoStreamingService;
+    }
 
     public function studentProfile()
     {
@@ -55,7 +64,7 @@ class studentController extends Controller
             $userEducation->class  = $re->class_student;
             $userEducation->save();
         }
-       return redirect('/student');
+        return redirect('/student');
     }
 
     public function studentCommunity()
@@ -77,7 +86,7 @@ class studentController extends Controller
 //            ->get();
 //        dd($authUser->teacher);
 
-        
+
 //        $users = [];
 //        $classId = DB::table('student_class_students')->where('student_id',Auth::id())->distinct()->get();
 //        if(isset($classId[0]->class_id)) {
@@ -97,5 +106,18 @@ class studentController extends Controller
         return view('home.community_student',compact('users','userst','authUser'));
     }
 
+
+    public function join_session()
+    {
+        $user = Auth::user();
+        $session = class_session::where('teacher_id',$user->teacher_id)->where('status','start')->first();
+        return view('home.join',compact('session'));
+    }
+
+    public function join_session_studen(Request $re)
+    {
+        $response = $this->videoStreamingService->joinRoom('bilal');
+        return view('videoStreaming.room',compact('response'));
+    }
 
 }
