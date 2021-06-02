@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de035c2e-1d41-440c-b9a4-93369d332810" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/studentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/studentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/teacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/teacherController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/twilio.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/twilio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_01_194011_create_class_sessions_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +153,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -176,7 +171,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622656339331</updated>
-      <workItem from="1622656341408" duration="1776000" />
+      <workItem from="1622656341408" duration="2288000" />
     </task>
     <servers />
   </component>
