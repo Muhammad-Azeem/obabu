@@ -297,13 +297,13 @@
 							</div></div>
 
 							    <!-- Add Arrows -->
-							    
+
 							  </div>
 
 
-							
+
 						</div>
-						
+
 					</div>
 				</div>
 					<div class="col-md-6">
@@ -324,7 +324,13 @@
 								</div>
 									<p class="join_luc">Lucy , john , mickey and B more are in this call </p>
 								<div class="join_btns">
-									<button type="button" class="join_now">JOIN NOW</button>
+                                    <form action="{{route('join_session_student')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="session_id" value="{{$session->id}}">
+                                        <button type="submit" class="join_now">JOIN NOW</button>
+                                    </form>
+
+
 									<button type="button" class="present_btn">PRESENT</button>
 								</div>
 								<div class="other_option">

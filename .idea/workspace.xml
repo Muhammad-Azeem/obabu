@@ -2,44 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f1039d9-c8ff-4172-9d09-f689325a53ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ClassController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/zebra_datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/zebra_datepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/date_time_picker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/zebra_datepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/classes/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/classes/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/classes/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/StudentClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/StudentClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/StudentClassDays.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/StudentClassDays.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/childrens/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/childrens/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/childrens/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/childrens/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/coordinators/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/coordinators/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/parents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/parents/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/teachers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/components/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navigation/nav-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navigation/nav-admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClassController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClassController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/studentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/studentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/user/teacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/user/teacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/studentMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/studentMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/zebra_datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/zebra_datepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/zebra_datepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/zebra_datepicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/date_time_picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/date_time_picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/zebra_datepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/zebra_datepicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/classes/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/classes/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/classes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/classes/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/classes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/classes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/join.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/join.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/teacher_profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b531bef451cc59132bdd726dfeb55c2b86b63908.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b531bef451cc59132bdd726dfeb55c2b86b63908.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b6f1af82c90a09739817ce409539b1845b7632e9.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b6f1af82c90a09739817ce409539b1845b7632e9.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../roadsideapi/storage/framework/views/076d39d12a055a8be31fcd9591844ec590734063.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../roadsideapi/storage/framework/views/0f0fc959d73ed26f50461379e3be4332c0a829f7.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../roadsideapi/storage/framework/views/2bbf979690d9f30fdade3344dc907362d2190d4f.php" beforeDir="false" />
@@ -240,7 +223,8 @@
       <updated>1622486283029</updated>
       <workItem from="1622486285098" duration="2641000" />
       <workItem from="1622538903181" duration="4501000" />
-      <workItem from="1622549922308" duration="7914000" />
+      <workItem from="1622549922308" duration="15908000" />
+      <workItem from="1622610631889" duration="121000" />
     </task>
     <servers />
   </component>

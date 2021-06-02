@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('maincontent')
+@section('content')
 <section class="teacher_section" style="margin-bottom: 50px;">
     <div class="container-fluid">
         <div class="row">

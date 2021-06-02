@@ -18,7 +18,6 @@ class studentMiddleware
     {
         if ($request->user() && $request->user()->type != 4)
         {
-            dd($request->user()->type);
             return redirect('/');
         }
         return $next($request);

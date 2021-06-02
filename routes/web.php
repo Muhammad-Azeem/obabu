@@ -14,7 +14,7 @@ use App\Http\Controllers\VideoStreamingController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by the Rout        $table->timestamps();eServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |users/parent
 */
@@ -123,9 +123,9 @@ Route::post('user_interest','user\userController@addInterest')->name('user_inter
 Auth::routes();
 
 // Umair Work
-Route::get('/join', function () {
-    return view('home.join');
-});
+//Route::get('/join', function () {
+//    return view('home.join');
+//});
 Route::get('/video', function () {
     return view('home.video');
 });
@@ -137,6 +137,8 @@ Route::group(['middleware' => 'App\Http\Middleware\studentMiddleware'], function
 {
     Route::get('/community-student','user\studentController@studentCommunity')->middleware('auth');
     Route::get('/student', 'user\studentController@studentProfile')->middleware('auth');
+    Route::get('/join', 'user\studentController@join_session')->middleware('auth');
+    Route::post('/join_session_student', 'user\studentController@join_session_studen')->middleware('auth')->name('join_session_student');
 
 });
 Route::get('profile','user\userController@profile')->middleware('auth')->name('profile');
@@ -150,6 +152,9 @@ Route::group(['middleware' => 'App\Http\Middleware\teacherMiddleware'], function
 Route::get('/coming-soon', function () {
     return view('home.coming-soon');
 });
+
+Route::post('session_create','user\teacherController@session_create')->name('session_create');
+Route::post('session_start','user\teacherController@session_start')->name('session_start');
 
 
 

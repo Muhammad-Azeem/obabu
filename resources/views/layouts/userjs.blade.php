@@ -174,4 +174,11 @@ $('#edit_user_profile').on('click',function(){
 
        $('#teacher_education12').modal('show');
     });
+
+
+
+
+    $('#create_session').on('click',function (){
+       $('#session_add_modal').modal('show');
+    });
 </script>
