@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Controllers\user;
 
-
 use App\Http\Controllers\Controller;
+use App\Models\class_session;
 use App\Models\CoordinatorTeacher;
 use App\Models\Interest;
 use App\Models\studenEducation;
@@ -14,9 +14,20 @@ use App\Models\userLanguage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Services\VideoStreamingService;
+use function GuzzleHttp\Promise\all;
 
 class teacherController extends Controller
 {
+
+    protected VideoStreamingService $videoStreamingService;
+
+
+    public function __construct(VideoStreamingService $videoStreamingService)
+    {
+        $this->videoStreamingService = $videoStreamingService;
+    }
+
     public function TeacherIndex()
     {
         $user=Auth::user();
@@ -27,7 +38,8 @@ class teacherController extends Controller
         $userEducation = teacherModel::where('user_id',$user->id)->get();
         $userExp = teacherexp::where('user_id',$user->id)->get();
         $userLanuage   = userLanguage::where('user_id',$user->id)->get();
-        return view('home.teacher_profile',compact('user','userEducation','userLanuage','userExp','Hobbies','interests','hobbyUser','interestUser'));
+        $teacherSessions = class_session::where('teacher_id',Auth::id())->where('status','pending')->get();
+        return view('home.teacher_profile',compact('user','userEducation','userLanuage','userExp','Hobbies','interests','hobbyUser','interestUser','teacherSessions'));
     }
 
     public function edit_user_about(Request $re)
@@ -54,9 +66,9 @@ class teacherController extends Controller
     public function addEducation(Request $re)
     {
         $teacherEducation = teacherModel::create([
-           'user_id'=>Auth::id(),
-           'institute'=>$re->institute,
-           'degree'=>$re->degree,
+            'user_id'=>Auth::id(),
+            'institute'=>$re->institute,
+            'degree'=>$re->degree,
         ]);
         return redirect('/teacher');
     }
@@ -98,7 +110,29 @@ class teacherController extends Controller
 
         }
 
-      return  view('home.community',compact('userCords','users','teachers'));
+        return  view('home.community',compact('userCords','users','teachers'));
 
+    }
+
+    public function session_create(Request $re)
+    {
+//        dd();
+        $data = $re->all();
+//        dd($data);
+        $data['status'] = 'pending';
+        $data['teacher_id']=Auth::id();
+     $dd =  class_session::create($data);
+        return redirect('/teacher');
+
+    }
+
+    public function session_start(Request $re)
+    {
+        $session = class_session::find($re->session_id);
+        $session->status = 'start';
+        $session->save();
+        $response = $this->videoStreamingService->createRoom('bilal');
+        $response = $this->videoStreamingService->joinRoom('bilal');
+        return view('videoStreaming.room',compact('response'));
     }
 }

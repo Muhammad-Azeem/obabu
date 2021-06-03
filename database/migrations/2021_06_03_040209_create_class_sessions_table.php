@@ -16,9 +16,9 @@ class CreateClassSessionsTable extends Migration
         Schema::create('class_sessions', function (Blueprint $table) {
             $table->id();
             $table->integer('teacher_id');
-            $table->integer('status');
+            $table->text('status');
             $table->timestamp('starting');
-            $table->integer('room_id');
+            $table->integer('room_id')->nullable();
             $table->timestamps();
         });
     }

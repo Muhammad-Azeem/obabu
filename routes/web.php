@@ -14,7 +14,7 @@ use App\Http\Controllers\VideoStreamingController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by the Rout        $table->timestamps();eServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |users/parent
 */
@@ -35,52 +35,49 @@ Route::get('/', function () {
 });
 
 Route::get('/main',function(){
-   return view('');
+    return view('');
 });
 
-Route::group(["middleware" =>  ['auth', 'is_admin'] ], function () {
-// logout:
-    Route::get('/logout', [UserController::class, 'user_logout'])->name('user_logout');
 
-//    end
-    Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard');
-    Route::get('/admin', [SiteController::class, 'dashboard'])->name('admin');
+Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard');
+//classes
+Route::get('/classes/index', [ClassController::class, 'index'])->name('page.classes-index');
+Route::get('/classes/add', [ClassController::class, 'create'])->name('page.classes-add');
+Route::post('/classes/add', [ClassController::class, 'store'])->name('page.classes-store');
+Route::get('/classes/edit/{class_id}', [ClassController::class, 'edit'])->name('class.edit');
+Route::post('/classes/edit', [ClassController::class, 'update'])->name('page.classes-update');
+Route::get('/classes/view/timings/{class_id}', [ClassController::class, 'view_timings'])->name('class.view-timings');
+Route::get('/students/view/classes/{teacher_id}', [ClassController::class, 'studentViewClasses'])->name('student.view-class');
 
-    //classes
-    Route::get('/classes/index', [ClassController::class, 'index'])->name('page.classes-index');
-    Route::get('/classes/add', [ClassController::class, 'create'])->name('page.classes-add');
-    Route::post('/classes/add', [ClassController::class, 'store'])->name('page.classes-store');
-    Route::get('/classes/edit/{class_id}', [ClassController::class, 'edit'])->name('class.edit');
-    Route::post('/classes/edit', [ClassController::class, 'update'])->name('page.classes-update');
-    Route::get('/classes/view/timings/{class_id}', [ClassController::class, 'view_timings'])->name('class.view-timings');
-    Route::get('/students/view/classes/{teacher_id}', [ClassController::class, 'studentViewClasses'])->name('student.view-class');
 
-    Route::get('/edit_user/{role}/{type}/{id}', [UserController::class, 'edit_user'])->name('edit_user');
-    Route::post('/edit_user', [UserController::class, 'update_user'])->name('update_user');
 
 
 //classes end
 
 
-    Route::get('/users/parent/view/childs/{parent_id}', [UserController::class, 'parentChilds'])->name('page.parent-child-view');
-    Route::get('/users/teacher', [UserController::class, 'teacherIndex'])->name('page.teacher-index');
-    Route::get('/users/children', [UserController::class, 'childrenIndex'])->name('page.children-index');
-    Route::get('/users/parent', [UserController::class, 'parentIndex'])->name('page.parent-index');
-    Route::get('/users/coordinator', [UserController::class, 'coordinatorIndex'])->name('page.coordinator-index');
+Route::get('/users/parent/view/childs/{parent_id}', [UserController::class, 'parentChilds'])->name('page.parent-child-view');
 
-    Route::get('/users/teacher/create', [UserController::class, 'teacherCreate'])->name('page.teachercreate');
-    Route::get('/users/children/create', [UserController::class, 'childrenCreate'])->name('page.childrencreate');
-    Route::get('/users/parent/create', [UserController::class, 'parentCreate'])->name('page.parentcreate');
-    Route::get('/users/coordinator/create', [UserController::class, 'coordinatorCreate'])->name('page.coordinatorCreate');
-    Route::get('/users/coordinator/view/teachers/{coordinate_id}', [UserController::class, 'coordinateTeachers'])->name('page.coordinator.view-teachers');
 
-    Route::get('/users/teacher/{id}/edit', [UserController::class, 'edit'])->name('teacher.edit');
-    Route::get('/users/children/{id}/edit', [UserController::class, 'edit'])->name('children.edit');
-    Route::get('/users/parent/{id}/edit', [UserController::class, 'edit'])->name('parent.edit');
-    Route::get('/users/teacher/view/students/{teacher_id}', [UserController::class, 'teacher_student'])->name('parent.teacher_student');
-    Route::post('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
-    Route::post('/users/childrens', [UserController::class, 'store'])->name('page.store');
-});
+Route::get('/users/teacher', [UserController::class, 'teacherIndex'])->name('page.teacher-index');
+Route::get('/users/children', [UserController::class, 'childrenIndex'])->name('page.children-index');
+Route::get('/users/parent', [UserController::class, 'parentIndex'])->name('page.parent-index');
+Route::get('/users/coordinator', [UserController::class, 'coordinatorIndex'])->name('page.coordinator-index');
+
+Route::get('/users/teacher/create', [UserController::class, 'teacherCreate'])->name('page.teachercreate');
+Route::get('/users/children/create', [UserController::class, 'childrenCreate'])->name('page.childrencreate');
+Route::get('/users/parent/create', [UserController::class, 'parentCreate'])->name('page.parentcreate');
+Route::get('/users/coordinator/create', [UserController::class, 'coordinatorCreate'])->name('page.coordinatorCreate');
+Route::get('/users/coordinator/view/teachers/{coordinate_id}', [UserController::class, 'coordinateTeachers'])->name('page.coordinator.view-teachers');
+
+Route::get('/users/teacher/{id}/edit', [UserController::class, 'edit'])->name('teacher.edit');
+Route::get('/users/children/{id}/edit', [UserController::class, 'edit'])->name('children.edit');
+Route::get('/users/parent/{id}/edit', [UserController::class, 'edit'])->name('parent.edit');
+Route::get('/users/teacher/view/students/{teacher_id}', [UserController::class, 'teacher_student'])->name('parent.teacher_student');
+
+Route::post('/users/parent/{id}/update', [UserController::class, 'update'])->name('page.update');
+
+Route::post('/users/childrens', [UserController::class, 'store'])->name('page.store');
+
 //interest
 Route::get('/interest', [InterestController::class, 'index'])->name('interest.index');
 Route::get('/hobby', [InterestController::class, 'hobbyIndex'])->name('hobby.index');
@@ -112,7 +109,7 @@ Route::get('/membership', [\App\Http\Controllers\HomeController::class,'membersh
 Route::post('/payment', [\App\Http\Controllers\HomeController::class,'payment'])->name('payment');
 Route::post('/charge', [\App\Http\Controllers\HomeController::class,'charge'])->name('charge');
 Route::get('/discount_membership', [\App\Http\Controllers\HomeController::class,'discount_membership'])->name('discount_membership');
-Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home_2');
+Route::get('/home', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
 Route::get('/sales', [\App\Http\Controllers\HomeController::class,'sales'])->name('sales');
 Route::get('/about-us', [\App\Http\Controllers\HomeController::class,'about_us'])->name('about_us');
 Route::post('contactus',[\App\Http\Controllers\HomeController::class,'saveContactUs'])->name('contactus');
@@ -126,41 +123,38 @@ Route::post('user_interest','user\userController@addInterest')->name('user_inter
 Auth::routes();
 
 // Umair Work
-Route::get('/join', function () {
-    return view('home.join');
-});
+//Route::get('/join', function () {
+//    return view('home.join');
+//});
 Route::get('/video', function () {
     return view('home.video');
 });
-Route::get('/404', function () {
-    $msg = '404 not found';
-    return view('home.success',compact('msg'));
-});
-Route::get('/not_allowed', function () {
-    $msg = 'Not Allowed';
-    return view('home.success',compact('msg'));
-});
 Route::get('/success', function () {
-    $msg = 'Successfully submitted';
-    return view('home.success',compact('msg'));
-})->name('home');
+    return view('home.success');
+});
+//
 Route::group(['middleware' => 'App\Http\Middleware\studentMiddleware'], function()
 {
     Route::get('/community-student','user\studentController@studentCommunity')->middleware('auth');
     Route::get('/student', 'user\studentController@studentProfile')->middleware('auth');
+    Route::get('/join', 'user\studentController@join_session')->middleware('auth');
+    Route::post('/join_session_student', 'user\studentController@join_session_studen')->middleware('auth')->name('join_session_student');
 
 });
 Route::get('profile','user\userController@profile')->middleware('auth')->name('profile');
 
 Route::group(['middleware' => 'App\Http\Middleware\teacherMiddleware'], function()
 {   Route::post('teacher_education','user\teacherController@addEducation')->name('teacher_education');
-  Route::post('teacher_expernce','user\teacherController@addExpe')->name('teacher_expernce');
-  Route::post('edit_user_about','user\teacherController@edit_user_about')->name('edit_user_about');
+    Route::post('teacher_expernce','user\teacherController@addExpe')->name('teacher_expernce');
+    Route::post('edit_user_about','user\teacherController@edit_user_about')->name('edit_user_about');
     Route::get('/teacher', 'user\teacherController@teacherIndex')->middleware('auth');
     Route::get('/community-teacher','user\teacherController@community');
-Route::get('/coming-soon', function () {
-    return view('home.coming-soon');
-});
+    Route::get('/coming-soon', function () {
+        return view('home.coming-soon');
+    });
+
+    Route::post('session_create','user\teacherController@session_create')->name('session_create');
+    Route::post('session_start','user\teacherController@session_start')->name('session_start');
 
 
 
