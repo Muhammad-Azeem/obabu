@@ -1,37 +1,10 @@
 @extends('layouts.app')
 @section('maincontent')
-<section class="teacher_section" style="margin-bottom: 50px;">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="profile_section profile_section2 text-center">
-                    @if(Illuminate\Support\Facades\Auth::id() == $user->id)
-                        <i class='bx bxs-pencil' id="edit_user_profile_image"></i>
-                    @endif
-                    @if($user->profile_pic == '')
-                        <img src="assets/images/teacher_profile.png" class="img-fluid">
-                    @else
-                        <img src="svg/{{$user->profile_pic}}" class="img-fluid">
-                    @endif
-                    <h3>{{$user->name}}</h3>
-                    <a href="#">{{$user->email}}</a>
-                    <!-- <button type="button" class="contact_btn">CONTACT ME !</button> -->
-                </div>
-                @if($user->type == 2)
-                <div class="profile_section change_profie_clr text-center">
-                    <img src="assets/images/teacher3.png" class="img-fluid">
-                    <h3>{{isset($user->parent)??$user->parent->name}}</h3>
-                    <a href="#">{{isset($user->parent)??$user->parent->name}}</a>
-
-{{--                    <button type="button" class="contact_btn">Acount Setting</button>--}}
-                </div>
-                    @endif
-            </div>
-            <div class="col-md-4">
-                <div class="teacher_info">
-                    <div class="tch_info_head d-flex justify-content-between">
-                        <h3>PERSONAL INFORMATION</h3>
-
+    <section class="teacher_section" style="margin-bottom: 50px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="profile_section profile_section2 text-center">
                         @if(Illuminate\Support\Facades\Auth::id() == $user->id)
                             <i class='bx bxs-pencil' id="edit_user_profile_image"></i>
                         @endif
@@ -76,9 +49,6 @@
                                         <h3>GENDER :</h3>
                                     </div>
                                 </div>
-<<<<<<< HEAD
-                                <div class="info_detail" id="profile_form_user">
-=======
                                 <div class="col-md-7">
                                     <div class="info_detail" id="edit_user_profile_data">
                                         <p>{{$user->name}}</p>
@@ -97,7 +67,6 @@
                                     </div>
                                     <div class="info_detail" id="profile_form_user">
                                     </div>
->>>>>>> 662e9b182febd28b310b41093a23b14da8d60157
                                 </div>
                             </div>
                         </div>
@@ -123,16 +92,6 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-            </div>
-            <div class="col-md-5">
-                <div class="hobbies_sections">
-                    <div class="hobbies">
-                        <h3>HOBBIES     @if(Illuminate\Support\Facades\Auth::id() == $user->id)
-                                <i class='bx bxs-pencil' onclick="add_inrest()"></i>
-                            @endif</h3>
-                        <div class="main_hobbies_images">
-=======
                 <div class="col-md-5">
                     <div class="hobbies_sections">
                         <div class="hobbies">
@@ -140,7 +99,6 @@
                                     <i class='bx bxs-pencil' onclick="add_inrest()"></i>
                                 @endif</h3>
                             <div class="main_hobbies_images">
->>>>>>> 662e9b182febd28b310b41093a23b14da8d60157
 
                                 <div class="images_hobby">
                                     @foreach($hobbyUser as $hobby)
@@ -154,22 +112,12 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                </div>
-                <div class="edu_sec edu_sec2">
-                    <div class="main_edu">
-                        <div class="edu_img">
-                            <img src="assets/images/mortarboard.png" class="img-fluid">
-                        </div>
-                        <div class="edu_data">
-=======
                     <div class="edu_sec edu_sec2">
                         <div class="main_edu">
                             <div class="edu_img">
                                 <img src="assets/images/mortarboard.png" class="img-fluid">
                             </div>
                             <div class="edu_data">
->>>>>>> 662e9b182febd28b310b41093a23b14da8d60157
 
                                 <h3>EDUCATION
                                     @if(Illuminate\Support\Facades\Auth::id() == $user->id)
@@ -213,48 +161,7 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
-</section>
-
-<div class="modal" tabindex="-1" role="dialog" id="edit_Modal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="modal_content">
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal" tabindex="-1" role="dialog" id="user_interest1">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Add Interest/Hobbies</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="modal_content">
-               <form action="{{route('user_interest')}}" method="POST" >
-                   @csrf
-                   <div class="cntcn_inp">
-                       <select class="form-control" name="hobby">
-                           <option value="">Hobby</option>
-                           @foreach($Hobbies as $Hobby)
-                               <option value="{{$Hobby->name}}">{{$Hobby->name}}</option>
-                           @endforeach
-                       </select>
-=======
     </section>
->>>>>>> 662e9b182febd28b310b41093a23b14da8d60157
 
     <div class="modal" tabindex="-1" role="dialog" id="edit_Modal">
         <div class="modal-dialog" role="document">
@@ -267,30 +174,11 @@
                 </div>
                 <div class="modal-body" id="modal_content">
 
-<<<<<<< HEAD
-                   </div>
-                   <button type="" class="btn btn-primary" > save</button>
-               </form>
-=======
                 </div>
->>>>>>> 662e9b182febd28b310b41093a23b14da8d60157
             </div>
         </div>
     </div>
 
-<<<<<<< HEAD
-<div class="modal" tabindex="-1" role="dialog" id="edit_education">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Add Education</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="modal_content">
-                <div id="modeling"><form action="{{route('update_student_education')}}" method="POST" >
-=======
     <div class="modal" tabindex="-1" role="dialog" id="user_interest1">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -302,7 +190,6 @@
                 </div>
                 <div class="modal-body" id="modal_content">
                     <form action="{{route('user_interest')}}" method="POST" >
->>>>>>> 662e9b182febd28b310b41093a23b14da8d60157
                         @csrf
                         <div class="cntcn_inp">
                             <select class="form-control" name="hobby">
@@ -328,17 +215,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-</div>
-<div class="modal" tabindex="-1" role="dialog" id="teacher_education12">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Add Picture</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-=======
 
     <div class="modal" tabindex="-1" role="dialog" id="edit_education">
         <div class="modal-dialog" role="document">
@@ -363,7 +239,6 @@
                         </form>
                     </div>
                 </div>
->>>>>>> 662e9b182febd28b310b41093a23b14da8d60157
             </div>
         </div>
     </div>
