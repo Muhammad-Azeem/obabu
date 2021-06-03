@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/public/assets/js/twilio.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/twilio.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/student_profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/userjs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/videoStreaming/room.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videoStreaming/room.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
