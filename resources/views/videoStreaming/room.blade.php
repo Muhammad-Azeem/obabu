@@ -42,11 +42,11 @@
                 <p><i class='bx bxs-microphone' ></i></p>
                 <p><i class='bx bxs-user-plus' ></i>Invites</p>
                 <p><i class='bx bxs-user-detail'></i>Participant</p>
-                <p><i class='bx bx-upload'></i>Screen share</p>
+                <p><i class='bx bx-upload share-screen-test' ></i>Screen share</p>
                 <p><i class='bx bx-message-detail' ></i>Chat</p>
                 <p><i class='bx bxs-video-recording' ></i>Record</p>
                 <p><i class='bx bx-smile' ></i>Reaction</p>
-                <p><i class="fa fa-sign-out" aria-hidden="true"></i><i class='bx bx-log-in' ></i></p>
+                <p><i class="fa fa-sign-out close-screen-test" aria-hidden="true"></i><i class='bx bx-log-in close-screen-test' ></i></p>
             </div>
         </div>
     </div>
@@ -57,5 +57,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
 <script src="{{asset('assets/js/twilio.js')}}"></script>
+
 </body>
 </html>
